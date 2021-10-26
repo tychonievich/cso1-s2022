@@ -2,6 +2,7 @@
 title: Computer Systems and Organization 1
 ...
 
+
 # Writeups
 
 The following are the main writeups created for this course:
