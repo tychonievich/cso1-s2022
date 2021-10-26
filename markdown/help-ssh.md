@@ -77,9 +77,7 @@ Interactive Terminal
     
     Close with `exit` or Ctrl+D
     
-    <div class="example">
-    `ssh mst3k@portal.cs.virginia.edu`
-    </div>
+    <div class="example">`ssh mst3k@portal.cs.virginia.edu`</div>
 
 Run remote command and see output
 :   `ssh username@the.server.edu command arg1 arg2 ...`
