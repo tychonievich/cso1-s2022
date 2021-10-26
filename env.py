@@ -56,6 +56,8 @@ def justimport(fname):
                     print('```\n')
                 else:
                     process(i.group(1))
+            else:
+                sys.stdout.write(line)
             newp = line.isspace()
 
 for arg in sys.argv[1:]:
