@@ -16,6 +16,9 @@ meta:
   name: CSO1
   lecture exam: false
   home: https://kytos.cs.virginia.edu/cso1/
+  final:
+    start: 2022-05-09 09:00:99
+    duration: 180
 
 sections:
   CS2501-200:
