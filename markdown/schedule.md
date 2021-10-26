@@ -116,9 +116,9 @@ readings can be <input type="button" value="shown" onclick="document.querySelect
 <script src="schedule.js"></script>
 
 
-To subscribe to the above calendar, add <http://www.cs.virginia.edu/luther/COA1/F2019/cal.ics> to your calender application of choice.
+To subscribe to the above calendar, add <http://www.cs.virginia.edu/luther/CSO1/S2022/cal.ics> to your calender application of choice.
 
 <hr/>
 
-The <a href="http://www.virginia.edu/registrar/exams.html#1198">final exam schedule</a> puts our final Saturday 14 December at 9:00 am. The final is an in-person on-paper exam administered in the usual classroom.
+The <a href="https://registrar.virginia.edu/exam-schedule-spring-2022">final exam schedule</a> puts our final Monday 9 May at 9:00 am if you are in the 12:00 section and 2:00 pm if you are in the 1:00 section. The final is an in-person on-paper exam administered in the usual classroom.
 
