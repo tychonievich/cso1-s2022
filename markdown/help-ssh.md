@@ -63,13 +63,14 @@ You'll need to do the `ssh-keygen` once per client machine you use (e.g., you la
 
 # Short summary
 
-{.example ...} The following copies files to the CS SSH portal, then compiles and runs them on the server and displays the output on your laptop.
+:::example
+The following copies files to the CS SSH portal, then compiles and runs them on the server and displays the output on your laptop.
 
 ```bash
 scp myfile1.c myfile2.c mst3k@portal.cs.virginia.edu:project1/
 ssh mst3k@portal.cs.virginia.edu "cd project1/; clang *.c; ./a.out"
 ```
-{/}
+:::
 
 Interactive Terminal
 :   Open with `ssh username@the.server.edu`
