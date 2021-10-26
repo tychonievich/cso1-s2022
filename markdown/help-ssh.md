@@ -2,6 +2,7 @@
 title: Using SSH
 ...
 
+
 SSH (the **S**ecure **SH**ell) is a protocol for allowing people to access a computer over the Internet and run programs on it as if they were physically present.
 
 # Software
