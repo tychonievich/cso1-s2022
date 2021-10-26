@@ -55,9 +55,10 @@ def raw2cal(data, links):
     e = data['Special Dates']['Courses end']
     end = e
     while s.weekday() != 6: s -= timedelta(1)
-    e = max(e, data['meta']['final']['start'].date())
-    
-    data['meta']['days'] = [dow(dows) for dows in data['meta']['days']]
+    for sect in data['sections'].values():
+        if 'final' in sect:
+            e = max(e, sect['final']['start'].date())
+        sect['days'] = [dow(dows) for dows in sect['days']]
     
     data['sidx'] = 0
     
