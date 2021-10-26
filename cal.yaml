@@ -1,105 +1,21 @@
 Special Dates:
-  Courses begin: 2019-08-27
-  Courses end: 2019-12-06
-  Add deadline: 2019-09-10
-  Drop deadline: 2019-10-15
-  Withdraw deadline: 2019-10-22
-  Thanksgiving recess:
-    start: 2019-11-27
-    end: 2019-12-01
-  Reading days:
-    start: 2019-10-05
-    end: 2019-10-08
-  Exam 1: [2019-10-02, 2019-10-03]
-  Exam 2: [2019-11-06, 2019-11-07]
-  Exam 3: 2019-12-14
+  Courses begin: 2022-01-19
+  Courses end: 2022-05-03
+  Add deadline: 2022-09-10
+  Drop deadline: 2022-10-15
+  Withdraw deadline: 2022-10-22
+  Spring recess:
+    start: 2022-03-05
+    end: 2022-03-13
+  Exam 1: [2022-10-02, 2022-10-03]
+  Exam 2: [2022-11-06, 2022-11-07]
+  Exam 3: 2022-05-09
 
 meta:
   timezone: America/New_York
-  name: COA1
+  name: CSO1
   lecture exam: false
-  home: https://www.cs.virginia.edu/luther/COA1/F2019/
-  final:
-    start: 2019-12-14 09:00:00
-    duration: 180
-    room: Thornton E303
-
-office hours:
-  .begin: 2019-09-04
-  faculty:
-    Tychonievich:
-      where: Rice 208
-      when:
-        - dow: Monday
-          start: 10:00:00
-          end: 11:00:00
-        - dow: Tuesday
-          start: 13:00:00
-          end: 15:00:00
-        - dow: Friday
-          start: 11:00:00
-          end: 12:00:00
-          except: [2019-09-06]
-  TA:
-    where: Thorton A-233
-    Omika:
-      when:
-        - dow: Thursday
-          start: 9:30:00
-          end: 11:30:00
-    Gustavo:
-      when:
-        - dow: Wednesday
-          start: 14:00:00
-          end: 15:00:00
-        - dow: Thursday
-          start: 15:30:00
-          end: 17:00:00
-        - dow: Friday
-          start: 9:00:00
-          end: 10:00:00
-          except: [2019-09-06]
-        - dow: Friday
-          start: 14:00:00
-          end: 16:00:00
-          except: [2019-09-06]
-        - dow: Saturday
-          start: 15:00:00
-          end: 16:00:00
-    Dylan:
-      when:
-        - dow: Thursday
-          start: 15:30:00
-          end: 16:30:00
-        - dow: Friday
-          start: 15:00:00
-          end: 16:00:00
-    Jack:
-      when:
-        - dow: Thursday
-          start: 12:30:00
-          end: 14:30:00
-        - dow: Sunday
-          start: 12:00:00
-          end: 14:00:00
-          except: [2019-09-07]
-        - date: 2019-09-06
-          start: 12:00:00
-          end: 13:00:00
-    Will:
-      when:
-        - dow: Friday
-          start: 14:00:00
-          end: 16:00:00
-        - dow: Monday
-          start: 11:00:00
-          end: 13:00:00      
-    Vineet:
-      when:
-        - dow: Thursday
-          start: 12:30:00
-          end: 14:30:00
-      
+  home: https://kytos.cs.virginia.edu/cso1/
 
 sections:
   CS2501-200:
@@ -351,12 +267,12 @@ assignments:
     PA01:
         title: bit fiddling
         link: pa01-bit fiddling.html
-        due: 2019-09-17 17:00:00
+        due: 2022-09-17 17:00:00
         notes: things like "count the number of set bits in an int" using limited numbers of bitwise operations
         rubric: {"kind":"percentage"}
     PA02:
         title: worksheet
-        due: 2019-09-20 13:50:00
+        due: 2022-09-20 13:50:00
         link: pa02-worksheet.html
         total: 100
         late-policy: []
@@ -382,17 +298,17 @@ assignments:
         title: mult
         link: pa03-mult.html
         files: ['mult.binary', 'mult.binary.txt']
-        due: 2019-10-12 17:00:00
+        due: 2022-10-12 17:00:00
     PA04:
         title: fib
         link: pa04-fib.html
         files: ['fib.binary', 'fib.binary.txt']
-        due: 2019-10-01 17:00:00
+        due: 2022-10-01 17:00:00
     PA05:
         title: assembly
         files: 'matlib.s'
         link: pa05-assembly.html
-        due: 2019-10-15 17:00:00
+        due: 2022-10-15 17:00:00
         rubric:
             kind: hybrid
             auto-weight: 0
@@ -413,12 +329,12 @@ assignments:
     PA06:
         title: 'bomb'
         link: pa06-bomb.html
-        due: 2019-10-22 17:00:00
+        due: 2022-10-22 17:00:00
     PA07:
         title: smallc
         files: smallfunc.c
         link: pa07-smallc.html
-        due: 2019-10-29 17:00:00
+        due: 2022-10-29 17:00:00
         rubric:
             kind: hybrid
             auto-weight: 0
@@ -435,18 +351,18 @@ assignments:
         title: linkedlist
         files: linkedlist.c
         link: pa08-linkedlist.html
-        due: 2019-11-12 17:00:00
+        due: 2022-11-12 17:00:00
         rubric: {"kind":"percentage"}
     PA09:
         title: postfix
         files: rpn.c
         link: pa09-postfix.html
-        due: 2019-11-26 17:00:00
+        due: 2022-11-26 17:00:00
     PA10:
         title: schat
         files: schat.c
         link: pa10-schat.html
-        due: 2019-12-06 17:00:00
+        due: 2022-12-06 17:00:00
         rubric:
             kind: hybrid
             auto-weight: 0
@@ -464,39 +380,39 @@ assignments:
                   weight: 2
                 - ends when end-of-file or Ctrl+C reached
     Quiz00:
-        due: 2019-09-02 13:00:00
+        due: 2022-09-02 13:00:00
         weight: 0
     Quiz01:
-        due: 2019-09-09 11:00:00
-        open: 2019-09-06 17:00:00
+        due: 2022-09-09 11:00:00
+        open: 2022-09-06 17:00:00
     Quiz02:
-        due: 2019-09-16 11:00:00
-        open: 2019-09-13 17:00:00
+        due: 2022-09-16 11:00:00
+        open: 2022-09-13 17:00:00
     Quiz03:
-        due: 2019-09-23 11:00:00
-        open: 2019-09-20 17:00:00
+        due: 2022-09-23 11:00:00
+        open: 2022-09-20 17:00:00
     Quiz04:
-        due: 2019-09-30 11:00:00
-        open: 2019-09-27 17:00:00
+        due: 2022-09-30 11:00:00
+        open: 2022-09-27 17:00:00
     Quiz05:
-        due: 2019-10-14 11:00:00
-        open: 2019-10-11 17:00:00
+        due: 2022-10-14 11:00:00
+        open: 2022-10-11 17:00:00
     Quiz06:
-        due: 2019-10-21 11:00:00
-        open: 2019-10-18 17:00:00
+        due: 2022-10-21 11:00:00
+        open: 2022-10-18 17:00:00
     Quiz07:
-        due: 2019-10-28 11:00:00
-        open: 2019-10-25 17:00:00
+        due: 2022-10-28 11:00:00
+        open: 2022-10-25 17:00:00
     Quiz09:
-        due: 2019-11-18 11:00:00
-        open: 2019-11-15 17:00:00
+        due: 2022-11-18 11:00:00
+        open: 2022-11-15 17:00:00
     Quiz10:
-        due: 2019-11-25 11:00:00
-        open: 2019-11-22 17:00:00
+        due: 2022-11-25 11:00:00
+        open: 2022-11-22 17:00:00
 
     Exam 1:
-        open: 2019-10-02 17:00:00
-        due: 2019-10-03 18:15:00
+        open: 2022-10-02 17:00:00
+        due: 2022-10-03 18:15:00
         link: review.html
         rubric:
             kind: hybrid
@@ -559,8 +475,8 @@ assignments:
 
     Exam1-1:
         hide: true
-        open: 2019-10-02 17:00:00
-        due: 2019-10-03 18:15:00
+        open: 2022-10-02 17:00:00
+        due: 2022-10-03 18:15:00
         weight: 8
         rubric:
             kind: hybrid
@@ -580,8 +496,8 @@ assignments:
                   weight: 2
     Exam1-2:
         hide: true
-        open: 2019-10-02 17:00:00
-        due: 2019-10-03 18:15:00
+        open: 2022-10-02 17:00:00
+        due: 2022-10-03 18:15:00
         weight: 4
         rubric:
             kind: hybrid
@@ -599,8 +515,8 @@ assignments:
                   weight: 1
     Exam1-3:
         hide: true
-        open: 2019-10-02 17:00:00
-        due: 2019-10-03 18:15:00
+        open: 2022-10-02 17:00:00
+        due: 2022-10-03 18:15:00
         weight: 10
         rubric:
             kind: hybrid
@@ -620,8 +536,8 @@ assignments:
                   weight: 2
     Exam1-4:
         hide: true
-        open: 2019-10-02 17:00:00
-        due: 2019-10-03 18:15:00
+        open: 2022-10-02 17:00:00
+        due: 2022-10-03 18:15:00
         weight: 9
         rubric:
             kind: hybrid
@@ -645,8 +561,8 @@ assignments:
                   weight: 1
     Exam1-5:
         hide: true
-        open: 2019-10-02 17:00:00
-        due: 2019-10-03 18:15:00
+        open: 2022-10-02 17:00:00
+        due: 2022-10-03 18:15:00
         weight: 3
         rubric:
             kind: hybrid
@@ -666,8 +582,8 @@ assignments:
                   weight: 1
     
     Exam 1-wrapper:
-        open: 2019-10-16 17:00:00
-        due: 2019-10-25 17:00:00
+        open: 2022-10-16 17:00:00
+        due: 2022-10-25 17:00:00
         link: exam-wrapper.html
         files: exam1wrapper.txt
         weight: 0.2
@@ -689,8 +605,8 @@ assignments:
               - "plans seem likely to improve learning"
 
     Exam 2:
-        open: 2019-11-06 17:00:00
-        due: 2019-11-07 18:15:00
+        open: 2022-11-06 17:00:00
+        due: 2022-11-07 18:15:00
         link: review.html
         rubric:
             kind: hybrid
@@ -737,8 +653,8 @@ assignments:
                     weight: 0.5
 
     E2-1:
-        open: 2019-11-06 17:00:00
-        due: 2019-11-07 18:15:00
+        open: 2022-11-06 17:00:00
+        due: 2022-11-07 18:15:00
         hide: true
         weight: 4
         rubric:
@@ -750,8 +666,8 @@ assignments:
                 - Q1 correct
                 - Q2 correct
     E2-2:
-        open: 2019-11-06 17:00:00
-        due: 2019-11-07 18:15:00
+        open: 2022-11-06 17:00:00
+        due: 2022-11-07 18:15:00
         hide: true
         weight: 8
         rubric:
@@ -765,8 +681,8 @@ assignments:
                 - Q5 correct
                 - Q6 correct
     E2-3:
-        open: 2019-11-06 17:00:00
-        due: 2019-11-07 18:15:00
+        open: 2022-11-06 17:00:00
+        due: 2022-11-07 18:15:00
         hide: true
         weight: 8
         rubric:
@@ -780,8 +696,8 @@ assignments:
                 - Q9 correct
                 - Q10 correct
     E2-4:
-        open: 2019-11-06 17:00:00
-        due: 2019-11-07 18:15:00
+        open: 2022-11-06 17:00:00
+        due: 2022-11-07 18:15:00
         hide: true
         weight: 10
         rubric:
@@ -799,8 +715,8 @@ assignments:
                 - {name: Q13 blank 5 correct, weight: 0.5}
                 - {name: Q13 blank 6 correct, weight: 0.5}
     E2-5:
-        open: 2019-11-06 17:00:00
-        due: 2019-11-07 18:15:00
+        open: 2022-11-06 17:00:00
+        due: 2022-11-07 18:15:00
         hide: true
         weight: 8
         rubric:
@@ -814,8 +730,8 @@ assignments:
                 - Q14 else without "else"
                 - Q14 nothing else wrong
     E2-6:
-        open: 2019-11-06 17:00:00
-        due: 2019-11-07 18:15:00
+        open: 2022-11-06 17:00:00
+        due: 2022-11-07 18:15:00
         hide: true
         weight: 9
         rubric:
@@ -834,8 +750,8 @@ assignments:
                 
 
     Exam 2-wrapper:
-        open: 2019-11-19 10:00:00
-        due: 2019-11-26 17:00:00
+        open: 2022-11-19 10:00:00
+        due: 2022-11-26 17:00:00
         link: exam-wrapper.html
         files: exam2wrapper.txt
         weight: 0.2
@@ -859,45 +775,45 @@ assignments:
         
       
     Lab01:
-        due: 2019-09-05 19:00:00
-        open: 2019-09-04 17:00:00
+        due: 2022-09-05 19:00:00
+        open: 2022-09-04 17:00:00
     Lab02:
-        due: 2019-09-12 19:00:00
-        open: 2019-09-11 17:00:00
+        due: 2022-09-12 19:00:00
+        open: 2022-09-11 17:00:00
     Lab03:
-        due: 2019-09-19 19:00:00
-        open: 2019-09-18 17:00:00
+        due: 2022-09-19 19:00:00
+        open: 2022-09-18 17:00:00
     Lab04:
-        due: 2019-09-26 19:00:00
-        open: 2019-09-25 17:00:00
+        due: 2022-09-26 19:00:00
+        open: 2022-09-25 17:00:00
 
     Lab05:
-        due: 2019-10-10 19:00:00
-        open: 2019-10-09 17:00:00
+        due: 2022-10-10 19:00:00
+        open: 2022-10-09 17:00:00
     Lab06:
-        due: 2019-10-17 19:00:00
-        open: 2019-10-16 17:00:00
+        due: 2022-10-17 19:00:00
+        open: 2022-10-16 17:00:00
     Lab07:
-        due: 2019-10-24 19:00:00
-        open: 2019-10-23 17:00:00
+        due: 2022-10-24 19:00:00
+        open: 2022-10-23 17:00:00
     Lab08:
-        due: 2019-10-31 19:00:00
-        open: 2019-10-30 17:00:00
+        due: 2022-10-31 19:00:00
+        open: 2022-10-30 17:00:00
 
     Lab09:
-        due: 2019-11-14 19:00:00
-        open: 2019-11-13 17:00:00
+        due: 2022-11-14 19:00:00
+        open: 2022-11-13 17:00:00
     Lab10:
-        due: 2019-11-21 19:00:00
-        open: 2019-11-20 17:00:00
+        due: 2022-11-21 19:00:00
+        open: 2022-11-20 17:00:00
     Lab11:
-        due: 2019-12-05 19:00:00
-        open: 2019-12-04 17:00:00
+        due: 2022-12-05 19:00:00
+        open: 2022-12-04 17:00:00
 
     E3-1:
         hide: true
-        open: 2019-12-14 09:00:00
-        due: 2019-12-14 12:00:00
+        open: 2022-12-14 09:00:00
+        due: 2022-12-14 12:00:00
         weight: 10
         rubric:
             kind: hybrid
@@ -915,8 +831,8 @@ assignments:
                   weight: 2
     E3-2:
         hide: true
-        open: 2019-12-14 09:00:00
-        due: 2019-12-14 12:00:00
+        open: 2022-12-14 09:00:00
+        due: 2022-12-14 12:00:00
         weight: 10
         rubric:
             kind: hybrid
@@ -936,8 +852,8 @@ assignments:
                   weight: 2
     E3-3:
         hide: true
-        open: 2019-12-14 09:00:00
-        due: 2019-12-14 12:00:00
+        open: 2022-12-14 09:00:00
+        due: 2022-12-14 12:00:00
         weight: 10
         rubric:
             kind: hybrid
@@ -957,8 +873,8 @@ assignments:
                   weight: 2
     E3-4:
         hide: true
-        open: 2019-12-14 09:00:00
-        due: 2019-12-14 12:00:00
+        open: 2022-12-14 09:00:00
+        due: 2022-12-14 12:00:00
         weight: 10
         rubric:
             kind: hybrid
@@ -974,8 +890,8 @@ assignments:
                   weight: 1
     E3-5:
         hide: true
-        open: 2019-12-14 09:00:00
-        due: 2019-12-14 12:00:00
+        open: 2022-12-14 09:00:00
+        due: 2022-12-14 12:00:00
         weight: 10
         rubric:
             kind: hybrid
@@ -1001,8 +917,8 @@ assignments:
                   weight: 1
     E3-7:
         hide: true
-        open: 2019-12-14 09:00:00
-        due: 2019-12-14 12:00:00
+        open: 2022-12-14 09:00:00
+        due: 2022-12-14 12:00:00
         weight: 10
         rubric:
             kind: hybrid
@@ -1020,8 +936,8 @@ assignments:
                   weight: 1
     E3-8:
         hide: true
-        open: 2019-12-14 09:00:00
-        due: 2019-12-14 12:00:00
+        open: 2022-12-14 09:00:00
+        due: 2022-12-14 12:00:00
         weight: 10
         rubric:
             kind: hybrid
@@ -1045,8 +961,8 @@ assignments:
                   weight: 1
 
     Exam 3:
-        open: 2019-12-14 09:00:00
-        due: 2019-12-14 12:00:00
+        open: 2022-12-14 09:00:00
+        due: 2022-12-14 12:00:00
         weight: 1.6
         link: review.html
         rubric:
