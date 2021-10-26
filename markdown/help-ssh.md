@@ -86,29 +86,24 @@ Run remote command and see output
     
     `ssh username@the.server.edu "commands to execute"`
 
-    {.example ...} `ssh mst3k@portal.cs.virginia.edu ls -l`
-    {/}
+    <div class="example"> `ssh mst3k@portal.cs.virginia.edu ls -l`</div>
 
-    {.example ...} `ssh mst3k@portal.cs.virginia.edu "cd /tmp; ls"`
-    {/}
+    <div class="example"> `ssh mst3k@portal.cs.virginia.edu "cd /tmp; ls"`</div>
 
 Copy files from local to remote
 :   `scp file file2 file3 ... user@the.server.edu:path/to/destination/`
 
-    {.example ...} `scp testfile.c mst3k@portal.cs.virginia.edu:code/demo1/`
-    {/}
+    <div class="example"> `scp testfile.c mst3k@portal.cs.virginia.edu:code/demo1/`</div>
     
     Note that `scp` will not create directories, but `ssh` can:
     
-    {.example ...} `ssh mst3k@portal.cs.virginia.edu mkdir -p code/demo1/`
-    {/}
+    <div class="example"> `ssh mst3k@portal.cs.virginia.edu mkdir -p code/demo1/`</div>
 
 Copy files from remote to local
 :   `scp user@the.server.edu:path/to/source/filename path/to/destination/`
     
     (use `./` for "put it where I am")
 
-    {.example ...} `scp mst3k@portal.cs.virginia.edu:code/demo1/testfile.c ./`
-    {/}
+    <div class="example"> `scp mst3k@portal.cs.virginia.edu:code/demo1/testfile.c ./`</div>
 
 
