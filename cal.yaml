@@ -17,7 +17,7 @@ meta:
   lecture exam: false
   home: https://kytos.cs.virginia.edu/cso1/
   final:
-    start: 2022-05-09 09:00:99
+    start: 2022-05-09 09:00:00
     duration: 180
 
 sections:
@@ -42,59 +42,59 @@ sections:
 
 
 lectures:
-    -   welcome
-    -   Boolean algebra
-    -   binary arithmetic
-    -   binary arithmetic
+    - welcome
+    - Boolean algebra
+    - binary arithmetic
+    - binary arithmetic
 
-    -   gates, wires, bitwise
-    -   mux, demux, adder
-    -   clocks
-    -   other hardware
+    - gates, wires, bitwise
+    - mux, demux, adder
+    - clocks
+    - other hardware
 
-    -   moves, memory, ALU ops
-    -   fetch-decode-execute
-    -   writing machine code
-    -   conditional jump
+    - moves, memory, ALU ops
+    - fetch-decode-execute
+    - writing machine code
+    - conditional jump
 
-    -   [addressing modes, endianness]
-    -   [adjacency, pointers, back doors]
-    -   review 
+    - [addressing modes, endianness]
+    - [adjacency, pointers, back doors]
+    - review 
     
-    -   [assembly, x86-64]
-    -   x86-64
-    -   [the stack, tracing variables]
+    - [assembly, x86-64]
+    - x86-64
+    - [the stack, tracing variables]
 
-    -   compilation
-    -   compile-time info
+    - compilation
+    - compile-time info
 
-    -   pilot town hall
-    -   C introduction
-    -   C introduction
-    -   C introduction
-    -   C introduction
-    -   global, stack, heap
-    -   malloc and free
-    -   malloc examples
+    - pilot town hall
+    - C introduction
+    - C introduction
+    - C introduction
+    - C introduction
+    - global, stack, heap
+    - malloc and free
+    - malloc examples
 
-    -   review
+    - review
     
-    -   C std library conventions
-    -   string.h
-    -   stdio.h and varargs
-    -   stdio.h and varargs
-    -   unistd.h and so on
+    - C std library conventions
+    - string.h
+    - stdio.h and varargs
+    - stdio.h and varargs
+    - unistd.h and so on
 
-    -   Q&A
+    - Q&A
 
-    -   buffer overrun; reporting exploits
-    -   function pointers
-    -   defensive programming
+    - buffer overrun; reporting exploits
+    - function pointers
+    - defensive programming
 
-    -   languages safer than C
-    -   ask me anything
+    - languages safer than C
+    - ask me anything
     
-    -   review
+    - review
 
 
 labs: 
