@@ -1,5 +1,12 @@
 import re, markdown, dateutil, json
 from datetime import timedelta, datetime
+from sys import stderr
+
+TEXTBOOKS = {
+    'MCS': 'files/mcs.pdf',
+    u'\u2200x': 'files/forallx.pdf'
+}
+ANCHORS = ["chapter.","section.","subsection."]
 
 def yamlfile(f):
     from yaml import load
@@ -30,10 +37,18 @@ def dow(n):
     raise Exception("Unknown weekday: "+str(n))
 
 
-def raw2cal(data, links=None):
+def raw2cal(data, links):
     """Given the data from a cal.yaml, return a list of weeks,
     where each week is a list of seven days,
     where each day is either None or {"date":datetime.date, "events":[...]}
+    
+    An event is a title, kind, and some kind of day info:
+        - from, to
+        - day = all-day
+        - date = one copy per section
+    
+    Location and office hours removed for now
+    Section data not placed in ics
     """
     s = data['Special Dates']['Courses begin']
     beg = s
@@ -42,9 +57,9 @@ def raw2cal(data, links=None):
     while s.weekday() != 6: s -= timedelta(1)
     e = max(e, data['meta']['final']['start'].date())
     
-    for sec, ent in data['sections'].items():
-        ent['days'] = [dow(dows) for dows in ent['days']]
-        ent.setdefault('sidx', 0)
+    data['meta']['days'] = [dow(dows) for dows in data['meta']['days']]
+    
+    data['sidx'] = 0
     
     def onday(d):
         dt = datetime.fromordinal(d.toordinal())
@@ -59,12 +74,16 @@ def raw2cal(data, links=None):
                 "kind":"exam",
                 "from":final['start'],
                 "to":final['start'] + timedelta(0,60*final['duration']),
-                "where":final['room']
             })
         for k,v in data['Special Dates'].items():
             if (v['start'] > d or v['end'] < d) if type(v) is dict else d not in v if type(v) is list else v != d:
                 continue # does not apply
             if 'recess' in k or 'Reading' in k or 'break' in k:
+                ans.append({
+                    "title":k,
+                    "kind":"special",
+                    "day":d
+                })
                 return ans # no classes
             if 'exam' in k.lower() or 'test' in k.lower() or 'midterm' in k.lower():
                 isexam = True
@@ -75,96 +94,67 @@ def raw2cal(data, links=None):
                     "day":d
                 })
         if d >= beg and d <= end:
-            
-            # handle sections
-            for sec, ent in data['sections'].items():
-                if d.weekday() not in ent['days']: continue
-                if isexam and any((
-                    data['meta'].get('lecture exam') == (ent['type'] == 'lecture'),
-                    ent.get('exams')
-                )):
+            if d.weekday() in data['meta']['days']:
+                # handle main calendar
+                if isexam:
                     ans.append({
-                        'section':sec,
                         'title':'Exam',
                         "kind":'exam',
-                        "from":dt + timedelta(0,ent['start']),
-                        "to":dt + timedelta(0,ent['start'] + 60*ent['duration']),
-                        "where":ent['room']
+                        "date":dt,
                     })
-                elif ent['type']+'s' not in data or len(data[ent['type']+'s']) <= ent['sidx']:
+                elif len(data['lectures']) <= data['sidx']:
                     ans.append({
-                        'section':sec,
-                        'title':ent['type'],
-                        "kind":ent['type'],
-                        "from":dt + timedelta(0,ent['start']),
-                        "to":dt + timedelta(0,ent['start'] + 60*ent['duration']),
-                        "where":ent['room']
+                        'title':'Lecture',
+                        "kind":'lecture',
+                        "date":dt,
                     })
                 else:
                     ans.append({
-                        'section':sec,
-                        'title':data[ent['type']+'s'][ent['sidx']] or '',
-                        "kind":ent['type'],
-                        "from":dt + timedelta(0,ent['start']),
-                        "to":dt + timedelta(0,ent['start'] + 60*ent['duration']),
-                        "where":ent['room']
+                        'title':data['lectures'][data['sidx']] or '',
+                        "kind":'lecture',
+                        "date":dt,
                     })
                     for subtitle in (ans[-1]['title'] if type(ans[-1]['title']) is list else [ans[-1]['title']]):
                         if subtitle in data['reading']:
                             tmp = data['reading'][subtitle]
                             if type(tmp) is not list: tmp = [tmp]
+
+                            for (i, reading) in enumerate(tmp):
+                                if type(reading) == str:
+                                    for name, link in TEXTBOOKS.items():
+                                        if name in reading:
+                                            sect = re.search(r'\d+(?:\.\d+)*', reading)
+                                            if sect and '#' not in link:
+                                                sect = sect.group(0)
+                                                anchor = '#'+ANCHORS[sect.count('.')]+sect
+                                                link += anchor
+                                            tmp[i] = {'txt': reading, 'lnk': link}
+
                             if 'reading' in ans[-1]:
                                 ans[-1]['reading'].extend(tmp)
                             else:
                                 ans[-1]['reading'] = tmp[:]
-                    ent['sidx'] += 1
-                # handle separate links file
-                if links and d in links:
-                    print(links[d])
-                    for f in links[d].get('files',[]):
-                        n = os.path.basename(f)
-                        n = n[n.find('-')+1:]
-                        ans[-1].setdefault('reading',[]).append({'txt':n,'lnk':f})
-                    if 'video' in links[d]: ans[-1]['video'] = links[d]['video']
-                    if 'audio' in links[d]: ans[-1]['audio'] = links[d]['audio']
-
-            # handle office hours
-            if data.get('office hours',{}).get('.begin', d) <= d:
-                ## find
-                oh = {}
-                for kind,meta in data.get('office hours',{}).items():
-                    if kind[0] == '.': continue
-                    for staff,det in meta.items():
-                        if staff == 'where': continue
-                        for ent in det['when']:
-                            if ((('dow' in ent and d.weekday() == dow(ent['dow']))
-                                    or ('date' in ent and d == ent['date']))
-                                and d not in ent.get('except',[])
-                            ):
-                                where = ent.get('where', det.get('where', meta.get('where','location TBD')))
-                                key = staff # kind if kind == 'TA' else staff
-                                oh.setdefault(key+' OH ('+where+')',{
-                                    'where':where,
-                                    'when':[]
-                                })['when'].append((ent['start'],ent['end']))
-                ## combine
-                for k in oh:
-                    oh[k]['when'].sort()
-                    tmp = [oh[k]['when'][0]]
-                    for s,e in oh[k]['when'][1:]:
-                        if s <= tmp[-1][1]: tmp[-1] = (tmp[-1][0], e)
-                        else: tmp.append((s,e))
-                    oh[k]['when'] = tmp
-                ## add to events
-                for k in oh:
-                    for s,e in oh[k]['when']:
+                    data['sidx'] += 1
+                
+                # handle links files
+                for section, notes in links.items():
+                    if d in notes:
                         ans.append({
-                            'title':k[:k.find(' (')] if ' (' in k else k,
-                            'kind':'oh',
-                            'from':dt + timedelta(0,s),
-                            'to':dt + timedelta(0,e),
-                            'where':oh[k]['where'],
+                            'title':section,
+                            'kind':'notes',
+                            'date':dt,
                         })
+                        for f in notes[d].get('files',[]):
+                            if type(f) is dict:
+                                ans[-1].setdefault('reading',[]).append(f)
+                            else:
+                                n = os.path.basename(f)
+                                n = n[n.find('-')+1:]
+                                n = re.sub('^([0-9]*-)*', '', n)
+                                ans[-1].setdefault('reading',[]).append({'txt':n,'lnk':f})
+                        if 'video' in notes[d]: ans[-1]['video'] = notes[d]['video']
+                        if 'audio' in notes[d]: ans[-1]['audio'] = notes[d]['audio']
+
 
         # handle assignments
         for task,ent in data['assignments'].items():
@@ -267,13 +257,13 @@ def cal2fullcal(cal, keep=lambda x:True):
                             'title':event['title'],
                             'classNames':['cal-'+event['kind']],
                             'editable':False,
-                            'location':event['where'],
+                            # 'location':event['where'],
                         })
                         if 'link' in event: ans[-1]['url'] = event['link']
     ans.sort(key=lambda x:x['start'])
     return ans
 
-def cal2ical(cal, course, home, tz=None, sections=None, stamp=None):
+def cal2ical(cal, course, home, tz=None, sections=None):
     if tz is None: tz = 'America/New_York'
     now = datetime.utcnow().strftime('%Y%m%dT%H%M%S')
     
@@ -304,21 +294,25 @@ NAME:{0}'''.format(course)]
         for media in ('video', 'audio'):
             if media in event:
                 details.append('{}: <{}>'.format(media, event[media]))
-        if 'day' in event:
-            dts = ':{}'.format(event['day'].strftime('%Y%m%d'))
-            dte = ':{}'.format((event['day'] + timedelta(1)).strftime('%Y%m%d'))
-        elif 'from' in event and 'to' in event:
-            dts = ';TZID={}:{}'.format(tz, event['from'].strftime('%Y%m%dT%H%M%S'))
-            dte = ';TZID={}:{}'.format(tz, event['to'].strftime('%Y%m%dT%H%M%S'))
-        else:
-            raise Exception("Event without time: "+str(event))
         title = event.get('title','TBA')
         if type(title) is list: title = ' and '.join(title)
-        if 'section' in event: title = event['section']+' -- ' + title
-        elif 'group' in event and event['group'] not in title:
+        if 'group' in event and event['group'] not in title:
             title = event['group']+' '+title
+        if 'day' in event:
+            dts = [':{}'.format(event['day'].strftime('%Y%m%d'))]
+            dte = [':{}'.format((event['day'] + timedelta(1)).strftime('%Y%m%d'))]
+        elif 'from' in event and 'to' in event:
+            dts = [';TZID={}:{}'.format(tz, event['from'].strftime('%Y%m%dT%H%M%S'))]
+            dte = [';TZID={}:{}'.format(tz, event['to'].strftime('%Y%m%dT%H%M%S'))]
+        elif 'date' in event:
+            dts = [';TZID={}:{}'.format(tz, (event['date']+timedelta(0,sec['start'])).strftime('%Y%m%dT%H%M%S')) for sec in sections.values()]
+            dte = [';TZID={}:{}'.format(tz, (event['date']+timedelta(0,sec['start']+sec['duration']*60)).strftime('%Y%m%dT%H%M%S')) for sec in sections.values()]
+            title = [sec+' -- ' + title for sec in sections.keys()]
+        else:
+            raise Exception("Event without time: "+str(event))
+        if type(title) is not list: title = [title]
         fixlinks(details)
-        return '''BEGIN:VEVENT
+        return ''.join('''BEGIN:VEVENT
 SUMMARY:{title}
 DESCRIPTION:{notes}{location}
 DTSTART{dts}
@@ -326,11 +320,11 @@ DTEND{dte}
 DTSTAMP:{now}Z
 UID:{uid}@{course}.cs.virginia.edu
 END:VEVENT'''.format(
-            title=title, dts=dts, dte=dte, course=course, now=now,
+            title=title[i], dts=dts[i], dte=dte[i], course=course, now=now,
             notes=icescape('\n'.join(details)),
             location='' if 'where' not in event else '\nLOCATION:{}'.format(event['where']),
-            uid='{}-{}'.format(dts,title),
-        )
+            uid='{}-{}'.format(dts[i],title[i]),
+        ) for i in range(len(dts)))
     for week in cal:
         for day in week:
             if day:
@@ -409,7 +403,7 @@ def coursegrade_json(data):
 
 
 if __name__ == '__main__':
-    import os, os.path
+    import os, os.path, glob
     here = os.path.realpath(os.path.dirname(__file__))
     os.chdir(here)
     course = os.path.basename(here)
@@ -417,18 +411,15 @@ if __name__ == '__main__':
 
     import json, sys, yaml
     raw = yamlfile('cal.yaml')
-    links = yamlfile('links.yaml') if os.path.exists('links.yaml') else {}
+    links = {fn[:-11]:yamlfile(fn) for fn in glob.glob('*links.yaml')}
     cal = raw2cal(raw, links)
     with open('schedule.html', 'w') as fh:
         fh.write(cal2html(cal))
 
     with open('markdown/cal.ics', 'w') as fh:
-        fh.write(cal2ical(cal, course, raw['meta']['home'], tz=raw['meta']['timezone']))
+        fh.write(cal2ical(cal, course, raw['meta']['home'], tz=raw['meta']['timezone'], sections=raw['sections']))
 
     import pjson
-    with open('markdown/cal-oh.js', 'w') as fh:
-        fh.write('oh_feed = ')
-        fh.write(pjson.prettyjson(cal2fullcal(cal, keep=lambda x : x['kind'] == 'oh')))
 
     with open('assignments.json', 'w') as fh:
         print(pjson.prettyjson(cal2assigments(cal, raw)), file=fh)
