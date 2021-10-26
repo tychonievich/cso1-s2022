@@ -113,7 +113,7 @@ The `strlen` function is described in `man strlen` as
 
 Write an implementation of this function, naming it `mystrlen` instead of `strlen`.
 
-{.example ...}
+:::example
 The following code
 
 ````c
@@ -126,7 +126,7 @@ should display
     
     ts exfoliate
 
-{/}
+:::
 
 
 After you've written an implementation, compare with another student.
@@ -148,7 +148,7 @@ You will implement a simplified version
         - if there is none, return `NULL`
         - otherwise, replace it with `\0` and return a pointer to the character after it
 
-{.example ...}
+:::example
 The following code
 
 ````c
@@ -164,9 +164,9 @@ should display
     c
     n all aardvarks quaff
 
-{/}
+:::
 
-{.example ...}
+:::example
 The following code
 
 ````c
@@ -190,7 +190,7 @@ should display
     rks qu
     ff?
 
-{/}
+:::
 
 
 After you've written an implementation, compare with another student.

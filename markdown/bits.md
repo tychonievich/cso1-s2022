@@ -11,7 +11,7 @@ Roughly speaking, a "bit" is an amount of information that is about as surprisin
 In the sentence "please pass the salt" the word "salt" has less than a bit of entropy; most of the time someone says "please pass the" the next word they say is "salt," so adding that word provides very little more information.
 On the other hand, the word that comes after "is" in "Hello, my name is" has many bits of entropy; no matter what the word is, it was quite surprising.
 
-{.exercise ...}
+:::exercise
 Claude Shannon performed an experiment to determine the bits of entropy
 of the average letter in English.
 We have you perform a similar experiment as part of [Lab 2](lab02-information-theory.html).
@@ -37,7 +37,7 @@ which could probably be tested by measuring the bits per character of subtitles
 and combing it with the timing information the subtitles contain,
 but I am unaware of any published effort to do this or any related measurement.
 -->
-{/}
+:::
 
 # Digital Information
 
@@ -198,7 +198,7 @@ lg(64G) = lg(2^6^ 2^30^) = lg(2^36^) = 36.
 Again, these show up so often that you should be able to do them automatically.
 
 
-{.exercise ...}
+:::exercise
 Fill in the rest of the following table.
 
 Exponent | Written As
@@ -212,7 +212,7 @@ Exponent | Written As
 <input type="text" style="width:8ex"/> | 32
 
 Answers are in this footnote^[8, 256G, 2K, 28, 34, 5]
-{/}
+:::
 
 
 ## Negative numbers
@@ -507,7 +507,7 @@ One's Complement
     that is often taught in courses like this
     but that is not used by common hardware today.
 
-{.exercise ...}
+:::exercise
 Fill in the rest of the following table.
 Assume you are using 6-bit numbers.
 Answers are in footnotes.
@@ -522,7 +522,7 @@ Decimal | Two's-C | Biassed
 <input type="text" style="width:8ex"/>^[31] | 011111 | <input type="text" style="width:8ex"/>^[111110]
 <input type="text" style="width:8ex"/>^[16] | <input type="text" style="width:8ex"/>^[010000] | 101111
 <input type="text" style="width:8ex"/>^[−15] | <input type="text" style="width:8ex"/>^[110001] | 010000
-{/}
+:::
 
 ## On non-integral numbers
 
@@ -572,7 +572,7 @@ Not a Number
     The value `s 1111 ffff` is Not a Number, or NaN.
     There is meaning to the fraction bits, but we will not explore it in this course.
 
-{.exercise ...}
+:::exercise
 Complete the following table.  Assume 8-bit floating-point numbers with 3 fraction bits.
 Answers are given in footnotes.
 
@@ -588,7 +588,7 @@ Fraction | Binary | Binary Scientific | Bits
 <input type="text" style="width:8ex"/>^[240] | <input type="text" style="width:8ex"/>^[11110000] | <input type="text" style="width:8ex"/> × 2<sup><input type="text" style="width:4ex"/></sup>^[1.111 × 2<sup>7</sup>] | 0 1110 111
 <input type="text" style="width:8ex"/>^[0] | <input type="text" style="width:8ex"/>^[0] | <input type="text" style="width:8ex"/> × 2<sup><input type="text" style="width:4ex"/></sup>^[0.000 × 2<sup>−6</sup>] | 1 0000 000
 
-{/}
+:::
 
 ## Numbering everything else
 
@@ -660,15 +660,16 @@ Some, like x86, x86-64, addition, and Arabic numerals in the original Arabic, pu
 Others, like MIPS, PowerPC, comparison, and Arabic numerals in most European languages, put the low-order byte last and are called "big-endian".
 A few, like ARM and students in classes like this, understand both and can be configured to act in either a big-endian or little-endian mode.
 
-{.aside ...} In English (and most other languages today) we use base-10 and Arabic numerals; thus thirty-five is written 35.  The high-order digit is on the left, the low-order digit is on the right.  When you put Arabic numbers inside of English text it thus looks big-endian because English is read left-to-right.  However, when you put the *same* number inside of Arabic text it looks little-endian because Arabic is read right-to-left.
-{/}
+:::aside
+In English (and most other languages today) we use base-10 and Arabic numerals; thus thirty-five is written 35.  The high-order digit is on the left, the low-order digit is on the right.  When you put Arabic numbers inside of English text it thus looks big-endian because English is read left-to-right.  However, when you put the *same* number inside of Arabic text it looks little-endian because Arabic is read right-to-left.
+:::
 
 It is important to note that endianness applies only when breaking a primitive value into pieces and putting those pieces in some arbitrary order.
 Endianness does not apply inside the processor, where numbers are stored in whole without an arbitrary order.
 Endianness also does not apply to naturally-ordered values like the elements of a list,
 as these are placed in their natural order on both big- and little-endian computers.
 
-{.example ...}
+:::example
 Consider an array (a list stored contiguously in memory)
 containing two 16-bit numbers, \[0x1234, 0x5678\].
 If this array were placed in memory at address 0x108, we'd find the following in memory:
@@ -688,7 +689,7 @@ but that all of the following are unimpacted by endianness:
 - The elements of an array are in the same order in memory as they are in code.
 - The second element's address is 2 bytes past the first, at 0x10a.
 - It is bytes, not nibbles or bits, that are placed in memory, so we still see byte `0x34` (`0b00110100`) not nibble-reversed `0x43` (`0b01000011`) nor bit-reversed `0x2c` (`0b00101100`).
-{/}
+:::
 
 # Intentional redundancy
 
@@ -709,7 +710,7 @@ as the redundant data itself is encoded in bits and if those bits are changed to
 A single extra bit can be enough to detect that a bit got flipped due to noise.
 To be able to automatically correct that flipped bit in an *n*-bit signal requires at least log~2~(*n*) extra bits, as anything less than that has insufficient information content to identify which bit needs correction.
 
-{.exercise ...}
+:::exercise
 Measure the detection and correction ability of redundancy in a human language of your choice.
 
 1. Find a large corpus of example text (the larger the better)
@@ -718,7 +719,7 @@ Measure the detection and correction ability of redundancy in a human language o
     2. randomly either (a) leave it alone or (b) change one word in the central half of what you show
     2. prompt the user to either identify the text as unchanged or changed, and if changed to identify what word was changed and what it was supposed to be
     3. track the number of correct and incorrect identifications and corrections
-{/}
+:::
 
 While correction may seem desirable, often the easier detection criteria is sufficient
 because in many cases the recipient of detected-bad data can simply request the sender to send it again, repeating as needed until a good copy is obtained.
@@ -734,7 +735,7 @@ Parity
 :   The "parity" of a set of bits is `0` if an even number of the bits are `1`s and `1` if an odd number of the bits are `1`.
     Adding a parity bit (sometimes called a "check bit") to a number is a simple way to make single-bit errors detectable.
 
-{.exercise ...}
+:::exercise
 The following table shows 1-byte values and their check bit.
 Identify which ones have a parity error.
 
@@ -749,7 +750,7 @@ Byte | Check | Has parity error
 11111111 | 1 | <input type="checkbox">
 
 Answers are in this footnote^[error, correct, correct, error, error]
-{/}  
+:::  
 
 Multiple parity
 :   If you store the parity of multiple groups of bits, you can use the intersections of the groups that have errors to determine which bit had the wrong value and correct it.

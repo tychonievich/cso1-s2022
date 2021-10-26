@@ -62,7 +62,7 @@ The von Neumann architecture consists of the following parts:
 - Ability to communicate with external devices, such as disks, keyboards, screens, etc.
 
 
-{.exercise ...}
+:::exercise
 Write the basic von Neumann architecture simulator in the programming language of your choice.
 You should include:
 
@@ -98,7 +98,7 @@ ir = 0; r0=0, r1=0, r2=0, r3=0
 ````
 
 We'll come back to this basic simulator and flesh it out in subsequent sections.
-{/}
+:::
 
 
 # Instruction-set architecture
@@ -195,7 +195,7 @@ For example, we can specify one of 4 registers using 2 bits;
 one of 8 operations using 3 bits; etc.
 Thus, a simple way to create an instruction encoding is to figure out all the information any action will need, figure out how many bits we need to encode that, and then reserve a set of bits in the instruction for that information.
 
-{.example ...}
+:::example
 Suppose we want the following operations:
 
 1. Move a literal value into a register
@@ -267,9 +267,9 @@ Finally we have to decide where in memory we are putting this so we know what va
 Now we assume all `_` are 0, prepend a 1 bit to each instruction, and turn that into hex so we can put it into a simulator and get the following contents of memory:
 
     0x80,0x03, 0x84,0x32, 0xE0, 0x88,0x00, 0xC8, 0xF9, 0x98,0x04
-{/}
+:::
 
-{.exercise ...}
+:::exercise
 Create an encoding for the following code that computes `r1 = r2 / r3` by implementing the following:
 
     r1 = 0
@@ -296,9 +296,9 @@ and reduce that to the few operations we have available to us
 
 Encode the above sequence of instructions into bytes.
 Remember to use the [two's complement encoding](bits.html#negative-numbers) of −1.
-{/}
+:::
 
-{.exercise ...}
+:::exercise
 Modify your simulator from the last exercise to implement the example instruction set encoding listed above.
 In particular,
 
@@ -311,7 +311,7 @@ In particular,
 Verify that your simulator runs the two example programs above.
 The code from the example should put 81 (0x51) into `r0`;
 the code from the exercise should put `r2 / r3` into `r1`.
-{/}
+:::
 
 ### Fixed- or variable-length
 
@@ -324,7 +324,7 @@ variable-length instructions make more efficient use of memory, also theoretical
 Intel and AMD are known for variable-length instruction sets,
 while IBM and Motorola have more fixed-length instruction sets.
 
-{.exercise ...}
+:::exercise
 Modify your simulator so it increases the `pc` by 2 only if the instruction needs 2 bytes (i.e., `000` and `001`); otherwise only increase the `pc` by 1.
 
 This should let us shorten our example program
@@ -337,7 +337,7 @@ to just
 
 removing 3 of the original 12 bytes (a 25% space saving).
 How much space does this save in the division program?
-{/}
+:::
 
 
 ## Addressing modes
@@ -452,7 +452,7 @@ The concept of a stack, as implemented by the x86 ISA, is easier to explain in c
       2. stack_pointer += 1
       3. return result
 
-{.example ...}
+:::example
 Consider the following code:
 
     push(3)
@@ -465,9 +465,9 @@ Consider the following code:
 
 At the end of the code `x` contains the value `5`
 and the stack still contains one value (the `3`).
-{/}
+:::
 
-{.exercise ...}
+:::exercise
 Consider the following code:
 
     push(3)
@@ -478,7 +478,7 @@ Consider the following code:
     z = pop()
 
 What are in `x`, `y`, and `z` at the end of the code?^[Answer: x = 4, y = 5, z = 3]
-{/}
+:::
 
 In x86-64, the `stack_pointer` in the above pseudocode is a program register, `rsp`.
 The ISA instruction `pop rax` does the equivalent of `rax = pop()` in the above pseudocode: that is, it reads a value from memory, stores that value in `rax`, and also increases the value in `rsp`.
@@ -490,7 +490,7 @@ For various reasons, some historical and some performance-based,
 some instructions assume particular registers are part of their operation.
 This is particularly common in x86 and x86-64.
 
-{.example ...}
+:::example
 Intel's ISA manual, volume 2, defines the 64-bit version of the `div` instruction
 as dividing `rdx:rax` by the source operand and storing the quotient in `rax`, the remainder in `rdx`.
 In other words, this is a 128-bit integer divided by a 64-bit integer
@@ -504,7 +504,7 @@ This results in assembly code for `answer = numerator / denominator` looking som
 - zero out `rdx`
 - `idiv` denominator
 - move `rax` into answer
-{/}
+:::
 
 It is also fairly common to have the computer processor logically or physically divided into distinct subprocessors, each with a specialized set of instructions and registers.
 x86, for example, uses separate registers for floating-point maths than for integer maths, and has more registers for various vector operations and so on.
@@ -604,7 +604,8 @@ While each instruction has its own dependency graph of steps, they can all be fi
 5. Access memory
 6. Update values in the register file
 
-{.aside ...} Naming the steps.
+:::aside
+Naming the steps.
 
 Every computer architecture text I have seen names the steps in the above sequence,
 but the exact set of steps and names, as well as the set of work included in each step,
@@ -615,7 +616,7 @@ Some texts also name steps "Memory", "Writeback", and/or "PC Update".
 
 Official ISA documentation also tends to use these names in some form,
 though often with additional steps as well.
-{/}
+:::
 
 This decomposition of work into steps is not merely academic;
 processor throughput of instructions can be dramatically increased by **pipelining** these steps.

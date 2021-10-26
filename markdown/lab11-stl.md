@@ -15,7 +15,8 @@ C++ adds syntax to allow these to look different the "reference" argument type.
 If you write a function where an argument name is followed by an ampersand (e.g., `int &x`{.cpp})
 then C++ will compile it to be a pointer, but have your syntax look like it is a variable.
 
-{.example ...} The following two pieces of code are equivalent in how they run
+:::example
+The following two pieces of code are equivalent in how they run
 
 +---------------------------------------+---------------------------------------+
 | C code                                | C++ code                              |
@@ -30,7 +31,7 @@ then C++ will compile it to be a pointer, but have your syntax look like it is a
 +---------------------------------------+---------------------------------------+
 
 Both pieces of code turn into equivalent *assembly*, but the C++ version uses *type-checking* to ensure that `x` is never treated as if it were an array instead of a single reference.
-{/}
+:::
 
 ## Templates
 
@@ -81,7 +82,7 @@ In essence, this lets you add, to any class you want to work with, functions tha
 Once you have this, though, it becomes tempting to use in other ways.
 One of the most famous is the `ostream` type, C's wrapper over file writing, which overloads the left-shift operator to mean "write".
 
-{.example ...}
+:::example
 The following C++ code writes "Hello, world!" and then an end-of-line.
 There are no integers being shifted; `<<` means "left-shift" for integers, but it means "here's some output" with ostreams like `cout`
 
@@ -116,7 +117,7 @@ int main() {
 
 `cout`, by the way, is C++'s `ostream` wrapper around file descriptor `1`,
 just as `stdout` is C's `FILE *` wrapper around the same.
-{/}
+:::
 
 Not all `ostream`s will flush output as promptly as others. For debugging, you should definitely use `cerr` instead of `cout` as it is better about showing everything when you ask it to be shown instead of delaying until later.
 
@@ -148,7 +149,7 @@ Hence `"Hi" == "Hi"`{.c} compares pointers, but `string("Hi") == string("Hi")`{.
 
 # Your Task
 
-{.exercise ...}
+:::exercise
 Implement a postfix calculator, like you did in [PA09](pa09-postfix.html) but this time use C++.
 
 - You must use `cin` to read input, `>>` to parse numbers, `string` and `==` to find operators, and `stack<double>`{.cpp} as your stack.
@@ -161,7 +162,7 @@ We strongly recommend, but do not requite, using a two-step read: read a word fr
 then feed the `string` into a `stringstream` and use the stringstream to parse a number. However, there are other solutions and you do not have to do this if you do not want to.
 
 We strongly recommend, but do not require, adding `using namespace std;` after your `#include`s so that you can refer to included types by name without prefixing `std::` before each.
-{/}
+:::
 
 
 The input processing cal look like a loop which, as long as `cin` is `.good()` (i.e., not closed and with no read errors)

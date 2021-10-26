@@ -50,8 +50,9 @@ Not
 
 [^not]: Technically, the small circle is the "not" part; the triangle is sort of like a filler for when there is no other gate to which the circle may be adjoined. 
 
-{.aside ...} The code symbol for "bitwise not" is `~`, the "tilde", which looks a lot like the "similar to" symbol ∼, the "most positive" symbol ∾, and the "alternating current" symbol ∿; fortunately, which one is meant can usually be inferred from context. The code symbol also has inconsistent representation across typefaces, sometimes being almost indistinguishable from a dash `−` or rendered as a small diacritic mark `˜`.
-{/}
+:::aside
+The code symbol for "bitwise not" is `~`, the "tilde", which looks a lot like the "similar to" symbol ∼, the "most positive" symbol ∾, and the "alternating current" symbol ∿; fortunately, which one is meant can usually be inferred from context. The code symbol also has inconsistent representation across typefaces, sometimes being almost indistinguishable from a dash `−` or rendered as a small diacritic mark `˜`.
+:::
 
 There are two commonly identified operations that take as input two bits.
 
@@ -158,8 +159,9 @@ Exclusive Or
 
      Exclusive or is also the operation that computes parity, as discussed [above](#parity-checksums-error-correction-codes-and-digests).
 
-{.aside ...} The code symbol for "exclusive or" is `^`, the "carat" or "circumflex", which looks a lot like the logical symbol for "and": ∧, the "wedge"; unfortunately, context does not help much in knowing which was meant. The code symbol also has inconsistent representation across typefaces, varying in size and position; some represent it almost like a capital lambda `Λ`, while others render it as a small diacritic mark `ˆ`.
-{/}
+:::aside
+The code symbol for "exclusive or" is `^`, the "carat" or "circumflex", which looks a lot like the logical symbol for "and": ∧, the "wedge"; unfortunately, context does not help much in knowing which was meant. The code symbol also has inconsistent representation across typefaces, varying in size and position; some represent it almost like a capital lambda `Λ`, while others render it as a small diacritic mark `ˆ`.
+:::
 
 Implies
 
@@ -215,7 +217,8 @@ We can use the basic building blocks of logical gates to implement much more com
 How that is done is more properly the domain of computer architecture,
 but one example can help reveal that complicated logic can be implemented.
 
-{.example ...} Suppose we have two binary numbers we wish to add, using only basic logical operations.
+:::example
+Suppose we have two binary numbers we wish to add, using only basic logical operations.
 Each number is represented by a sequence of bits;
 *x*~0~ is the 1s place of number *x*,
 *x*~1~ is the 2s place,
@@ -281,7 +284,7 @@ Everything we did for *z*~1~ and *c*~2~ also apply for all later *z*s and *c*s:
 Thus, we can wire together a bunch of "and", "or", and "xor" gates to create an "adder."
 
 ![](img/adder.svg)
-{/}
+:::
 
 In general, any deterministic function with a fixed number of fixed-length binary inputs and a fixed number of fixed-length binary outputs can be implemented using some combination of Boolean logic gates.
 
@@ -424,7 +427,7 @@ Given a set represented as flags-variable `x`,
 While rarely of intrinsic importance in programming,
 they show up often enough in practice that they sometimes make it into technical interviews and the like.
 
-{.example ...}
+:::example
 Suppose you want to retrieve *k* bits from *x*, starting at bit *i*.
 You'd first shift *x* to the right so the last *i* bits are not there:
 
@@ -433,9 +436,9 @@ You'd first shift *x* to the right so the last *i* bits are not there:
 and then mask out the last *k* bits
 
     x &= (1<<k)-1
-{/}
+:::
 
-{.example ...}
+:::example
 Suppose you wanted to compute the parity of a 32-bit vector *x*,
 as described in the section [Parity, checksums, error-correction codes, and digests](bits.html#parity-checksums-error-correction-codes-and-digests).
 You could brute-force it:
@@ -469,9 +472,9 @@ That's just 5 xors, 1 and, and 5 shifts.
 A lot of bit-fiddling is about finding these kinds of shortcuts and tricks.
 Software engineers often find these shortcuts distasteful and confusing,
 but in some rare circumstanced bit fiddling can provide significant memory or speed benefits.
-{/}
+:::
 
-{.exercise ...}
+:::exercise
 Consider the following bit-fiddling code:
 
     x ^= y
@@ -483,4 +486,4 @@ Consider the following bit-fiddling code:
 2. Work out by hand the contents of each variable in terms of the original values of `x` and `y`;
     for example, after running the first line `x` contains $x_0 ⊕ y_0$.
     Using the identities $a ⊕ a = 0$ and $0 ⊕ x = x$, prove that your description from part 1 is true.
-{/}
+:::

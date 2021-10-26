@@ -47,7 +47,7 @@ Each file also has two global values you can access: `R`, an array of 4 register
 
 We also provide a helper function for getting a range of bits from a number.
 
-{.exercise ...}
+:::exercise
 Add code to `execute` (do not edit other parts of the file) to do the following:
 
 Separate the instruction into parts
@@ -130,7 +130,7 @@ Execute the instruction
 Test your simulator
 :   See [Example programs](#example-programs) below for suggestions.
 
-{/}
+:::
 
 ## Language nuances
 

@@ -262,7 +262,8 @@ they can only have one source^[This is an over-simplification, but a reasonable 
 in code, this means each variable can appear on the left side of a `=` only once.
 The wires can fork and be used in several places, but only set in one place.
 
-{.example ...} The following is valid:
+:::example
+The following is valid:
 
     x = 3;
     y = x ^ (1 + x);
@@ -274,7 +275,7 @@ but the following is not legal, as it defines `x` twice:
     y = x ^ (1 + x);
     x = 1 - y;
 
-{/}
+:::
 
 ## Operators
 
@@ -305,7 +306,8 @@ and with very few exceptions all computations compute register inputs from regis
 Like variables, register inputs can only be specified once;
 register inputs can be used multiple times.
 
-{.example ...} Syntax for interacting with registers varies by language;
+:::example
+Syntax for interacting with registers varies by language;
 for this example, assume `R` is a register with input `R_in` and output `R_out`.
 
 The following implements a simple counter:
@@ -313,7 +315,7 @@ The following implements a simple counter:
     R_in = R_out + 1;
 
 Note that `R_out = ...` is not permitted, as `R_out` is set by the register itself.
-{/}
+:::
 
 
 It is common to have a special "register bank", a set of registers 
@@ -321,7 +323,8 @@ that can be accessed like a fixed-sized list or array.
 The full implementation of these is slightly more nuanced than is worth our attention here,
 but a simplified version is described in the following example.
 
-{.example ...} Suppose we want to implement a simplified bank of 4 registers.
+:::example
+Suppose we want to implement a simplified bank of 4 registers.
 
 The code `R[i] = x` can be implemented as
 
@@ -340,7 +343,7 @@ The code `x = R[i]` can be implemented as
 A fully functional register bank would have somewhat more complicated logic
 so that, for example, two different indices could be assigned to without violating the [single-source](#variables-and-assignment) rule;
 but the general principle applies.
-{/}
+:::
 
 Memory tends to be a lot slower than registers,
 and is implemented with somewhat different logic to handle its very large size,

@@ -554,7 +554,7 @@ This is obeyed blindly by both the caller and the callee;
 so if the caller thought the callee had different argument types than it did,
 neither will notice they have a problem; they'll just silently do the wrong thing.
 
-{.example ...}
+:::example
 Consider the following pair of files:
 
 <figure><caption>baz.c</caption>
@@ -586,7 +586,7 @@ When executed,
 
 This is almost certainly not what was wanted,
 but no part of it violates the rules.
-{/}
+:::
 
 <!--
 Technically, mis-matched declarations and definitions are undefined behavior,
@@ -737,7 +737,7 @@ but also processes various *macros* and *directives*.
     and the second one, seeing `__MY_FILE_HAS_BEEN_INCLUDED__` is already defined,
     will have all its contents removed by the `#ifndef`.
     
-    {.example ...}
+    <div class="example">
     If we have something like
     
     +---------------------+-----------------+
@@ -796,7 +796,7 @@ but also processes various *macros* and *directives*.
     int y;
     int x;
     ````
-    {/}
+    </div>
     
     
 `__FILE__` and `__LINE__`

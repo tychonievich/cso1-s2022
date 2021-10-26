@@ -120,7 +120,7 @@ many functions will instead *return* an error-checking integer (see [Reporting e
 and use a pointer-type argument to provide the "returned" value.
 Some will mix and match, both returning and using a pointer parameter to provide information.
 
-{.example ...}
+:::example
 Consider the function `char *strsep(char **stringp, const char *delim)`{.c}.
 It returns a `char *`, which is a single token of a string after it is split on `delim`.
 But the input string, instead of being a normal `char *` is a `char **`.
@@ -134,7 +134,7 @@ Inside this function, there is something like the following:
 
 Because this modifies not the local variable `stringp` but rather the pointer it points to,
 the calling function can see that pointed-to pointer change.
-{/}
+:::
 
 ## Reporting errors
 
@@ -151,7 +151,7 @@ If you want to know that something went wrong with these functions, you have to
 A few functions instead directly return either `0` or an error number declared in `<errno.h>` directly.
 A few others set `errno` with no special return value, requiring `errno` to be checked manually.
 
-{.example ...}
+:::example
 The `strtol` function
 converts a `char *` to the integer its (as a string) contains.
 It returns the result of the conversion, *unless* the value would underflow or overflow.
@@ -178,7 +178,7 @@ if (error != 0) {
     // ...
 }
 ````
-{/}
+:::
 
 ## Avoiding `malloc`
 
@@ -187,7 +187,7 @@ unless allocating memory is central to their primary purpose (as e.g. for `mallo
 Instead, functions that would need to return a variable-length array of data (such as a string)
 will generally require that a pointer to memory to write it to is passed in as an argument.
 
-{.example ...}
+:::example
 The `read` function reads bytes from a file or file-like object.
 Thus it requires three parameters:
 
@@ -198,5 +198,5 @@ Thus it requires three parameters:
 It communicates how much of the buffer it filled as a return value.
 
 Putting these pieces together, we get `read`'s signature: `ssize_t read(int fildes, void *buf, size_t nbyte);`{.c}.
-{/}
+:::
 

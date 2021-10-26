@@ -124,7 +124,8 @@ Offset          `b`                         `d`
 
 The compiler then translates `d->size()`{.cpp} into the equivalent of what in C we might write as `d->vtable->size(d)`{.c}
 
-{.aside ...} I'm not sure the above is the best explanation.
+:::aside
+I'm not sure the above is the best explanation.
 I wrote a different one too, a portion of which I've included here in case you prefer it.
 
 In C' we'd write the virtual functions and vtables as something like
@@ -194,6 +195,6 @@ double invoke_size(base *b) {
 ````
 
 The above basically works, but I found trying to write why (and handle the ugliness of function pointer syntax) painful,
-so I re-wrote it with the main test of this page.
-{/}
+so I re-wrote it with the main text of this page.
+:::
 

@@ -6,12 +6,13 @@ We were assured the systems would work so that `ssh` to `portal` would solve all
 
 You are encouraged to do this lab on your own at home, then just quickly check it off with a TA. Once you finish, there is no need to remain in lab.
 
-{.exercise ...} To complete this lab, do both of the following:
+:::exercise
+To complete this lab, do both of the following:
 
 1. Show a TA you can [use `ssh` and `module load`](#how-to-on-portal) to follow the instructions in the section [Show at least this](#show-at-least-this) below on `portal.cs.virginia.edu`.
 1. Show a TA you can use a [virtual box](#how-to-with-a-virtual-machine) or [other system](#how-to-on-your-own) on your own computer to follow the instructions in the section [Show at least this](#show-at-least-this) below on your own computer.
 
-{/}
+:::
 
 # Show at least this
 

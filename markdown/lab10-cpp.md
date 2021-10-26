@@ -48,7 +48,8 @@ to be compiled; the compiler picks which version of `abs_val` to invoked in each
 
 This renaming of functions to arrive at labels is called **name mangling**.
 
-{.exercise ...}Experiment with the compiler until you are ready to answer the following questions
+:::exercise
+Experiment with the compiler until you are ready to answer the following questions
 
 1. What is the label used by `void f()`{.cpp}?
 
@@ -73,7 +74,7 @@ This renaming of functions to arrive at labels is called **name mangling**.
     `void f(float a, int b, double c)`{.cpp}
 
 1. If the TA writes an arbitrary signature using `int`, `float`, and `double` in arguments and return types, could you write its label?
-{/} 
+::: 
 
 # Namespaces
 
@@ -88,7 +89,8 @@ These are included in the name mangling to further decrease the chance of name c
 
 Name mangling for namespaces uses a length-before-name technique, so that namespace `welcome` would become `7welcome` in the mangled name. This is important to be able to have numbers in the namespace hierarchy: `7welcome2it` represents the two nested namespaces `welcome::it` while `10welcome2it` is the single namespace `welcome2it`
 
-{.exercise ...}Experiment with the compiler until you are ready to answer the following questions
+:::exercise
+Experiment with the compiler until you are ready to answer the following questions
 
 1. What are the mangled names of both `baz`s and `xyxxy` in the following code?
     
@@ -115,7 +117,7 @@ Name mangling for namespaces uses a length-before-name technique, so that namesp
 
     int f(int g) { return d(b(g)); }
     ````
-{/}
+:::
 
 # Operator overloading
 
@@ -123,7 +125,8 @@ C++ allows you to redefine what almost every operator does.
 You can define functions whose name is `operator+`, `operator<<=`, etc,
 and they will be used in place of built-in behavior for `+`, `<<=`, etc, when those operators are applied to the appropriate types.
 
-{.exercise ...} Consider the following code:
+:::exercise
+Consider the following code:
 
 ```cpp
 #include <stdio.h>
@@ -145,7 +148,7 @@ int main() {
 
 1. What does it print when run?
 1. What assembly instruction does the `a + b` compile to?
-{/}
+:::
 
 # Other odds and ends
 
@@ -186,11 +189,11 @@ These two compile to virtually the assembly except that the compiler takes care 
 Recent versions of C++ have added many other similar tricks for efficient coding with more compile-time checking,
 such as more careful casts, self-deallocating pointers, etc.
 
-{.exercise ...}
+:::exercise
 Write a pass-by-reference wrapper around `realloc` named `realloc2`
 such that you can replace `x = realloc(x, 20)` with just `realloc2(x, 20)` without errors.
 You'll show the TA your source code.
-{/}
+:::
 
 # Classes
 
@@ -218,7 +221,8 @@ C++ also extends `struct` and `class` to allow them to declare member functions 
 |````                   |                               |
 +-----------------------+-------------------------------+
 
-{.exercise ...} Compile the above code and inspect the resulting assembly to answer the following:
+:::exercise
+Compile the above code and inspect the resulting assembly to answer the following:
 
 1. How many arguments does `inOrder` use?
     Recall the arguments are passed (in order) in `%rdi`, `%rsi`, `%rdx`, `%rcx`, `%r8`, %`r9`, and the stack.
@@ -226,7 +230,7 @@ C++ also extends `struct` and `class` to allow them to declare member functions 
     accesses before they are set inside that code.
 
 1. From the code that uses each argument, what is the type of each (address, int, etc)?
-{/}
+:::
 
 
 
@@ -259,9 +263,9 @@ public:
 };
 ```
 
-{.exercise ...}
+:::exercise
 Given the above code, what assembly operation(s) is/are invoked if we invoke `gleam2 *bazzle = new gleam2(1, 2)`{.cpp}?
-{/}
+:::
 
 ## Inheritance and overloading
 

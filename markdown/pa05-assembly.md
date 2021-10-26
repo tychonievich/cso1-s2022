@@ -18,7 +18,7 @@ Write your code where the comments say "TO DO: write this function".
 
 You can edit your assembly however you wish, but we *strongly* recommend [a CLI editor](lab00-ssh-ed.html#cli-editor).
 
-{.aside ...}
+:::aside
 Why a CLI editor?
 
 It is common to interact with servers that do not have their own monitors.
@@ -26,7 +26,7 @@ In these cases, you typically attach to the server via `ssh`
 and have access only to a terminal, not a full windowing environment.
 The more comfortable you are with doing common programming tasks in the terminal,
 the better these experiences will be.
-{/}
+:::
 
 ## Testing your code
 
@@ -84,7 +84,7 @@ should compute and return the product of the two integer arguments.
 It **must not use** multiplication or division instructions.
 It must compute this **iteratively**, not recursively.
 
-{.example ...}
+:::example
 There are other correct solutions,
 but a simple one might follow an approach like the following pseudo-code:
 
@@ -98,7 +98,7 @@ but a simple one might follow an approach like the following pseudo-code:
     end function
 
 There also exists a much more efficient solution that uses bit shifts.
-{/}
+:::
 
 You may assume that both of the parameters are positive integers
 (i.e., neither negative or zero)
@@ -112,7 +112,7 @@ It **must use** the `product` routine you wrote to do this,
 not x86-64 multiplication instructions or other routines you did not write.
 It must compute this **recursively**, not iteratively.
 
-{.example ...}
+:::example
 There are other correct solutions,
 but a simple one might follow an approach like the following pseudo-code:
 
@@ -123,7 +123,7 @@ but a simple one might follow an approach like the following pseudo-code:
             return product(x, power(x, y-1))
         end if
     end function
-{/}
+:::
 
 You may assume that both of the parameters are positive integers
 (i.e., neither negative or zero)

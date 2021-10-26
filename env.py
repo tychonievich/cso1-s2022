@@ -41,5 +41,22 @@ def process(fname):
                 print('\n'+o.group(1)+'\\safecloseclass{'+o.group(2)+'}</div>\n')
             newp = line.isspace()
 
+
+def justimport(fname):
+    with open(fname) as f:
+        tags = []
+        newp = True
+        for line in f:
+            i = tag_import.search(line)
+            if newp and i is not None:
+                if i.group(1).endswith('.html'):
+                    print('\n```{=html}')
+                    with open(i.group(1)) as f2:
+                        print(f2.read().strip())
+                    print('```\n')
+                else:
+                    process(i.group(1))
+            newp = line.isspace()
+
 for arg in sys.argv[1:]:
-    process(arg)
+    justimport(arg)

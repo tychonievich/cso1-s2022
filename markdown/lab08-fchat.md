@@ -34,7 +34,8 @@ Linux provides access to several "environment variables".
 One of them (`USER`) has, as its value, your current login ID.
 You can retrieve this using the `getenv` function in `stdlib.h`:
 
-{.example ...} The following will print your ID to the terminal,
+:::example
+The following will print your ID to the terminal,
 duplicating the behavior of the built-in `whoami` command.
 
 ````c
@@ -44,7 +45,7 @@ int main() {
     return 0;
 }
 ````
-{/}
+:::
 
 ## Building a string
 
@@ -56,7 +57,8 @@ Both of them require a pre-allocated destination buffer.
 
 The `strcat` function from `string.h` is similar to `+=` for strings in Java or Python.
 
-{.example ...} After running the following
+:::example
+After running the following
 
 ````c
 buffer[0] = '\0';
@@ -66,14 +68,15 @@ strcat(buffer, ".chat");
 ````
 
 the array `buffer` contains `"/bigtemp/coa1/mst3k.chat"`
-{/}
+:::
 
 ### `sprintf`
 
 The `snprintf` function from `stdio.h` does a formatted string construction, like the string's `.format` method in Java or Python.
 It uses the same formatting specifiers as `printf`, with both the power and complexity that that entails.
 
-{.example ...} After running the following
+:::example
+After running the following
 
 ````c
 snprintf(buffer, 4096, "/bigtemp/%s/%s.chat",
@@ -84,7 +87,7 @@ snprintf(buffer, 4096, "/bigtemp/%s/%s.chat",
 
 the array `buffer` contains `"/bigtemp/coa1/mst3k.chat"`.
 It will not overrun `4096` characters, even if it were given very large strings to format.
-{/}
+:::
 
 ## Working with files
 

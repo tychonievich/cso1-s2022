@@ -187,7 +187,7 @@ Download [Dennis-Ritchie.bmp](files/Dennis-Ritchie.bmp) and do the following:
         - set the low-order bit of the byte to 0 if the corresponding bit of "win" is 0
         - set the low-order bit of the byte to 1 if the corresponding bit of "win" is 1
         
-        {.example ...}
+        <div class="example"
         Suppose we want to encode "x" in the low-order bits of data consisting of bytes `01 23 54 76 89 a4 cd 5f`.
         Since "x" is ASCII 78~16~, or 01111000~2~, we encode this by setting the lower-order bits as follows:
         
@@ -202,7 +202,7 @@ Download [Dennis-Ritchie.bmp](files/Dennis-Ritchie.bmp) and do the following:
         `5f`		set bit to 0	`5e` (changed bit)
         -----------	--------------	-----------------
 
-        {/}
+       </div>
         
     4. Save the resulting image as `hide.bmp` and verify that it does not look odd when viewed as an image
 

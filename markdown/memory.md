@@ -61,7 +61,8 @@ Stack memory is automatically "allocated" when a function is invoked and "de-all
 although this does not actually entail much work beyond changing the contents of `%rsp`.
 Because of this, you should **never return the address of a local variable**.
 
-{.example ...} Consider the following program:
+:::example
+Consider the following program:
 
 ````c
 int *makeArray() {
@@ -100,7 +101,7 @@ Address     makeArray's use             setTo's use
 
 Note that this bug may become invisible if we compile with optimizations and `i` is stored only in a register;
 we still did the wrong thing in `makeArray`, so this is still a bug, but we might not see it in this program.
-{/}
+:::
 
 # Using global variables in C
 
@@ -111,7 +112,8 @@ provided you know in advance how much memory you'll need.
 
 A common pattern in using global arrays is to (a) `#define` a maximum size and (b) use a variable to track how much has actually been used.
 
-{.example ...} The following is a simplified partial example of how one might collect a set of courses a student is interested in:
+:::example
+The following is a simplified partial example of how one might collect a set of courses a student is interested in:
 
 ````c
 /* A function we'd need to define elsewhere that reads up to max chars *
@@ -143,7 +145,7 @@ int main(int argc, const char *argv[]) {
 ````
 
 Correct implementation of functions like `get_input` will be a subject for a future part of this course.
-{/}
+:::
 
 Because global arrays are simple to program and efficient in practice,
 they are common in C code.
@@ -172,13 +174,13 @@ The heap is a region of memory where
 - new chunks can be added as the program runs
 - each chunk remains until it is explicitly deallocated or the program terminates
 
-{.aside ...}
+:::aside
 "Heap" is used in two main ways in programing.
 When discussing memory, "the heap" is an unorganized region of memory made out of many heterogeneous chunks of memory with different purposes.
 When discussing data structures, "a heap" is a partially-organized tree structure where "small" things make their way to the top without requiring complete ordering of the whole.
 There is no relationship between these: *the* heap is not *a* heap, and *a* heap need not be stored in *the* heap.
 This course will only use it in the former way: a region of memory, not a data structure.
-{/}
+:::
 
 ## Managing memory
 
@@ -204,7 +206,8 @@ It does this by
 
 The internal bookkeeping data structure allows subsequent calls to `malloc` to be guaranteed not to return the same (or an overlapping) region a second time.
 
-{.example ...} It is typical to `malloc` a `struct` with `sizeof` and a pointer type cast, like
+:::example
+It is typical to `malloc` a `struct` with `sizeof` and a pointer type cast, like
 
 ````c
 typedef struct student_s {
@@ -219,9 +222,10 @@ student *enroll(const char *name, int transfer_credits) {
     return ans;
 }
 ````
-{/}
+:::
 
-{.example ...} It is typical to `malloc` an array with `sizeof` and a multiplier, like
+:::example
+It is typical to `malloc` an array with `sizeof` and a multiplier, like
 
 ````c
 typedef struct length_array_s {
@@ -238,7 +242,7 @@ larray *make_array() {
     return ans;
 }
 ````
-{/}
+:::
 
 
 With very rare exceptions, we malloc to store one or more values of a given size inside the malloced memory; if you find yourself `malloc`ing *without* a `sizeof` inside, you almost certainly did something wrong.
@@ -258,7 +262,7 @@ Two additional convenience functions can also be useful.
 `x = calloc(n, s);` is the same as `x = malloc(n * s);` except that it (a) may be optimize for storing an array of `n` distinct `s`-byte values and (b) sets all bytes of allocated memory to `0`.
 Notably, `malloc` does *not* erase the memory it returns.
 
-{.example ...}
+:::example
 After running the following code:
 
 ````
@@ -269,7 +273,7 @@ int b = *y;
 ````
 
 the value of `a` may be anything, while `b` is guaranteed to be `0`.
-{/}
+:::
 
 
 `x = realloc(x, s);`
@@ -281,7 +285,7 @@ the value of `a` may be anything, while `b` is guaranteed to be `0`.
     3. `free(x)`, and then 
     4. returns the new region's address.
 
-{.example ...}
+:::example
 After running the following code:
 
 ````
@@ -293,7 +297,7 @@ int *x = (int *)realloc(x, 16*sizeof(int));
 `x` is a pointer to an array of 16 `int`s.
 The first 8 elements are `{0, 0, 0, 0, 123, 0, 0, 0}`
 and the next 8 could be anything.
-{/}
+:::
 
 ## Garbage collectors
 
@@ -317,7 +321,7 @@ Some sources call unreachable memory "syntactic garbage"
 and the more general category of garbage "semantic garbage";
 confusingly, it is also not hard to find sources that use the word "garbage" to mean "unreachable" and ignore the existence of other kinds of garbage.
 
-{.example ...}
+:::example
 Consider the following code:
 
 ```c
@@ -340,7 +344,7 @@ The memory returned by `malloc` becomes garbage at the comment `// midpoint`{.c}
 it becomes unreachable after the function returns (and hence is a [memory leak](#memory-leak)).
 
 It's not related to memory, but what mathematical function does `bad(n)` compute?^[Answer: `floor(log2((n)*(n+1)/2))+1`{.c}]
-{/}
+:::
 
 ### Garbage detection
 
@@ -382,7 +386,7 @@ Note that the address sanitizer inserts bug detection code into the binary at co
 but only actually detects bugs when the compiled program is run.
 Because of this, bugs that exist but that your program doesn't use (e.g., because they are in a branch of an `if` statement that your test cases do not exercise) are not detected.
 
-{.aside ...}
+:::aside
 Both `gcc` and `clang` have a variety of different categories of command-line flags.
 Often the first letter tells you something about the flag:
 
@@ -392,7 +396,7 @@ Often the first letter tells you something about the flag:
 - `-W...` controls what warning messages are displayed
 - `-g...` specifies how much debugging information should be generated and included in the binary
 
-{/}
+:::
 
 ## Common kinds of problems
 
@@ -408,7 +412,7 @@ The [address sanitizer](#using-the-address-sanitizer) can detect this bug,
 but is somewhat conservative in what it looks for.
 Often it is necessary to explicitly change a pointer before the sanitizer notices the leak.
 
-{.example ...}
+:::example
 ````c
 /** represents a mathematical expression */
 typedef struct expr_s {
@@ -443,7 +447,7 @@ long flatten(expr *e) {
     return e->value;
 }
 ````
-{/}
+:::
 
 Memory leaks tend to make the program use more and more memory,
 becoming slower and slower the longer it runs.
@@ -467,7 +471,7 @@ because it is often the case that for many runs in a row the uninitialized memor
 just happens to be all `0` bytes,
 and then one time it happens to be other values instead, causing the bug to manifest itself intermittently.
 
-{.example ...}
+:::example
 ````c
 int *allsum(int *y, int n) {
     int *x = (int *)malloc(sizeof(int)*n);
@@ -477,7 +481,7 @@ int *allsum(int *y, int n) {
     return x;
 }
 ````
-{/}
+:::
 
 ### Accidental cast-to-pointer
 
@@ -486,13 +490,13 @@ it will interpret the integer value as being an address.
 This is particularly problematic with variadic functions like `printf` and `scanf`
 that are harder for the compiler to type-check.
 
-{.example ...}
+:::example
 ````c
 int x; scanf("%d", x); // should have been scanf("%d", &x);
 
 int x; printf("%s", x); // %s means "char *" not "int"
 ````
-{/}
+:::
 
 ### Wrong use of `sizeof`
 
@@ -500,24 +504,26 @@ It is fairly common to make mistakes with `sizeof`, such as
 
 -   using `sizeof(T)` when you meant `sizeof(T *)`
 
-    {.example ...}<span class="gap"> </span> `int **A = (int **)malloc(sizeof(int) * n);`{.c}
-    {/}
+    <div class="example">
+    <span class="gap"> </span> `int **A = (int **)malloc(sizeof(int) * n);`{.c}
+    </div>
 
 -   using `sizeof(T)` when adding to a `T *`
 
-    {.example ...}
+    <div class="example">
     ````c
     int *find(int *p, int val) { 
         while(*p && *p != val) p += sizeof(int);
         return p;
     }
     ````
-    {/}
+    </div>
 
 -   failing to use `sizeof` when `malloc`ing
 
-    {.example ...}<span class="gap"> </span> `int *ten_ints = (int *)malloc(10);`{.c}
-    {/}
+    <div class="example">
+    <span class="gap"> </span> `int *ten_ints = (int *)malloc(10);`{.c}
+    </div>
 
 
 ### Unary operator precedence mistakes
@@ -543,7 +549,8 @@ After you `free` a block of memory, using a pointer to it is an error.
 
 The [address sanitizer](#using-the-address-sanitizer) is usually able to detect this bug.
 
-{.example ...} The following is a minimal example
+:::example
+The following is a minimal example
 ````c
 int *x = (int *)malloc(sizeof(int)*10);
 int *y = &(x[5]);
@@ -553,7 +560,7 @@ int z = *y;
 
 More realistic examples generally hide the copying of the pointer and the freeing of its target memory
 inside other custom functions.
-{/}
+:::
 
 
 ### Stack buffer overflow
@@ -568,7 +575,7 @@ by intentionally supplying a return address that causes `retq` to jump to an add
 
 The [address sanitizer](#using-the-address-sanitizer) is usually able to detect this bug.
 
-{.example ...}
+:::example
 ````c
 char word[16];
 scanf("%s", word); // overflows if type a 16+-character word
@@ -576,7 +583,7 @@ scanf("%s", word); // overflows if type a 16+-character word
 
 Since `scanf`'s `%s` format specifier reads a non-whitespace sequence of characters into `word`,
 this will be a buffer overflow if you type sixteen or more characters without any whitespace.
-{/}
+:::
 
 ### Heap buffer overflow
 
@@ -587,12 +594,12 @@ messing up some other part of your program.
 
 The [address sanitizer](#using-the-addresssanitizer) is usually able to detect this bug.
 
-{.example ...}
+:::example
 ````c
 char word = (char *)malloc(16 * sizeof(char));
 scanf("%s", word); // overflows if type a 16+-character word
 ````
-{/}
+:::
 
 
 ### Global buffer overflow
@@ -602,14 +609,14 @@ This sometimes causes a segfault, or it might overwrite a different global varia
 
 The [address sanitizer](#using-the-address-sanitizer) is usually able to detect this bug.
 
-{.example ...}
+:::example
 ````c
 char word[16];
 int f() {
     scanf("%s", word); // overflows if type a 16+-character word
 }
 ````
-{/}
+:::
 
 
 ### Use after return
@@ -629,13 +636,13 @@ you are likely to end up in an invalid code segment and get a segfault;
 however, you might by random bad luck end up with a pre-initialized value that points to valid memory
 and end up overwriting a value some other part of the program depends on.
 
-{.example ...}
+:::example
 ````c
 int *x; int y = *x;    // a fairly obvious bug...
 
 printf("%s");          // printf's %s means "a char *" which we failed to supply
 ````
-{/}
+:::
 
 ### Use after scope
 
@@ -648,7 +655,8 @@ If you use a pointer to an out-of-scope variable, this creates a user-after-scop
 The [address sanitizer](#using-the-address-sanitizer) is able to detect this bug,
 but requires a special additional flag during compilation to do so: `-fsanitize-address-use-after-scope`.
 
-{.example ...} The following code may or may not have this bug, depending on how the compiler choses to optimize it.
+:::example
+The following code may or may not have this bug, depending on how the compiler choses to optimize it.
 ````c
 int *p;
 {
@@ -657,6 +665,6 @@ int *p;
 }
 *p = 5;
 ````
-{/}
+:::
 
 

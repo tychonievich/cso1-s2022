@@ -113,13 +113,14 @@ However, the program prints the wrong numbers.
 
 Your task: use `lldb` to find the bug, then use `ghex` (or another hex editor) to fix it.
 
-{.aside ...} Hex editors
+:::aside
+Hex editors
 
 We used an online hex-editor in [Lab 03](lab03-simulator.html), and that can be used again here.
 However, stand-alone hex editors like [GHex](https://wiki.gnome.org/Apps/Ghex) can be simpler in some cases.
 
 If you are running a Linux environment without ghex, try `module load ghex` (on portal) or `sudo apt install ghex` (in your virtual machine) to get access to it.
-{/}
+:::
 
 Note: the simplest fix (though not the only one) includes changing the conditions of a jump. There are multiple encodings of jumps, but the most common is a two-byte encoding, where the second byte is a relative offset and the first byte indicates the condition of the jump:
 

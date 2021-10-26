@@ -10,10 +10,10 @@ title: Information Theory Lab
 
 Please work through these in order, as the first is most important and not quite finishing the last shouldn't be too much of a problem.
 
-{.exercise ...}
+:::exercise
 Read and understand everything written on this page.
 Do the activities listed in exercise boxes like this.
-{/}
+:::
 
 # Lab 00 review
 
@@ -30,9 +30,9 @@ You should be able to
     - `..` as meaning "the directory containing the current directory"
     - `~` as meaning "my home directory" -- i.e., `/u/lab/mst3k`
 
-{.exercise ...}
+:::exercise
 If you are unsure of any part of this, please talk to a TA in lab. You take priority over people working on later parts of this lab.
-{/}
+:::
 
 ## One more step: changing permissions
 
@@ -89,7 +89,7 @@ You can find out your user name with `whoami` and your group memberships with `g
 
 You should set up your home directory so only you can access it, not other people in your group nor strangers not in your group:
 
-{.exercise ...}
+:::exercise
 After `ssh`ing into the CS server (i.e., `ssh mst3k@portal.cs.virginia.edu`{.bash}), run the following commands:
 
 > **Warning**: Be careful in typing. If you accidentally remove write access to yourself (via `a-w` or `u-w`) you will not be able to fix it; we'll have to contact the systems staff to do that instead.
@@ -99,7 +99,7 @@ cd              # go home
 chmod g-rwx .   # remove group-access to read, write, and execute this directory
 chmod o-rwx .   # remove other-access to read, write, and execute this directory
 ````
-{/}
+:::
 
 # `git` introduction
 
@@ -187,7 +187,8 @@ You'll only need to do this once in this course, so we'll only give a little exp
 
 We may have you use projects we've made for you later in the semester, which uses step 2 of the above.
 
-{.exercise ...} As a summary, the steps listed above that you should actually do are
+:::exercise
+As a summary, the steps listed above that you should actually do are
 
 1. `ssh` your-computing-id`@portal.cs.virginia.edu`
 1. `mkdir coa1-code.git`
@@ -200,7 +201,7 @@ We may have you use projects we've made for you later in the semester, which use
 1. `cd coa1-code`
 1. `git config user.name "`Your Full Name`"`
 1. `git config user.email "`your-computing-id`@virginia.edu"`
-{/}
+:::
 
 ### Laptop → git → CS server
 
@@ -246,8 +247,9 @@ On your laptop, in the directory of this new project, create a file named `lab01
 
     I wrote this on my laptop! Hooray!
 
-{.aside ...} Don't know how to make a file? See [Lab 00 "CLI Editor"](lab00-ssh-ed.html#cli-editor)
-{/}
+:::aside
+Don't know how to make a file? See [Lab 00 "CLI Editor"](lab00-ssh-ed.html#cli-editor)
+:::
 
 then use commands from "[Laptop → git → CS server](#laptop-git-cs-server)" above to get it into git and onto the server's version of the project.
 Then show the TAs you did so.
@@ -263,7 +265,7 @@ cat lab01
 
 ... then call over a TA to show them the results.
 
-{.exercise ...}
+:::exercise
 Since you already created a project in the last exercise,
 
 1. `cd` into your project directory
@@ -281,7 +283,7 @@ Since you already created a project in the last exercise,
     git status
     cat lab01
     ````
-{/}
+:::
 
 ## Tutorials
 

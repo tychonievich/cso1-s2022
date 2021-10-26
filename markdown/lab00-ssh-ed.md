@@ -37,7 +37,8 @@ Visit <http://web.mit.edu/mprat/Public/web/Terminus/Web/main.html>, a somewhat c
 
 There is a lot more you can do (creating a magic locker, explore a hidden tunnel, learn about `grep` and `rm`, etc.) but those are the most important basics.
 
-{.aside ...} Avoiding excessive typing
+:::aside
+Avoiding excessive typing
 
 While in a shell, there are several keys to make you life easier; the most important are
 
@@ -48,7 +49,7 @@ Tab
 :  Pressing the tab key when the cursor is preceded by an incomplete word that can only be completed in one way will fill in the rest of the word.
 
     Pressing tab twice when the cursor is preceded by an incomplete word that can be completed in several ways lists all of the completions the command line knows about.
-{/}
+:::
 
 ## Learning SSH with games/tutorials
 
@@ -65,10 +66,10 @@ and consult <http://overthewire.org/wargames/bandit/bandit0.html> to get started
 
 We suggest getting to level 4 of Bandit, though you might find other levels and games there interesting.
 
-{.aside ...}
+:::aside
 At some point you should get an email from the CS department with a CS login.
 You should be able to use that to SSH into mst3k`@portal.cs.virginia.edu`, an account we will use many times this semester.
-{/}
+:::
 
 # CLI Editor
 
