@@ -170,10 +170,13 @@ class CourseSchedule:
                     empty = False
                 # shared
                 e = self.lects[d]
-                ans.append('<details class="lecture"><summary>{}</summary>{}</details>'.format(
-                    ' <small>and</small> '.join(e[False]),
-                    ' <small>and</small> '.join((_[0] if not _[1] else '<a href="{1}">{0}</a>'.format(*_)) for _ in e[None]),
-                ))
+                if not any(_[1] for _ in e[None]):
+                    ans.append('<div class="lecture">{}</div>'.format(' <small>and</small> '.join(e[False])))
+                else:
+                    ans.append('<details class="lecture"><summary>{}</summary>{}</details>'.format(
+                        ' <small>and</small> '.join(e[False]),
+                        ' <small>and</small> '.join((_[0] if not _[1] else '<a href="{1}">{0}</a>'.format(*_)) for _ in e[None]),
+                    ))
                 # sections
                 for k,v in e.items():
                     if type(k) is str:
@@ -186,10 +189,13 @@ class CourseSchedule:
                     ans.append('<div class="day {0:%a}" date="{0:%Y-%m-%d}"><span class="date w{0:%w}">{0:%d %b}</span><div class="events">'.format(d))
                     empty = False
                 e = self.labs[d]
-                ans.append('<details class="lab"><summary>{}</summary>{}</details>'.format(
-                    ' <small>and</small> '.join(e[False]),
-                    ' <small>and</small> '.join((_[0] if not _[1] else '<a href="{1}">{0}</a>'.format(*_)) for _ in e[None]),
-                ))
+                if not any(_[1] for _ in e[None]):
+                    ans.append('<div class="lab">{}</div>'.format(' <small>and</small> '.join(e[False])))
+                else:
+                    ans.append('<details class="lab"><summary>{}</summary>{}</details>'.format(
+                        ' <small>and</small> '.join(e[False]),
+                        ' <small>and</small> '.join((_[0] if not _[1] else '<a href="{1}">{0}</a>'.format(*_)) for _ in e[None]),
+                    ))
             for s,d2 in self.final.items():
                 if d2.date() == d:
                     if empty:
