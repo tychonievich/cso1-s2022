@@ -61,9 +61,9 @@ lectures:
     - x86-64
     - [the stack, tracing variables]
 
+    - SIGCSE
+    - SIGCSE
     - compilation
-    - [SIGCSE]
-    - [SIGCSE]
 
     - compile-time info
     - C introduction
