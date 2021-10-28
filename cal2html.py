@@ -96,6 +96,32 @@ def icescape(s):
     s = s.replace(r',', r'\;')
     return s
 
+def htmlDetailsOrflat(e, cls):
+    """Given a day's content 
+        {None:[list, of, topic, names]
+        ,False:[(text,locallink,abslink), ...]
+        ,"section":[(text,locallink,abslink), ...]
+        }
+    return a list of HTML components with the given class="cls",
+    generally a mix of <details>...</details> and <div>...</div>
+    """
+    glue = ' <small>and</small> '
+    deets = any((_[1] and _[0] not in e[False]) for _ in e[None])
+    links = {_[0]:_[1].replace('<','&lt;').replace('&','&amp;').replace('"','&quot;') for _ in e[None] if _[1]}
+    ans = []
+    if deets:
+        longer = glue.join('<a href="{}">{}</a>'.format(links[_[0]],_[0]) if _[0] in links else _[0] for _ in e[None])
+        ans.append('<details class="{}"><summary>{}</summary>{}</details>'.format(cls,glue.join(e[False]),longer))
+    else:
+        heading = glue.join((_ if _ not in links else '<a href="{}">{}</a>'.format(links[_],_)) for _ in e[False])
+        ans.append('<div class="{}">{}</div>'.format(cls,heading))
+    for k,v in e.items():
+        if type(k) is not str: continue
+        links = {_[0]:_[1].replace('<','&lt;').replace('&','&amp;').replace('"','&quot;') for _ in v if _[1]}
+        longer = glue.join('<a href="{}">{}</a>'.format(links[_[0]],_[0]) if _[0] in links else _[0] for _ in v)
+        ans.append('<details class="{}"><summary>{}</summary>{}</details>'.format(cls,k,longer))
+    return ans
+
 class CourseSchedule:
     def __init__(self, data, **kargs):
         """CourseSechedule(yamlfile('cal.yaml'), Sec1=yamlfile('sec1-links.yaml'), ...)"""
@@ -168,34 +194,12 @@ class CourseSchedule:
                 if empty:
                     ans.append('<div class="day {0:%a}" date="{0:%Y-%m-%d}"><span class="date w{0:%w}">{0:%d %b}</span><div class="events">'.format(d))
                     empty = False
-                # shared
-                e = self.lects[d]
-                if not any(_[1] for _ in e[None]):
-                    ans.append('<div class="lecture">{}</div>'.format(' <small>and</small> '.join(e[False])))
-                else:
-                    ans.append('<details class="lecture"><summary>{}</summary>{}</details>'.format(
-                        ' <small>and</small> '.join(e[False]),
-                        ' <small>and</small> '.join((_[0] if not _[1] else '<a href="{1}">{0}</a>'.format(*_)) for _ in e[None]),
-                    ))
-                # sections
-                for k,v in e.items():
-                    if type(k) is str:
-                        ans.append('<details class="lecture"><summary>{}</summary>{}</details>'.format(
-                            k,
-                            ' <small>and</small> '.join('<a href="{1}">{0}</a>'.format(*_) for _ in v),
-                        ))
+                ans.extend(htmlDetailsOrflat(self.lects[d],'lecture'))
             if d in self.labs:
                 if empty:
                     ans.append('<div class="day {0:%a}" date="{0:%Y-%m-%d}"><span class="date w{0:%w}">{0:%d %b}</span><div class="events">'.format(d))
                     empty = False
-                e = self.labs[d]
-                if not any(_[1] for _ in e[None]):
-                    ans.append('<div class="lab">{}</div>'.format(' <small>and</small> '.join(e[False])))
-                else:
-                    ans.append('<details class="lab"><summary>{}</summary>{}</details>'.format(
-                        ' <small>and</small> '.join(e[False]),
-                        ' <small>and</small> '.join((_[0] if not _[1] else '<a href="{1}">{0}</a>'.format(*_)) for _ in e[None]),
-                    ))
+                ans.extend(htmlDetailsOrflat(self.labs[d],'lab'))
             for s,d2 in self.final.items():
                 if d2.date() == d:
                     if empty:
