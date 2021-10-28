@@ -1,5 +1,5 @@
 ﻿---
-title: Fall 2019 Schedule
+title: Spring 2022 Schedule
 ...
 
 The following is the current best guess at course pacing and topics.

@@ -47,6 +47,7 @@ lectures:
     - clocks
     - other hardware
 
+    - flex day
     - moves, memory, ALU ops
     - fetch-decode-execute
     - writing machine code
@@ -81,7 +82,7 @@ lectures:
     - stdio.h and varargs
     - unistd.h and so on
 
-    - Q&A
+    - flex day
 
     - buffer overrun; reporting exploits
     - function pointers
