@@ -1,1 +1,1 @@
-This is a repository of course content and website creation material for Computer Organization and Architecture 1, Fall 2019 version.
+This is a repository of course content and website creation material for Computer Systems and Organization 1, Spring 2022 version.
