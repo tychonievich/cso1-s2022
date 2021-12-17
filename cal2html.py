@@ -96,7 +96,7 @@ def icescape(s):
     s = s.replace(r',', r'\;')
     return s
 
-def htmlDetailsOrflat(e, cls):
+def htmlDetailsOrflat(e, cls, flatten=False):
     """Given a day's content 
         {None:[list, of, topic, names]
         ,False:[(text,locallink,abslink), ...]
@@ -111,7 +111,10 @@ def htmlDetailsOrflat(e, cls):
     ans = []
     if deets:
         longer = glue.join('<a href="{}">{}</a>'.format(links[_[0]],_[0]) if _[0] in links else _[0] for _ in e[None])
-        ans.append('<details class="{}"><summary>{}</summary>{}</details>'.format(cls,glue.join(e[False]),longer))
+        if flatten:
+            ans.append('<div class="{}">{}: {}</div>'.format(cls,glue.join(e[False]),longer))
+        else:
+            ans.append('<details class="{}"><summary>{}</summary>{}</details>'.format(cls,glue.join(e[False]),longer))
     else:
         heading = glue.join((_ if _ not in links else '<a href="{}">{}</a>'.format(links[_],_)) for _ in e[False])
         ans.append('<div class="{}">{}</div>'.format(cls,heading))
@@ -208,7 +211,7 @@ class CourseSchedule:
                 if empty:
                     ans.append('<div class="day {0:%a}" date="{0:%Y-%m-%d}"><span class="date w{0:%w}">{0:%d %b}</span><div class="events">'.format(d))
                     empty = False
-                ans.extend(htmlDetailsOrflat(task,'task'))
+                ans.extend(htmlDetailsOrflat(task,'task',True))
             for s,d2 in self.final.items():
                 if d2.date() == d:
                     if empty:
