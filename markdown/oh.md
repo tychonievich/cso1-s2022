@@ -28,9 +28,9 @@ How to get help from a TA
 
 
 
-<!--
 <div style="display:table; font-size:200%; margin: 1em auto; padding:1ex; box-shadow: 0 1px 10px rgba(0,0,0,.1); border: thin solid #eee; border-radius:1ex; background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);">[Get TA Help](https://kytos.cs.virginia.edu/ohq/?c=coa1)</div>
--->
+
+<!--
 
 Upcoming office hours (for the next week):
 
@@ -52,7 +52,7 @@ tr.Sun + tr.Sun, tr.Mon + tr.Mon, tr.Tue + tr.Tue, tr.Wed + tr.Wed, tr.Thu + tr.
 </style>
 <script src="moment.min.js" type="text/javascript"></script>
 <script src="cal-oh.js" type="text/javascript"></script>
-<script type="text/javascript">//<!--
+<script type="text/javascript">
 now = new Date(); now.setDate(now.getDate() - 1); now = now.toISOString()
 week = new Date(); week.setDate(week.getDate() + 7); week = week.toISOString()
 within = document.getElementById('cal-oh')
@@ -78,4 +78,6 @@ oh_feed.forEach(x => {
     tr.insertCell().innerText = moment(x.start).format('h:mm a')
     tr.insertCell().innerText = moment(x.end).format('h:mm a')
 })
-//--></script>
+</script>
+
+-->
