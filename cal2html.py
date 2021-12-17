@@ -241,6 +241,7 @@ NAME:{0}'''.format(self.name)]
                     minutes = start[0] + 60*start[1]
                 def m2s(m):
                     return '{:02d}{:02d}00'.format(m//60,m%60)
+                print(k, r[k].get('duration',15), r[k])
                 r[k]['st'] = m2s(minutes)
                 r[k]['et'] = m2s(minutes+r[k].get('duration',15))
         
