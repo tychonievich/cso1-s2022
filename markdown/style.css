@@ -26,11 +26,18 @@ footer { text-align: center; box-shadow: 0 0.0625ex 0.5ex rgba(0,0,0,.1); backgr
 
 
 
-/* TOC on side if enough space, else above */
+/* TOC on side if enough space, else above 
 .row { display: flex; flex-wrap: wrap; align-items: flex-start; }
 #TOC { flex: 1 0 15em; margin: 1em; }
 #TOC + div { flex:10 1 40em; margin: 1em; }
 .row > div:only-child { flex: 1 1 auto; margin: 1em; }
+*/
+
+/* Cap width. TOC floats if wide, not if not. */
+.row { display: table; margin: auto; max-width:60em; }
+@media (min-width:30em) {
+#TOC { float:right; margin: 1em; }
+}
 
 /* TOC styles */
 .well { background: rgba(0,0,0,0.04); border: 0.125ex solid #e3e3e3; min-height: 1em; border-radius: 0.5ex; box-shadow: inset 0 0.0625ex 0.125ex rgba(0,0,0,0.25); }
