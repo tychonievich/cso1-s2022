@@ -182,7 +182,7 @@ class CourseSchedule:
             b += timedelta(1)
         for slug,obj in data['assignments'].items():
             if 'due' in obj:
-                self.tasks.setdefault(obj['due'].date(),[]).append({None: parseReading(data,topic),False:[slug]})
+                self.tasks.setdefault(obj['due'].date(),[]).append({None: parseReading(data,[slug]),False:[slug]})
     def toHTML(self):
         ans = []
         ans.append('<div id="schedule">')
