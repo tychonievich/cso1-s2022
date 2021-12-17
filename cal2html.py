@@ -242,7 +242,7 @@ NAME:{0}'''.format(self.name)]
                 def m2s(m):
                     return '{:02d}{:02d}00'.format(m//60,m%60)
                 r[k]['st'] = m2s(minutes)
-                r[k]['et'] = m2s(minutes+r.get('duration',15))
+                r[k]['et'] = m2s(minutes+r[k].get('duration',15))
         
         d = self.start
         while d <= self.stop:
