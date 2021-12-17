@@ -58,10 +58,9 @@ $endfor$
       $if(toc)$
       <div id="$idprefix$TOC" class="span3">
         <div class="well toc">
-        <ul>
-          <li class="nav-header">Table of Contents</li>
-        </ul>
-        $toc$
+          <details><summary class="nav-header">Table of Contents</summary>
+            $toc$
+          </details>
         </div>
       </div>
       $endif$
