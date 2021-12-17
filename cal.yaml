@@ -1,9 +1,9 @@
 Special Dates:
   Courses begin: 2022-01-19
   Courses end: 2022-05-03
-  Add deadline: 2022-09-10
-  Drop deadline: 2022-10-15
-  Withdraw deadline: 2022-10-22
+  Add deadline: 2022-02-02
+  Drop deadline: 2022-03-02
+  Withdraw deadline: 2022-03-23
   Spring recess:
     start: 2022-03-05
     end: 2022-03-13
@@ -263,7 +263,7 @@ assignments:
             drop: 1
             duration: -1
             rubric: {"kind":"percentage"}
-            link: https://kytos.cs.virginia.edu/coa1/quizzes/
+            link: https://kytos.cs.virginia.edu/cso1/quizzes/
 
     PA01:
         title: bit fiddling
