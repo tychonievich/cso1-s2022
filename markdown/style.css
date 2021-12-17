@@ -35,11 +35,12 @@ footer { text-align: center; box-shadow: 0 0.0625ex 0.5ex rgba(0,0,0,.1); backgr
 
 /* Cap width. TOC floats if wide, not if not. */
 .row { display: table; margin: auto; max-width:60em; }
-@media (min-width:30em) {
+@media (min-width:40em) {
     #TOC {
 	float:right;
 	border-left: solid white 1em;
 	margin: 1em 0 1em 1em;
+	max-width: 50%;
     }
 }
 
