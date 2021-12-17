@@ -268,12 +268,12 @@ assignments:
     PA01:
         title: bit fiddling
         link: pa01-bit fiddling.html
-        due: 2022-02-09 17:00:00
+        due: 2022-02-08 17:00:00
         notes: things like "count the number of set bits in an int" using limited numbers of bitwise operations
         rubric: {"kind":"percentage"}
     PA02:
         title: worksheet
-        due: 2022-02-14 13:50:00
+        due: 2022-02-11 13:50:00
         link: pa02-worksheet.html
         total: 100
         late-policy: []
