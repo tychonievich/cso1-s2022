@@ -158,6 +158,7 @@ class CourseSchedule:
         lab['w'] = [dow(_) for _ in lab.get('days',[])] # note: requires all labs on same weekday
         self.lects = {}
         self.labs = {}
+        self.tasks = {}
         b = self.start
         while b <= end:
             if b in self.breaks: 
@@ -179,6 +180,8 @@ class CourseSchedule:
                 if type(topic) is not list: topic = [topic]
                 self.labs[b] = {None: parseReading(data,topic),False:topic}
             b += timedelta(1)
+        for slug,obj in data['assignments'].items():
+            self.tasks.setdefault(obj['due'],[]).append({False:slug})
     def toHTML(self):
         ans = []
         ans.append('<div id="schedule">')
@@ -200,6 +203,11 @@ class CourseSchedule:
                     ans.append('<div class="day {0:%a}" date="{0:%Y-%m-%d}"><span class="date w{0:%w}">{0:%d %b}</span><div class="events">'.format(d))
                     empty = False
                 ans.extend(htmlDetailsOrflat(self.labs[d],'lab'))
+            for task in self.tasks.get(d,[]):
+                if empty:
+                    ans.append('<div class="day {0:%a}" date="{0:%Y-%m-%d}"><span class="date w{0:%w}">{0:%d %b}</span><div class="events">'.format(d))
+                    empty = False
+                ans.extend(htmlDetailsOrflat(task,'task'))
             for s,d2 in self.final.items():
                 if d2.date() == d:
                     if empty:
