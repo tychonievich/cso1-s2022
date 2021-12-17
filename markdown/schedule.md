@@ -116,7 +116,13 @@ readings can be <input type="button" value="shown" onclick="document.querySelect
 <script src="schedule.js"></script>
 
 
-To subscribe to the above calendar, add <http://www.cs.virginia.edu/luther/CSO1/S2022/cal.ics> to your calender application of choice.
+To subscribe to the above calendar, add to your calendar application of choice one or more of the following:
+
+- <http://www.cs.virginia.edu/luther/CSO1/S2022/all.ics> -- all lecture and lab sections
+- <http://www.cs.virginia.edu/luther/CSO1/S2022/CS2130-001.ics> -- one lecture section
+- <http://www.cs.virginia.edu/luther/CSO1/S2022/CS2130-002.ics> -- one lecture section
+- <http://www.cs.virginia.edu/luther/CSO1/S2022/CS2130-101.ics> -- one lab section
+- <http://www.cs.virginia.edu/luther/CSO1/S2022/CS2130-101.ics> -- one lab section
 
 <hr/>
 
