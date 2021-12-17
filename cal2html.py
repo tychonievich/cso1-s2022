@@ -1,4 +1,4 @@
-import re, markdown, dateutil, json
+import re, markdown, dateutil
 from datetime import timedelta, datetime
 from sys import stderr
 
@@ -189,7 +189,7 @@ class CourseSchedule:
                 if empty:
                     ans.append('<div class="day {0:%a}" date="{0:%Y-%m-%d}"><span class="date w{0:%w}">{0:%d %b}</span><div class="events">'.format(d))
                     empty = False
-                ans.append('<div class="special">{}</div>'.format(self.extras[d]))
+                ans.append('<div class="special">{}</div>'.format(self.extra[d]))
             if d in self.lects:
                 if empty:
                     ans.append('<div class="day {0:%a}" date="{0:%Y-%m-%d}"><span class="date w{0:%w}">{0:%d %b}</span><div class="events">'.format(d))
@@ -306,6 +306,69 @@ END:VEVENT'''.format(sec=sec,
         ans.append('END:VCALENDAR')
         return '\n'.join(ans)
 
+# def slug2asgn(slug, group, raw):
+    # ans = {}
+    # ans.update(raw['assignments'].get('.groups').get(group,{}))
+    # ans.update(raw['assignments'][slug])
+    # return ans
+    
+
+# def cal2assigments(cal,raw):
+    # ans = {}
+    # for week in cal:
+        # for day in week:
+            # if day is not None:
+                # for event in day['events']:
+                    # if event.get('kind') == 'assignment':
+                        # s = event['slug']
+                        # g = event['group']
+                        # dat = slug2asgn(s,g,raw)
+                        # dat['group'] = g
+                        # ans[s] = dict(**dat)
+    # return ans
+
+# def coursegrade_json(data):
+    # groups = data['assignments'].get('.groups', {})
+    # weights, drops, inc, exc = {}, {}, {}, {}
+    # for k,v in groups.items():
+        # if 'portion' in v:
+            # weights[k] = v['portion']
+        # else:
+            # weights[k] = 0
+        # if type(weights[k]) is str:
+            # try:
+                # weights[k] = eval(weights[k].replace('%','/100'))
+            # except: pass
+        # if 'drop' in v:
+            # drops[k] = v['drop']
+        # if 'include' in v:
+            # inc[k] = v['include']
+        # if 'exclude' in v:
+            # exc[k] = v['exclude']
+    # for k,v in drops.items():
+        # if type(v) is str:
+            # v = eval(v.replace('%','/100'))
+        # if v < 1:
+            # cnt = 0
+            # for k,v in assignments_json(data).items():
+                # if v.get('group','') == k: cnt += 1
+            # v *= cnt
+        # drops[k] = int(round(v))
+    # return {'letters':[
+        # # {'A+':0.98},
+        # {'A' :0.93},
+        # {'A-':0.90},
+        # {'B+':0.86},
+        # {'B' :0.83},
+        # {'B-':0.80},
+        # {'C+':0.76},
+        # {'C' :0.73},
+        # {'C-':0.70},
+        # {'D+':0.66},
+        # {'D' :0.63},
+        # {'D-':0.60},
+        # {'F' :0.00},
+    # ],'weights':weights,'drops':drops,'includes':inc,'excludes':exc}
 
 if __name__ == '__main__':
     import os, os.path, glob
@@ -314,7 +377,7 @@ if __name__ == '__main__':
     course = os.path.basename(here)
 
 
-    import json, sys, yaml
+    import sys, yaml
     raw = yamlfile('cal.yaml')
     links = {fn[:-11]:yamlfile(fn) for fn in glob.glob('*-links.yaml')}
     
