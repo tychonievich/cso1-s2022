@@ -2,9 +2,6 @@
 title: Policies
 ...
 
-> "A syllabus is just a list of words they don&rsquo;t know yet."
-> <div>---Seth Reichelson</div>
-
 # Course objectives
 
 This course is intended to cover topics on the abstraction hierarchy 
@@ -21,23 +18,17 @@ At the end of it, you will be able to
 
 ## Meetings
 
-> "The pain of parting is nothing to the joy of meeting again." 
-> <div>---Charles Dickens</div>
+Lecture is optional but strongly encouraged:
+experience has shown that attendance is strongly correlated with grade.
+Meetings are Monday, Wednesday, and Friday
+with section 002 12:00–12:50 in Olsson 120
+and section 001 1:00–1:50 in Nau 101.
 
-Lecture is optional but strongly encouraged.
-Monday, Wednesday, and Friday, 1:00–1:50, in Thorton E303.
-
-There are two lab sections, both meeting in MEC 213:
-one on Wednesdays 5:00--6:15 pm
-and the other on Thursdays 5:00--6:15 pm.
+There are two lab sections, both meeting on Thursdays in Rice 130:
+one at 5:00--6:15 pm and one at 6:30–7:45.
 Please attend your assigned lab section.
 
-I do not schedule review sessions or the like outside of usual class time.
-
 ## Tasks
-
-> "Some college cell, Where muzzing quizzes mutter monkish schemes."
-> <div>---William Roberts</div>
 
 Some tasks are designed to help you learn and practice what you learned enough that the concepts solidify in your mind.
 Others are designed to measure what you have learned.
@@ -57,35 +48,28 @@ The primary kinds of tasks are:
 
 ## Contact
 
-> "I heard a sound; I turned around; I turned around to face the thing that made the sound."
-> <div>---They Might Be Giants</div>
 
-
-|        | Instructor | TAs |
+|        | Section 001 | Section 002 | TAs |
 |--------|------------|-----|
-| Name | Luther Tychonievich | Dylan Cao, Vineet Kalpathi, William Mayes, James McDowell, Gustavo Moreira, Omika Suryawanshi |
-| Location | Rice 208 | Thornton Stacks (A235) |
-| Office Hours | Monday 10:00–11:00<br/>Tuesday 13:00–15:00<br/>Friday 11:00–12:00 | See [the OH schedule](oh.html) |
-| Phone | 243-3789 | (none) |
-| Email | <a href="mailto:tychonievich@virginia.edu?subject=COA1">tychonievich@virginia.edu</a> | use [Piazza](https://piazza.com/class/jyzxml4m9ls3km) |
+| Name | Daniel Graham | Luther Tychonievich | TBA |
+| Location | Rice 411 | Rice 208 | Thornton Stacks (A235) |
+| Office Hours | TBA | TBA | See [the OH schedule](oh.html) |
+| Phone | 243-3391| 243-3789 | (none) |
+| Email | <a href="mailto:dgg6b@virginia.edu?subject=CSO1">dgg6b@virginia.edu</a> | <a href="mailto:tychonievich@virginia.edu?subject=CSO1">tychonievich@virginia.edu</a> | TBA |
 
-For most communication, [Piazza](https://piazza.com/class/jyzxml4m9ls3km) is preferred to email.
-If you email, include "COA1" in the subject line to prevent your email from skipping my inbox and never getting read.
+For most communication, [Piazza](#) is preferred to email.
+If you email, include "CSO1" in the subject line to help us prioritize your email.
 
 Our TAs are students too, with duties and work outside of their TAing. Please do not ask them to act as your TA except at the scheduled on-the-clock times they have listed as their office hours and lab time. They are also kind people; please don't put them in the position of having to say no or (worse) being nice to you at the expense of their own schooling.
 
 ## Readings
 
-> "When you read books your eyeballs wither away leaving the bare sockets"
-> <div>---Yang Wanli</div>
-
-Although we have several textbooks we are considering for use,
-none of them were settled on for this pilot offering.
-Readings written by us or selected from articles or web pages will periodically be posted on the schedule.
-Some of these may have "reading quizzes" associated with them:
+Primary readings are write-ups posted on this website.
+We may also link to external articles when appropriate.
+Some readgins may have "reading quizzes" associated with them:
 quizzes to be taken based on the reading prior to the lecture in which they are discussed.
 
-If you desire additional resources, I recommend the textbook *Introduction to Computer Systems: From Bits and Gate to C/C++ & Beyond* by Yale Patt and Sanjay Patel. That book contains all of the major topics we'll cover, with a different presentation than we'll cover them.
+If you desire a different take on the same material, the textbook *Introduction to Computer Systems: From Bits and Gate to C/C++ & Beyond* by Yale Patt and Sanjay Patel contains all of the major topics we'll cover, with a different presentation than we'll cover them.
 
 ## Coding
 
@@ -102,12 +86,10 @@ The target difficulty is 5–10 hours of focused effort each week.
 
 # Grading
 
-[Grading](http://www.cs.virginia.edu/tychonievich/blog/posts/244.html) is one of the aspects of a course that instructors enjoy even less than students. Still, we are stuck with them, so here goes.
-
 ## Grading Goal
 
 In February 2019 the CS faculty approved [a definition](http://ugrads.cs.virginia.edu/grading-guidelines.html) of what we believe grades mean.
-It is my intent to approximate that definition in this course.
+We hope to approximate that definition in this course.
 As a brief summary,
 
 Letter  Student demonstrated                Recommendation re future courses[^future]
@@ -119,9 +101,9 @@ D       minimal competence                  unlikely to succeed
 F       less than minimal competence        retake this course first
 
 [^future]:
-    The most obvious future course is COA2.
-    COA1 material is also directly important for work in various fields including
-    networks, cyber-physical systems, robotics, operating systems, and any constrained-resource or speed-sensitive application
+    The most obvious future course is CSO2.
+    CSO1 material is also directly important for work in various fields including
+    networks, cyber-physical systems, robotics, operating systems, and any constrained-resource or speed-sensitive application.
 
 These goals do not map perfectly to numeric scores. If you get full or nearly full points on all graded tasks, you should expect an A. If you miss non-trivial numbers of points or deadlines, we may attempt to assess your standing on this subjective scale in lieu of a raw point-based grade.
 
@@ -169,27 +151,33 @@ Let our TAs be students when they are not on the clock as TAs.
 
 ## Honesty
 
-I always hope everyone will behave honestly.
-I know we all are tempted to do what we ought not;
-if you do something you regret, the sooner you tell me the sooner (and more leniently) we can correct it.
+We always hope everyone will behave honestly.
+We know we all are tempted to do what we ought not;
+if you do something you regret, the sooner you tell us the sooner (and more leniently) we can correct it.
 
 ### No plagiarism (nor anything like it)
 
 You **must** cite any and every source you consult, other than those explicitly provided by the course itself.
 Talked to a friend, saw an interesting video, consulted a website, had a tutor?
 Tell us!
-Put it in a comment in your code.
+Put it in a comment in your code or quiz.
 
 ### Write your own code
 
 You must write your own code.
 Not just type it (though you need to do that too): **compose it yourself**, as your own original work.
-Beware of looking at other students code or code you find online: it is hard to unsee and can spoil your ability to compose your own solutions!
+
+We ask you to program to help you learn the content covered in the programming assignment and to help you demonstrate to us your knowledge.
+This is unlike industry, where you program to create a product.
+Because it is your mind we are looking to help develop and measure, it is your mind that must do all the work.
+Working with others is *not* OK.
+
+Our TAs have been trained to provide help that does not undermine the primary purpose of helping you learn. Other people (tutors, fellow students, etc) have not. As such, you should not give help to your peers nor accept help from others besides course staff.
 
 ### Understand what you submit
 
-Working together can help you learn. But make sure you learned!
-We may ask you to explain aspects of a solution you turn in,
+Your understanding is the primary deliverable of our assignments, not the code itself.
+As such, we may ask you to explain aspects of a solution you turn in,
 and may dock points if it appears you simply copied someone else's ideas (or just guessed a lot of things until one worked) without understanding them.
 
 ### No help on quizzes
@@ -198,23 +186,23 @@ It would probably go without saying if we didn't say it, but no assistance may b
 
 ### Consequences of Dishonesty
 
-If I believe you have acted dishonestly, I will communicate this fact to you and propose a penalty.
-If you have information I lack, please share that with me; I may thereafter change my belief and/or proposed penalty.
+If we believe you have acted dishonestly, we will communicate this fact to you and propose a penalty.
+If you have information we lack, please share that with us; we may thereafter change our belief and/or proposed penalty.
 
-If we are not able to come to an agreement, or if the case is particularly egregious and beyond my comfort level handling in-course, we will instead refer the case to the University Honor System and abide by their findings.
+If we are not able to come to an agreement, or if the case is particularly egregious and beyond our comfort level handling in-course, we will instead refer the case to the University Honor System and abide by their findings.
 
 
 ## Personal accommodations
 
 ### Disability
 
-If you qualify for accommodations from [the SDAC](http://studenthealth.virginia.edu/sdac), please let me know, preferably in my office where we can discuss how your accommodations will interplay with the quiz- and assignment-based nature of this course.
+If you qualify for accommodations from [the SDAC](http://studenthealth.virginia.edu/sdac), please let your professor know, preferably in a private setting where we can discuss how your accommodations will interplay with the quiz- and assignment-based nature of this course.
 
 ### Religious observances
 
-As a religious person myself, I fully support [the university's stance](https://eocr.virginia.edu/accommodations-religious-observance) on accommodating religious observances.
+We fully support [the university's stance](https://eocr.virginia.edu/accommodations-religious-observance) on accommodating religious observances.
 If such observances or other religious beliefs impact or are likely to impact your work this semester,
-please let me know as soon as you are aware of this impact.
+please let us know as soon as you are aware of this impact.
 
 ### Life
 
@@ -223,4 +211,4 @@ People forget things and make mistakes.
 Bad days coincide with due dates.
 Etc.
 
-If you believe that circumstances warrant an change in deadline, a second chance, or some other accommodation in order to more accurately synchronize grade with knowledge, come talk to me and we'll resolve the situation as best we can.
+If you believe that circumstances warrant an change in deadline, a second chance, or some other accommodation in order to more accurately synchronize grade with knowledge, come talk to your professor and we'll resolve the situation as best we can.
