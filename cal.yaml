@@ -381,7 +381,7 @@ assignments:
                   weight: 2
                 - ends when end-of-file or Ctrl+C reached
     Quiz00:
-        due: 2022-01-24 13:00:00
+        due: 2022-01-24 11:00:00
         weight: 0
     Quiz01:
         due: 2022-01-31 11:00:00
