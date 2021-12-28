@@ -123,7 +123,7 @@ To subscribe to the above calendar, add to your calendar application of choice o
 - <http://www.cs.virginia.edu/luther/CSO1/S2022/CS2130-001.ics> -- one lecture section
 - <http://www.cs.virginia.edu/luther/CSO1/S2022/CS2130-002.ics> -- one lecture section
 - <http://www.cs.virginia.edu/luther/CSO1/S2022/CS2130-101.ics> -- one lab section
-- <http://www.cs.virginia.edu/luther/CSO1/S2022/CS2130-101.ics> -- one lab section
+- <http://www.cs.virginia.edu/luther/CSO1/S2022/CS2130-102.ics> -- one lab section
 
 <hr/>
 
