@@ -45,7 +45,7 @@ We recommend using `git` to version and test your code.
         
         i. `ssh mst3k@portal.cs.virginia.edu`
         i. `module load clang-llvm`
-        i. `cd coa1-code`
+        i. `cd cso1-code`
         i. `git pull`
         i. `clang matlib.s && ./a.out`
         i. `exit`
@@ -53,7 +53,7 @@ We recommend using `git` to version and test your code.
         or using a one-liner to have SSH do it all for you. Note the extra `source` command to tell SSH to know about modules:
         
         ````bash
-        ssh mst3k@portal.cs.virginia.edu 'source /etc/profile.d/modules.sh; module load clang-llvm; cd coa1-code; git pul; clang matlbi.s && a.out'
+        ssh mst3k@portal.cs.virginia.edu 'source /etc/profile.d/modules.sh; module load clang-llvm; cd cso1-code; git pul; clang matlbi.s && a.out'
         ````
 
     a. You can also put all these commands in a file (`pa06test.sh` on MacOS, `pa06test.ps1` on Windows) and run them at once (using `bash pa06test.sh` on MacOS, `pwsh pa06test.ps1` on Windows)
@@ -61,7 +61,7 @@ We recommend using `git` to version and test your code.
         ````bash
         git commit -a -m 'auto-commit before testing'
         git push
-        ssh mst3k@portal.cs.virginia.edu 'source /etc/profile.d/modules.sh; module load llvm-clang; cd coa1-code; git pull; clang matlib.s && ./a.out'
+        ssh mst3k@portal.cs.virginia.edu 'source /etc/profile.d/modules.sh; module load llvm-clang; cd cso1-code; git pull; clang matlib.s && ./a.out'
         ````
 
 This way you'll both (a) have a backup of every version you test, (b) have a copy on the server in case something happens to your laptop, and (c) know you're using the same compiler, processor variant, etc, that we are.

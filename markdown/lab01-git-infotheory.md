@@ -157,12 +157,12 @@ Git will complain if you try to `git commit` without having done this.
 You'll only need to do this once in this course, so we'll only give a little explanation.
 
 1.  Create the git-managed project on the server, `portal.cs.virginia.edu`.
-    Use your user name, not `mst3k`, and any name you want (we assume `coa1-code` but you can change that)
+    Use your user name, not `mst3k`, and any name you want (we assume `cso1-code` but you can change that)
 
     ````bash
     ssh mst3k@portal.cs.virginia.edu
-    mkdir coa1-code.git
-    cd coa1-code.git
+    mkdir cso1-code.git
+    cd cso1-code.git
     git init --bare
     exit
     ````
@@ -171,15 +171,15 @@ You'll only need to do this once in this course, so we'll only give a little exp
     
     ````bash
     cd ~
-    git clone mst3k@portal.cs.virginia.edu:coa1-code.git
+    git clone mst3k@portal.cs.virginia.edu:cso1-code.git
     exit
     ````
 
 1.  Create your local working copy of that project
     
     ````bash
-    git clone mst3k@portal.cs.virginia.edu:coa1-code.git
-    cd coa1-code
+    git clone mst3k@portal.cs.virginia.edu:cso1-code.git
+    cd cso1-code
     ````
     
     If you have not set up a global username and email, you should then set those for this project (see [`user.name` and `user.email`](#user-name-and-user-email))
@@ -191,14 +191,14 @@ We may have you use projects we've made for you later in the semester, which use
 As a summary, the steps listed above that you should actually do are
 
 1. `ssh` your-computing-id`@portal.cs.virginia.edu`
-1. `mkdir coa1-code.git`
-1. `cd coa1-code.git`
+1. `mkdir cso1-code.git`
+1. `cd cso1-code.git`
 1. `git init --bare`
 1. `cd ~`
-1. `git clone` your-computing-id`@portal.cs.virginia.edu:coa1-code.git`
+1. `git clone` your-computing-id`@portal.cs.virginia.edu:cso1-code.git`
 1. `exit`
-1. `git clone` your-computing-id`@portal.cs.virginia.edu:coa1-code.git`
-1. `cd coa1-code`
+1. `git clone` your-computing-id`@portal.cs.virginia.edu:cso1-code.git`
+1. `cd cso1-code`
 1. `git config user.name "`Your Full Name`"`
 1. `git config user.email "`your-computing-id`@virginia.edu"`
 :::
@@ -230,7 +230,7 @@ Let's go through this step by step, assuming you start in Terminal/PowerShell in
 `ssh mst3k@portal.cs.virginia.edu`{.bash}
 :   Move over to the server
 
-`cd coa1-code`{.bash}
+`cd cso1-code`{.bash}
 :   Enter the server's project directory
 
 `git pull`{.bash}

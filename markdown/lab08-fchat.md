@@ -4,14 +4,14 @@ title: File-based chat system
 
 When you log into a department server
 you have access to a large public shared space called `/bigtemp`.
-I have placed in that directory a folder called `/bigtemp/coa1`
+I have placed in that directory a folder called `/bigtemp/cso1`
 which we will use like a wall of mail cubbyholes for this assignment.
 
 # Outline
 
 You will write a program that will do the following:
 
-1. If there is a file named `/bigtemp/coa1/mst3k.chat`, where `mst3k` is replaced by your ID,
+1. If there is a file named `/bigtemp/cso1/mst3k.chat`, where `mst3k` is replaced by your ID,
     the program will show that file's contents to the user and then empty the file.
 
 2. The program will ask the user the computing ID of the person they want to send a message to.
@@ -19,7 +19,7 @@ You will write a program that will do the following:
 3. The program will ask the user what message to send them.
 
 4. The program will append your ID, followed by a colon, followed by the message, to the file
-    `/bigtemp/coa1/mst3k.chat`, where `mst3k` is replaced by the recipient's ID, and change its permissions so others can read and write it.
+    `/bigtemp/cso1/mst3k.chat`, where `mst3k` is replaced by the recipient's ID, and change its permissions so others can read and write it.
 
 You are welcome to assume that no string will be bigger than 4096 characters and use a global `char buffer[4096]`
 instead of trying to handle `malloc`, etc, in this lab.
@@ -62,12 +62,12 @@ After running the following
 
 ````c
 buffer[0] = '\0';
-strcat(buffer, "/bigtemp/coa1/");
+strcat(buffer, "/bigtemp/cso1/");
 strcat(buffer, "mst3k");
 strcat(buffer, ".chat");
 ````
 
-the array `buffer` contains `"/bigtemp/coa1/mst3k.chat"`
+the array `buffer` contains `"/bigtemp/cso1/mst3k.chat"`
 :::
 
 ### `sprintf`
@@ -80,12 +80,12 @@ After running the following
 
 ````c
 snprintf(buffer, 4096, "/bigtemp/%s/%s.chat",
-    "coa1",
+    "cso1",
     "mst3k",
 );
 ````
 
-the array `buffer` contains `"/bigtemp/coa1/mst3k.chat"`.
+the array `buffer` contains `"/bigtemp/cso1/mst3k.chat"`.
 It will not overrun `4096` characters, even if it were given very large strings to format.
 :::
 
@@ -125,13 +125,13 @@ Reading:
 
 Permissions, etc:
 
-- `chmod("/bigtemp/coa1/mst3k.chat", 0666);`{.c} sets the permissions for `mst3k.chat` based on a bit-vector of flags, specified in octal (hence the leading `0`):
+- `chmod("/bigtemp/cso1/mst3k.chat", 0666);`{.c} sets the permissions for `mst3k.chat` based on a bit-vector of flags, specified in octal (hence the leading `0`):
 
     - The three octal digits are (in written order) the owner, group, and others permissions.
     - If re-written in binary (e.g. change `07` to 111~2~), the bits mean may-read, may-write, and may-execute, in order.
     - We want the files used in the chat to be writeable by any user, so `0666` is a reasonable permission set.
 
-- `truncate("/bigtemp/coa1/mst3k.chat", 0);`{.c} truncates a file so its new size is 0 bytes.
+- `truncate("/bigtemp/cso1/mst3k.chat", 0);`{.c} truncates a file so its new size is 0 bytes.
     This is useful in re-setting a chat file after the user has read its contents.
 
 
@@ -140,26 +140,26 @@ Permissions, etc:
 You can manually check for the existance and permissions of a file by running
 
 ````bash
-ls -l /bigtemp/coa1/mst3k.chat
+ls -l /bigtemp/cso1/mst3k.chat
 ````
 
 Note that many bugs end up creating the wrong file name; the following will list all files in the directory with the newest file last
 
 ````bash
-ls -ltr /bigtemp/coa1/
+ls -ltr /bigtemp/cso1/
 ````
 
 You can force-add a message to a mailbox by running
 
 ````bash
-echo "This is a message" >> /bigtemp/coa1/mst3k.chat
-chmod 666 /bigtemp/coa1/mst3k.chat
+echo "This is a message" >> /bigtemp/cso1/mst3k.chat
+chmod 666 /bigtemp/cso1/mst3k.chat
 ````
 
 You can read all messages by running
 
 ````bash
-less /bigtemp/coa1/mst3k.chat
+less /bigtemp/cso1/mst3k.chat
 ````
 
 These can be useful in testing different aspects of your program independently.

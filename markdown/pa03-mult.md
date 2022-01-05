@@ -133,4 +133,4 @@ Debugging binary is hard. That's part of why we don't generally write code in bi
 
 # Submit
 
-Submit via the submission site, linked from the top of every course page and also available as <https://kytos.cs.virginia.edu/coa1/>
+Submit via the submission site, linked from the top of every course page and also available as <https://kytos.cs.virginia.edu/cso1/>
