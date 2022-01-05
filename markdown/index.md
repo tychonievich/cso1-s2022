@@ -16,17 +16,21 @@ You should take this course only if
 1. You will know some C- or Java-like language by the middle of the class, as e.g. by one of
     - Being concurrently enrolled in DSA1
     - Having had Java, C, or C++ in your Introduction to Programming course
-    - <details><summary>Independent study sufficient to understand type declarations, braces, semi-colons, and C-style control constructs such as this:</summary>
+    - Independent study sufficient to understand this example:
+    
+        <details><summary>Example code (click to expand):</summary>
         
         ````java
-        int returnOne() {
+        int example() {
             for(int i = 0; i < 10; i += 1) {
                 double j = 3;
                 if (i/3 != i/j) return i;
             }
-            return -1;
+            return 10;
         }
         ````
+        
+        You should be able to describe the use of `int`, `double`, braces, semi-colons, and `for` and why the function returns 1, not 10.
         </details>
 
 More information about the transition from previous courses to the new foundation
