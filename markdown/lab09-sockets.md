@@ -50,7 +50,7 @@ so we'll have the port be a command-line parameter in the client.
 
 ## Address
 
-TCP/IP addresses tell us what computer and program we're talking to. They are somewhat involved to explain (we'll go into more on these in COA2),
+TCP/IP addresses tell us what computer and program we're talking to. They are somewhat involved to explain (we'll go into more on these in CSO2),
 but are stored in a `struct sockaddr_in` declared in `<netinet/in.h>`.
 For our uses, we'll need to (a) create one of these, (b) zero it out, and then (c) set three fields:
 

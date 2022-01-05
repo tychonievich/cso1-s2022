@@ -240,7 +240,7 @@ Modern computers add significant complexity to this basic design,
 with address translation to achieve virtual memory
 and a hierarchy of different caches to make memory seem faster,
 but the core interface from the heart of the processor's point of view is just some address and value wires.
-We'll discuss more about these topics in COA 2.
+We'll discuss more about these topics in CSO2.
 
 
 # Code-to-Hardware Compilation
