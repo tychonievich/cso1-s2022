@@ -51,13 +51,13 @@ The primary kinds of tasks are:
 
 |        | Section 001 | Section 002 | TAs |
 |--------|------------|-----|
-| Name | Daniel Graham | Luther Tychonievich | TBA |
+| Name | Daniel Graham | Luther Tychonievich | Annabel, Edward, Giovanni, Gustavo, Ian, Isabelle, Joseph, Julian, Kelvin, Lukas, Quentin, Sarah, Sujie, and Will |
 | Location | Rice 411 | Rice 208 | Thornton Stacks (A235) |
-| Office Hours | TBA | TBA | See [the OH schedule](oh.html) |
+| Office Hours | TBA | TBA | TBA |
 | Phone | 243-3391| 243-3789 | (none) |
 | Email | <a href="mailto:dgg6b@virginia.edu?subject=CSO1">dgg6b@virginia.edu</a> | <a href="mailto:tychonievich@virginia.edu?subject=CSO1">tychonievich@virginia.edu</a> | TBA |
 
-For most communication, [Piazza](#) is preferred to email.
+For most communication, [Piazza](https://collab.its.virginia.edu/portal/site/5c4b9286-c13d-4a4e-a5d9-5af58952ffcc) is preferred to email.
 If you email, include "CSO1" in the subject line to help us prioritize your email.
 
 Our TAs are students too, with duties and work outside of their TAing. Please do not ask them to act as your TA except at the scheduled on-the-clock times they have listed as their office hours and lab time. They are also kind people; please don't put them in the position of having to say no or (worse) being nice to you at the expense of their own schooling.
