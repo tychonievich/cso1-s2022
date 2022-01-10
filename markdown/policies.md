@@ -88,7 +88,7 @@ The target difficulty is 5–10 hours of focused effort each week.
 
 ## Grading Goal
 
-In February 2019 the CS faculty approved [a definition](http://ugrads.cs.virginia.edu/grading-guidelines.html) of what we believe grades mean.
+In February 2019 the CS faculty approved [a definition](https://engineering.virginia.edu/departments/computer-science/computer-science-undergraduate-advising#accordion656767) of what we believe grades mean.
 We hope to approximate that definition in this course.
 As a brief summary,
 
