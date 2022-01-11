@@ -13,7 +13,7 @@ You should take this course only if
 
 1. You have credit (or passed the placement test) for at least one of CS 1110, CS 1111, CS 1112, CS 1113, or CS 1120
 
-1. You have do **not** have credit for CS 2110 or CS 2150
+1. You do **not** have credit for CS 2110 or CS 2150
 
 1. You will know some C- or Java-like language by the middle of the class, as e.g. by one of
     - Having previously taken or being concurrently enrolled in DSA1
