@@ -268,7 +268,7 @@ assignments:
     HW01:
         title: bit fiddling
         link: pa01-bit fiddling.html
-        due: 2022-02-08 17:00:00
+        due: 2022-02-09 23:59:59
         notes: things like "count the number of set bits in an int" using limited numbers of bitwise operations
         rubric: {"kind":"percentage"}
     HW02:
@@ -299,17 +299,17 @@ assignments:
         title: mult
         link: pa03-mult.html
         files: ['mult.binary', 'mult.binary.txt']
-        due: 2022-02-15 17:00:00
+        due: 2022-02-16 23:59:59
     HW04:
         title: fib
         link: pa04-fib.html
         files: ['fib.binary', 'fib.binary.txt']
-        due: 2022-02-22 17:00:00
+        due: 2022-02-23 23:59:59
     HW05:
         title: assembly
         files: 'matlib.s'
         link: pa05-assembly.html
-        due: 2022-03-15 17:00:00
+        due: 2022-03-16 23:59:59
         rubric:
             kind: hybrid
             auto-weight: 0
@@ -330,12 +330,12 @@ assignments:
     HW06:
         title: 'bomb'
         link: pa06-bomb.html
-        due: 2022-03-22 17:00:00
+        due: 2022-03-23 23:59:59
     HW07:
         title: smallc
         files: smallfunc.c
         link: pa07-smallc.html
-        due: 2022-03-29 17:00:00
+        due: 2022-03-30 23:59:59
         rubric:
             kind: hybrid
             auto-weight: 0
@@ -352,18 +352,18 @@ assignments:
         title: linkedlist
         files: linkedlist.c
         link: pa08-linkedlist.html
-        due: 2022-04-12 17:00:00
+        due: 2022-04-13 23:59:59
         rubric: {"kind":"percentage"}
     HW09:
         title: postfix
         files: rpn.c
         link: pa09-postfix.html
-        due: 2022-04-26 17:00:00
+        due: 2022-04-27 23:59:59
     HW10:
         title: schat
         files: schat.c
         link: pa10-schat.html
-        due: 2022-05-03 17:00:00
+        due: 2022-05-03 23:59:59
         rubric:
             kind: hybrid
             auto-weight: 0
