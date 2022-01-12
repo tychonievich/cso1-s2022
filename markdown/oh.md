@@ -6,7 +6,13 @@ title: Office Hours
 <a href="https://kytos.cs.virginia.edu/ohq/?c=cso1">Join the Help Queue</a>
 </div>
 
-# Online
+# Asynchronous
+
+- Quick Q&A in the `on-topic` Discord channel
+- Longer questions in Piazza
+- Both accessible via [Collab](https://collab.its.virginia.edu/portal/site/5c4b9286-c13d-4a4e-a5d9-5af58952ffcc)
+
+# Online Synchronous
 
 - Occur via the course Discord server.
 - Join the queue using the link above.
