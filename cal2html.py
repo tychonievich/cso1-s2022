@@ -38,7 +38,7 @@ def parseReading(data,topic):
     """Given "git" or ["git","hex editor"] and parsed cal.yaml,
     returns list of (text,locallink,abslink) triples"""
     def localfix(text,link):
-        if '://' in link:
+        if not link or '://' in link:
             return (text,link,link)
         else:
             if link[0] == '/': return (text, link, data['meta']['home'][:data['meta']['home'].find('/',9)+1].rstrip('/')+'/'+link)
@@ -106,7 +106,7 @@ def htmlDetailsOrflat(e, cls, flatten=False):
     generally a mix of <details>...</details> and <div>...</div>
     """
     glue = ' <small>and</small> '
-    deets = any((_[1] and _[0] not in e[False]) for _ in e[None])
+    deets = any((_[0] not in e[False]) for _ in e[None])
     links = {_[0]:_[1].replace('<','&lt;').replace('&','&amp;').replace('"','&quot;') for _ in e[None] if _[1]}
     ans = []
     if deets:
@@ -162,7 +162,7 @@ class CourseSchedule:
         self.lects = {}
         self.labs = {}
         self.tasks = {}
-        b = self.start
+        b = d['Courses begin']
         while b <= end:
             if b in self.breaks: 
                 b += timedelta(1)
