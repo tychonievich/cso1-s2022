@@ -61,10 +61,10 @@ lectures:
     
     - [assembly, x86-64]
     - x86-64
-    - [the stack, tracing variables]
 
     - SIGCSE
     - SIGCSE
+    - [the stack, tracing variables]
     - compilation
 
     - compile-time info
