@@ -87,7 +87,7 @@ It may be adjusted as the semester progresses to reflect actual pacing and uptak
 details.lab:before { content: ""; }
 small { opacity: 0.5; }
 .special, .task:before { background: rgba(255,127,0,0.25); opacity: 0.75; }
-.day.exam { background: rgba(255,223,191,1) !important; }
+.day.exam { background: rgba(255,231,207,1) !important; }
 span.date { font-family:monospace; }
 details { padding-left: 1em; }
 summary { margin-left: -1em; }
