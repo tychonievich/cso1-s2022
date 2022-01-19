@@ -174,6 +174,7 @@ You'll only need to do this once in this course, so we'll only give a little exp
 1.  Create a working copy of that project on the server
     
     ````bash
+    ssh mst3k@portal.cs.virginia.edu
     cd ~
     git clone mst3k@portal.cs.virginia.edu:cso1-code.git
     exit
@@ -186,7 +187,7 @@ You'll only need to do this once in this course, so we'll only give a little exp
     cd cso1-code
     ````
     
-    If you have not set up a global username and email, you should then set those for this project (see [`user.name` and `user.email`](#user-name-and-user-email))
+    If you have not set up a global username and email, you should then set those for this project (see [`user.name` and `user.email`](#user.name-and-user.email))
 
 
 We may have you use projects we've made for you later in the semester, which uses step 2 of the above.
