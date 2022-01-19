@@ -230,7 +230,7 @@ Let's go through this step by step, assuming you start in Terminal/PowerShell in
     We don't expect that to happen very often this semester, but you should get into the practice of *always* `git pull`{.bash} before `git push`{.bash}.
 
 `git push`{.bash}
-:   As git to send your changes to the main repository on the remote server
+:   Ask git to send your changes to the main repository on the remote server
 
 `ssh mst3k@portal.cs.virginia.edu`{.bash}
 :   Move over to the server
@@ -243,6 +243,21 @@ Let's go through this step by step, assuming you start in Terminal/PowerShell in
 
 Compile and run your program
 :   however is appropriate for what you are doing
+
+:::aside
+Writing scripts
+
+If you find yourself repeatedly running the same commands, you can save them in a file and run them in bulk. For example, you might write a file like
+
+```bash
+git commit -a -m 'auto-commit caused by serversync.sh'
+git pull
+git push
+ssh mst3k@portal.cs.virginia.edu "cd cso1-code; git pull"
+```
+
+and save it on your laptop as `serversync.sh`; then any time you want to sync your code to the server, simply run `bash serversync.sh`
+:::
 
 ## Task for this lab
 
