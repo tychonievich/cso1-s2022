@@ -77,7 +77,7 @@ def parseLinks(entry,name=None):
         lnk = entry.get('lnk',entry.get('link',None))
         if lnk: return [(entry.get('txt',entry.get('text',lnk if name is None else name)), lnk, lnk)]
         ans = []
-        if 'video' in entry: ans.extend(parseLinks(entry['video'],'video'))
+        if 'video' in entry: ans.extend(parseLinks(entry['video'].replace('lectures/','player.html#'),'video'))
         if 'audio' in entry: ans.extend(parseLinks(entry['audio'],'audio'))
         ans.extend(parseLinks(entry.get('files',[])))
         return ans
