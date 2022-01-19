@@ -34,6 +34,8 @@ You should be able to
 If you are unsure of any part of this, please talk to a TA in lab. You take priority over people working on later parts of this lab.
 :::
 
+<!--
+
 ## One more step: changing permissions
 
 ### Overview of directory permissions
@@ -100,6 +102,8 @@ chmod g-rwx .   # remove group-access to read, write, and execute this directory
 chmod o-rwx .   # remove other-access to read, write, and execute this directory
 ````
 :::
+
+-->
 
 # `git` introduction
 
