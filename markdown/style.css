@@ -1,5 +1,5 @@
 /* Overall look-and-feel */
-body { margin:1em; font-family: serif; color: #333333; background: #ffffff; line-height: 130%; }
+body { margin:1em; font-family: sans-serif; color: #333333; background: #ffffff; line-height: 130%; }
 p { margin: 0em; }
 p + p, p + table, table + p, table + table, details + p { margin-top: 1ex; }
 a { color: #0088cc; text-decoration: none; }
