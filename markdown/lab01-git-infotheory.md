@@ -28,7 +28,7 @@ You should be able to
 1. recognize 
     - `.` as meaning "the current directory"
     - `..` as meaning "the directory containing the current directory"
-    - `~` as meaning "my home directory" -- i.e., `/u/lab/mst3k`
+    - `~` as meaning "my home directory" -- i.e., `/u/mst3k`
 
 :::exercise
 If you are unsure of any part of this, please talk to a TA in lab. You take priority over people working on later parts of this lab.
@@ -229,7 +229,7 @@ Let's go through this step by step, assuming you start in Terminal/PowerShell in
     We don't expect that to happen very often this semester, but you should get into the practice of *always* `git pull`{.bash} before `git push`{.bash}.
 
 `git push`{.bash}
-:   As git to send your changes to the master repository on the remote server
+:   As git to send your changes to the main repository on the remote server
 
 `ssh mst3k@portal.cs.virginia.edu`{.bash}
 :   Move over to the server
