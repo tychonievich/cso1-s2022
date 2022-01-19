@@ -66,7 +66,7 @@ Our TAs are students too, with duties and work outside of their TAing. Please do
 
 Primary readings are write-ups posted on this website.
 We may also link to external articles when appropriate.
-Some readgins may have "reading quizzes" associated with them:
+Some readings may have "reading quizzes" associated with them:
 quizzes to be taken based on the reading prior to the lecture in which they are discussed.
 
 If you desire a different take on the same material, the textbook *Introduction to Computer Systems: From Bits and Gate to C/C++ & Beyond* by Yale Patt and Sanjay Patel contains all of the major topics we'll cover, with a different presentation than we'll cover them.
