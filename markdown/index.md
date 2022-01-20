@@ -80,7 +80,7 @@ The following are additional references:
 - [Using SSH](help-ssh.html), including how to set up passwordless authentication
 - [Command-fu](command-fu.html), a few simple command-line examples (unfinished)
 - [Debugger example](cmdadd.html), using `lldb` and `ghex`
-- [Eduroam on Linux](//www.cs.virginia.edu/luther/tips/linux-at-uva.html), including how to connect to UVA's instantiation of eduroam and handling digital certificates.
+- [Eduroam on Linux](https://www.cs.virginia.edu/luther/tips/linux-at-uva.html), including how to connect to UVA's instantiation of eduroam and handling digital certificates.
 
 The following are assignment writeups:
 
