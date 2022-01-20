@@ -2,8 +2,9 @@
 title: SSH and Editors
 ...
 
-This pseudo-lab is to be done on your own prior to the first lab.
-There is no check-off or other grade process for this pseudo-lab.
+This pseudo-lab is to be done on your own.
+There are no lab meetings for this lab.
+There is no check-off or other grade process for this lab.
 
 # SSH
 
