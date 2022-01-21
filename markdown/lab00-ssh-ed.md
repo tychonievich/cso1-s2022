@@ -70,6 +70,8 @@ We suggest getting to level 4 of Bandit, though you might find other levels and 
 :::aside
 At some point you should get an email from the CS department with a CS login.
 You should be able to use that to SSH into mst3k`@portal.cs.virginia.edu`, an account we will use many times this semester.
+
+To reset your password, use the password reset tool at <https://www.cs.virginia.edu/PasswordReset/>. This tool will not work unless your account was setup at some point, a task that typically happens 3-5 days after you add the class.
 :::
 
 # CLI Editor
