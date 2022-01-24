@@ -2,7 +2,9 @@
 title: Information Theory Lab -- TA guidelines
 ...
 
-We're tracking lab completion on a google sheet: <no link yet>
+We're tracking lab completion on a google sheet: <https://docs.google.com/spreadsheets/d/17JSh154JxBgfInof1QEuYVcdYQnuEw19PIEhtWzKkBg/edit>
+Note I shared this with all TA's computing IDs, so log in with netbadge.
+If you'd prefer another google account be added, let me know by email.
 
 Prioritize questions on lab 00 (shell, ssh, ed) over other questions
 
