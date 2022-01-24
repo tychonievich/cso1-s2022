@@ -2,9 +2,13 @@
 title: Office Hours
 ...
 
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=WEEK&showTitle=0&showNav=1&showPrint=0&showTabs=1&showCalendars=0&src=Y19sc3RzYjVpdHY1cHNvNXU2c3Mxc2QyaGNrMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23C0CA33" style="border:solid 1px #777" width="800" height="600" style="width:100%" frameborder="0" scrolling="no"></iframe>
+
 <div style="display:table; font-size:200%; margin: 1em auto; padding:1ex; box-shadow: 0 1px 10px rgba(0,0,0,.1); border: thin solid #eee; border-radius:1ex; background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);">
 <a href="https://kytos.cs.virginia.edu/ohq/?c=cso1">Join the Help Queue</a>
 </div>
+
+
 
 # Asynchronous
 
