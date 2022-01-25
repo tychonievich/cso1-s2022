@@ -322,7 +322,7 @@ A bit-mask or simply **mask** is a value used to select a set of bits from anoth
 Typically, these have a sequential set of bits set to 1 while all others are 0,
 and are used with an `&` to select particular bits out of a value.
 
-Bit-mask constants are generally written in hexadecimal; for example, `0x3ffe0` (or 0011 1111 1111 1110 0000~2~) selects 13 bits, the 5th-least-significant through the 27th.
+Bit-mask constants are generally written in hexadecimal; for example, `0x3ffe0` (or 0011 1111 1111 1110 0000~2~) selects 13 bits, the 5th-least-significant through the 17th.
 
 Bit-mask computed values are generally built using shifts and negations;
 for example, `((~0)<<5) ^ ((~0)<<14)` generates `0x3fe0`:
