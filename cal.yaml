@@ -164,7 +164,7 @@ reading:
         txt: Bits §2.1–2.4
         lnk: bits.html
     gates, wires, bitwise: 
-        txt: Booleans §1–2, 4
+        txt: Booleans §4
         lnk: bool.html
     mux, demux, adder: 
         txt: Booleans §3
