@@ -25,7 +25,7 @@ Do not add conditionals, loops, subroutines, etc.
 
 ## The Tasks
 
-In case the server is down, the tasks in question are:
+We want you to do four of the problems. There are four others on the site as well if you want more practice, but the only four we grade are:
 
 subtract
 :   Given `x` and `y`, set `z` to `x - y` without using `-` or multi-bit constants.
@@ -41,11 +41,6 @@ anybit
 :   Given `x`, set `y` to `1` if any bit in `x` is `1`; set `y` to `0` if `x` is all `0`s.
 
     For full credit, use ≤ 40 operations from {`~`, `+`, `-`, `<<`, `>>`, `&`, `^`, `|`}.
-
-fiveeighths
-:   Given `x`, set `y` to be 5/8 of `x` (rounded toward zero). This should work for both positive and negative numbers, even if neither `5*x` nor `x/8` can be properly represented in 32 bits, but does not need to work for 0x80000000.
-
-    For full credit, use ≤ 20 operations from {`!`, `~`, `+`, `<<`, `>>`, `&`, `^`, `|`}.
 
 bitcount
 :   Given `x`, set `y` to the number of bits in `x` that are `1`.
