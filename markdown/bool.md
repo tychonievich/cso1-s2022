@@ -314,6 +314,7 @@ for left shifts those new bits are always 0s, but for right shifts they are some
 and sometimes copies of whatever bit had been in the highest-order spot before the shift.
 Copying the high-order bit is called "sign-extending" because it keeps negative numbers negative in twos-complement.
 Which kind of right-shift is performed varies by language and by datatype shifted.
+Most languages use sign-extending shifts for signed integers and zero-extending shifts for unsigned integers.
 Some languages also have a third shift `>>>` to distinguish between sign-extending (`>>`) and zero-extending (`>>>`) right shifts.
 
 ## Masks
