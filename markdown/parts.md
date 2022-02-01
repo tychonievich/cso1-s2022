@@ -173,7 +173,7 @@ but that is fine because the register will ignore it until the next rising clock
 ## Clock Speed
 
 The clock is important enough to have become one of the most noted stats about chips:
-a 2GHz clock speed means the clock oscillator completes 2 billion ($2×10^9$ not $2×2^30$) low-high cycles per second.
+a 2GHz clock speed means the clock oscillator completes 2 billion ($2×10^{9}$ not $2×2^{30}$) low-high cycles per second.
 Because virtually every part of a chip contains registers,
 and because all registers are attached to the clock,
 clock speed is a direct indicator of overall processor speed.
