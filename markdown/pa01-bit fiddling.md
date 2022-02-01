@@ -1,5 +1,5 @@
 ---
-title: Bit fiddling PA
+title: Bit fiddling
 ...
 
 
@@ -25,7 +25,7 @@ Do not add conditionals, loops, subroutines, etc.
 
 ## The Tasks
 
-We want you to do four of the problems. There are four others on the site as well if you want more practice, but the only four we grade are:
+We want you to do four of the problems. There are others puzzles on the site as well if you want more practice, but the only four we grade are:
 
 subtract
 :   Given `x` and `y`, set `z` to `x - y` without using `-` or multi-bit constants.
