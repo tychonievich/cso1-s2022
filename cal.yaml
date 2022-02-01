@@ -62,12 +62,11 @@ lectures:
     - [assembly, x86-64]
     - x86-64
 
-    - SIGCSE
-    - SIGCSE
+    - debugger demo
     - [the stack, tracing variables]
     - compilation
-
     - compile-time info
+
     - C introduction
     - C introduction
     - C introduction
