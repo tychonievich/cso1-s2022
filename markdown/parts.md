@@ -304,7 +304,7 @@ Registers are used to implement any kind of circular dependency or change over t
 Each register has an input and an output,
 and with very few exceptions all computations compute register inputs from register outputs.
 Like variables, register inputs can only be specified once;
-register inputs can be used multiple times.
+register outputs can be used multiple times.
 
 :::example
 Syntax for interacting with registers varies by language;
