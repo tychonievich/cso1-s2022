@@ -11,7 +11,7 @@ You'll likely find [Booleans §4](bool.html) a useful reference.
 # Task
 
 Visit <https://kytos.cs.virginia.edu/cso1/pa01.php>
-and complete at least 80% of the problems there.
+and complete the four problems listed below.
 The text boxes want lightweight code using just operators and assignments, like
 
 ````c
