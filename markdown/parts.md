@@ -129,12 +129,12 @@ Consider the following circuit:
 <text style="text-anchor:middle;text-align:center;font-style:italic;" font-size="8px" y="30" x="60"><tspan x="75" y="17.5">x</tspan></text>
 </g>
 </svg>
-^[x + 1 can be done with a simplified circuit: <img src="img/increment.svg" style="max-width:20em"/>]
+^[x + 1 can be done with a simplified circuit:<br/><img src="img/increment.svg" style="max-width:30em"/>]
 
 As we stated [in the previous section](#transitioning-multi-bit-values),
 the different bits of the output of the adder appear at different times.
 This means that if we start with $x = 0$ we might see a sequence of x values like 0, 1, 0, 2, 1, ...: in other words, not the sequence we want to see.
-To fix this we add a register^[Te details of register design is beyond the scope of this course, but one common version is the rising-edge gated D flip-flop, which looks like <img src="img/dflipflop.svg" style="max-width:20em"/>] to the circuit:
+To fix this we add a register^[Te details of register design is beyond the scope of this course, but one common version is the rising-edge gated D flip-flop, which looks like<br/><img src="img/dflipflop.svg" style="max-width:10em"/>] to the circuit:
 
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 80 48" style="max-width:10.4em">
 <defs>
