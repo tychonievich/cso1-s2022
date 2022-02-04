@@ -24,8 +24,9 @@ cd lab03-simulator
 ```
 
 You should be able to run this entirely on your laptop, so no `portal` needed.
-We still recommend you `git add NewFile.Java`{.sh} and new files you create
-and `git commit -a -m "added icode 3"`{.sh} so you have a history of changes and can go back if needed.
+We still recommend you `git add NewFile.Java`{.sh} for any new files you create
+and `git commit -a -m "added icode 3"`{.sh} any time you make progress
+so that you have a history of changes and can go back if needed.
 
 The repository we provide has a basic simulator
 in python (`sim_base.py`) and java (`SimBase.java`).
