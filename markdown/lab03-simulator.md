@@ -16,8 +16,22 @@ In this lab, and the subsequent programming assignment, you will expand on these
 
 # Getting the simulator skeleton
 
-We've written a basic simulator in [python (sim_base.py)](files/sim_base.py) and [java (SimBase.java)](files/SimBase.java).
-This works from a command-line interface, expecting memory byte values (either directly or in a file) as a command-line argument:
+Download the starter code using git:
+
+```sh
+git clone https://github.com/CSO-Starter-Code/lab03-simulator.git
+cd lab03-simulator
+```
+
+You should be able to run this entirely on your laptop, so no `portal` needed.
+We still recommend you `git add NewFile.Java`{.sh} and new files you create
+and `git commit -a -m "added icode 3"`{.sh} so you have a history of changes and can go back if needed.
+
+The repository we provide has a basic simulator
+in python (`sim_base.py`) and java (`SimBase.java`).
+Pick one of the two to work with (whichever language you find more comfortable).
+
+The program works from a command-line interface, expecting memory byte values (either directly or in a file) as a command-line argument:
 
 ````sh
 # runs SimBase in java with 8 bytes of memory set
@@ -31,9 +45,9 @@ python3 sim_base.py 01 23 45 67 89 ab cd ef
 ````
 
 ````sh
-# runs SimBase using the contents of memory.txt to set memory
-python3 sim_base.py memory.txt
-java SimBase memory.txt
+# runs SimBase using the contents of programs/halt to set memory
+python3 sim_base.py programs/halt
+java SimBase programs/halt
 ````
 
 Memory contents must be specified in hexadecimal bytes, separated by whitespace.
@@ -45,7 +59,7 @@ The skeleton code just returns `oldPC + 1`.
 
 Each file also has two global values you can access: `R`, an array of 4 register values, and `M`, an array of 256 memory values.
 
-We also provide a helper function for getting a range of bits from a number.
+We also provide a `get_bits` helper function for getting a range of bits from a number which you may use if you wish.
 
 :::exercise
 Add code to `execute` (do not edit other parts of the file) to do the following:
