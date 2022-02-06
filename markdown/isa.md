@@ -141,7 +141,7 @@ or equivalently with a large mux in hardware.
 After `=`, the next building block of most imperative programming languages is binary operators.
 These are big networks of gates: `+` we've already looked at, and `-` is very similar;
 `*` is basically one `+` for each bit in the input numbers;
-and `\\` and `%`, while quite a bit more complicated still, can still be handled with a lot of gates.
+and `/` and `%`, while quite a bit more complicated still, can still be handled with a lot of gates.
 
 There are other operators we'll need too, like `>=` and its friends,
 and [boolean operators](#bit-wise-boolean-operators-in-code) as well,
