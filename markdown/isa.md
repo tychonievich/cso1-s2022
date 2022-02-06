@@ -547,7 +547,7 @@ A summary follows:
 |follow others              |ordering                       |            |
 +---------------------------+-------------------------------+------------+
 |Conditions are in registers|There are special "condition   |More CISC   |
-|                           |codes                          |            |
+|                           |codes"                         |            |
 +---------------------------+-------------------------------+------------+
 |Function arguments usually |Function arguments usually     |More RISC   |
 |passed in registers        |passed on the stack            |            |
