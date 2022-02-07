@@ -86,3 +86,75 @@ You may work with other students in this class on this assignment, but only in t
     ````
     
 In all cases, include computing IDs in your citations to streamline our automated tools that assist with collaboration checking.
+
+
+
+# Hints
+
+If needed, we have some hints you can look at.
+
+<style>
+summary { font-weight: bold; }
+details { padding: 1ex; margin: 1ex 0ex; }
+details[open] { border-left: thin solid rgba(0,0,0,0.25); border-radius:1ex; }
+</style>
+
+
+<details><summary>subtract</summary>
+
+Consider the definition of two's compliment.
+
+</details>
+
+
+<details><summary>bottom</summary>
+
+The obvious solution `~(0xFFFFFFFF << b)`{.c} won't work.
+Bit shifts always do a modulo on their right-hand operand, so `a << b` does the same thing as `a << (b % (8*sizeof(a))`.
+Thus, `<< 32` and `<< 0` do the same thing.
+
+</details>
+
+<details><summary>anybit</summary>
+
+The easy solution would be `y = !!x` but we don't allow `!`. Nor do we allow enough operations to do a loop-like solution.
+    
+You can divide and conquer.
+Try defining `x1` where if any bit anywhere in `x` was `1`, some bit in the bottom 16 bits of `x1` is `1`.
+The given task is "see if any `1` bit is in the 32 bits of `x`".
+How could you reduce it to "see if any `1` bit is in the bottom 16 bits of `x1`"?
+
+</details>
+
+
+<details><summary>bitcount</summary>
+
+The obvious solution would be something like
+
+````c
+ans = 0;
+for(int i=0; i<32; i+=1) {
+    a += x&1;
+    x >>=1;
+}    
+````
+
+We don't allow for loops, but even if you replace it with 32 copies that's still 96 operations, and we only allow 40 for this task.
+
+The trick is to do things in parallel, treating a number like a vector of smaller numbers.
+Suppose I wanted to count the bits of an 8-bit number with bits `abcdefgh`.
+With a little shifting and masking I could make three numbers
+
+    0b00e00h
+    0a00d00g
+    0000c00f
+
+and add them to get `xx0yy0zz` where `xx = a+b`, `yy = c+d+e`, and `zz = f+g+h`.
+
+Extending this trick to several rounds on 32 bits will solve this problem.
+
+</details>
+
+
+
+
