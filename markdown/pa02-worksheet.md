@@ -18,9 +18,7 @@ Submit in one of the following two ways:
 
 - Bring a filled-in paper to class on Friday and give it to the instructor.
 
-- Upload an image of your answer to GradeScope, either on [collab](https://collab.its.virginia.edu/portal/site/5c4b9286-c13d-4a4e-a5d9-5af58952ffcc/page/5e4642d2-7b08-4e8a-ac4a-ccdf0210b29f) or by GradeScope entry code **RWJ4JG**.
-    
-    Note: after you upload, please assign the pages of the upload to the corresponding questions.
+- Upload an image of your answer to GradeScope, either on [collab](https://collab.its.virginia.edu/portal/site/5c4b9286-c13d-4a4e-a5d9-5af58952ffcc/page/5e4642d2-7b08-4e8a-ac4a-ccdf0210b29f) or by GradeScope entry code **RWJ4JG**. After you upload, please assign the pages of the upload to the corresponding questions and then click the "submit" button.
 
 
 # Collaboration
