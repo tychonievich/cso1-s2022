@@ -133,10 +133,29 @@ They are given 90% credit between 0 and 24 hours late;
 at 80% credit between 24 and 48 hours late.
 If extensions beyond that time are needed, please see the professor to discuss why and if other accommodations are also needed.
 
-Labs may be checked off late for 90% credit by visiting a TA during office hours later during the week of the lab and going through the usual checkoff process.
-If extensions beyond that time are needed, please see the professor to discuss why and if other accommodations are also needed.
-
 Exams may not be taken late without special-case permission.
+
+Labs deserve their own section:
+
+### Late Labs
+
+No early checkoff
+:   We hope you will begin labs during lab time, with the guidance of TAs and help of fellow students during the initial stages of the lab. We also want to have the freedom to alter the labs before they begin and want to limit how many labs TAs have to be ready to check off at any one time. For these reasons we do not permit early lab check-off.
+
+In-lab check-off
+:   Checking off a lab during lab time gets 100%
+
+In-lab unfinished work
+:   If you participated in lab but didn't finish, you get 50% at the end of lab.
+    This can be changed to 100% by checking off the completed lab with a TA during office hours before the start of the next week's lab.
+
+Check-off without attending
+:   If you missed lab, you can get 90% by checking off with a TA during office hours after the lab ends and before the start of the next week's lab.
+    If you have an excused absence (such as quarantine or university-sponsored travel) this gets 100% instead.
+
+In all cases, TAs may award lesser credit if your work is incorrect. 
+
+TAs will prioritize helping students during the first part of lab. If for some reason you come to lab with it already completed, you'll be checked off after the TAs have helped everyone else begin to make progress.
 
 # Miscellanea
 
