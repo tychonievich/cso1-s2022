@@ -139,7 +139,7 @@ Labs deserve their own section:
 
 ### Late Labs
 
-<center>*The policy in this section was changed 2022-02-08 14:08 EST*</center>
+<small>*The policy in this section was changed 2022-02-08 14:08 EST*</small>
 
 No early checkoff
 :   We hope you will begin labs during lab time, with the guidance of TAs and help of fellow students during the initial stages of the lab. We also want to have the freedom to alter the labs before they begin and want to limit how many labs TAs have to be ready to check off at any one time. For these reasons we do not permit early lab check-off.
