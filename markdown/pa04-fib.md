@@ -96,6 +96,8 @@ It should be the case that running your simulator on `fib.binary` for many cycle
     0xf0-ff: 21 61 82 e3 65 48 ad f5 a2 97 39 d0 09 d9 e2 bb
 
 
+Your code should *not* change the byte stored in address 0 during its run.
+
 # Hints, tips, and suggestions
 
 ## How to compute Fibonacci numbers
