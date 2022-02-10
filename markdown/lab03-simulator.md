@@ -156,7 +156,7 @@ That means they are not good indices (e.g., `M[R[i]]`{.java} might throw an exce
 However, `R[i] & 0xFF`{.java} treats it as unsigned instead,
 so `M[R[i] & 0xFF]`{.java} should work.
 
-Python treats bytes as unsigned, so `R[i] <= 0`{.python} is always true.
+Python treats bytes as unsigned, so `R[i] <= 0`{.python} acts like `R[i] == 0`, which is not what we want.
 It can be re-written to work correctly as `R[i] == 0 or R[i] >= 0x80`{.python}
 
 
