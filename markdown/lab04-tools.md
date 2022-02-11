@@ -63,5 +63,5 @@ If you run a mostly POSIX-compliant operating system (Linux, FreeBSD, OpenBSD, A
 
 As a special case, macOS is POSIX-compliant but by default does not include most of the tools we'll need, has a slightly different take on some parts of C than normal, and often has commands hidden under non-standard names or the like. If you install `clang` and `lldb` through the macOS developer tools, you can probably use your macOS machine directly with no virtual machine. You are welcome to do this, but note that we may not be able to help if something goes wrong.
 
-If you run Windows, there's a thing called the Linux Subsystem for Windows which can let you make windows (almost) act like a POSIX-compliant OS. You are welcome to do this, but note that we may not be able to help if something goes wrong.
+If you run Windows, there's a thing called the Windows Subsystem for Linux which can let you make windows (almost) act like a POSIX-compliant OS. You are welcome to do this, but note that we may not be able to help if something goes wrong.
 
