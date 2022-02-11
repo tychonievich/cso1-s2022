@@ -57,40 +57,6 @@ You have to load modules
 
 Other than loading these modules after you `ssh` in to `portal` (each time you `ssh` into portal), you should be able to use the skills you learned in [Lab 00](lab00-ssh-ed.html) and [Lab 01](lab01-git-infotheory.html) to complete the [Show at least this](#show-at-least-this) material.
 
-# How-to with a virtual machine
-
-A virtual machine is a program that pretends to be an entire computer, so you can run a different operating system inside your current operating system. We recommend using this to get Linux running inside your MacOS or Windows environment.
-
-1. Download and install VirtualBox from <https://www.virtualbox.org/wiki/Downloads>
-
-2. Download our (1.8 GB) VirtualBox OVA file either from [UVA Box](https://virginia.box.com/s/b1nhtc3z2uuhze5xxjlcjh8gjb9wx6wy) or from [Collab](https://collab.its.virginia.edu/access/content/group/376189b0-ab8a-4906-a181-153ed4ffaf4c/COA_Lubuntu.ova) (we have two copies available, either one is fine)
-
-3. If you are running Windows,
-    a. Disable Windows Hyper-V (an alternative virtualization layer which is incompatible with VirtalBox) by running the following from powershell:
-        
-            bcdedit /set hypervisorlaunchtype off
-        
-        ... and then restarting your computer
-    
-    b. You can re-enable Hyper-V by running the following from powershell; note though that VirtualBox requires it to be disabled, so don't do this if you still need VirtalBox:
-        
-            bcdedit /set hypervisorlaunchtype on
-
-        ... and then restarting your computer
-
-4. Run VirtualBox, and within it initialize your virtual machine as follows
-    a. In the menu bar, click File → Import Appliance…
-    b. Click the folder icon on the right of the text box and browse to where you downloaded the OVA file in step 2 above
-    c. Click Next, then Import
-    d. Wait for it to finish
-
-5. To run your virtual machine,
-    a. Run VirtualBox
-    b. Select "UVA_COA_Lubuntu" on the left panel
-    c. Click "Start" 
-
-Note: you may have to enable virtualization in your BIOS to get VirtualBox to work. You likely have this enabled by default; if not, the TAs will help you do so in lab.
-
 # How-to on your own
 
 If you run a mostly POSIX-compliant operating system (Linux, FreeBSD, OpenBSD, AIX, Solaris, and almost all the others with one notable exceptions), you can probably get `clang`, `git`, and `lldb` to work with no extra effort.
