@@ -303,7 +303,7 @@ assignments:
         title: fib
         link: pa04-fib.html
         files: ['fib.binary', 'fib.binary.txt']
-        due: 2022-02-23 23:59:59
+        due: 2022-03-02 23:59:59
     HW05:
         title: assembly
         files: 'matlib.s'
