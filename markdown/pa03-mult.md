@@ -132,7 +132,9 @@ Debugging binary is hard. That's part of why we don't generally write code in bi
 
 ## Related Walkthrough
 
-There's a 10-minute [video](player.html#code-leftshift.webm) of Prof Tychonievich using the "How to write binary" section above to create a program that computes `x <<= y`. We hope it will prove helpful.
+There's a 10-minute [video](player.html#code-leftshift.webm) of Prof Tychonievich^[I made an error in the video: 50 seconds in I said "multiply" but wrote `<<=` instead of `*=`. Because that was in the lead-in discussion and not the machine code creation part, I decided not to do another take to fix it.] using the "How to write binary" section above to create a program that computes `x <<= y`. We expect it will prove helpful in understanding how to solve this assignment.
+
+
 
 # Submit
 
