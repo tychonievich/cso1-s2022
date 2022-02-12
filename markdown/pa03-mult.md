@@ -130,6 +130,9 @@ We suggest following these steps, carefully, saving the result of each in a file
 
 Debugging binary is hard. That's part of why we don't generally write code in binary. If you get stuck, you should probably try pulling just the part you are stuck on separate from the rest and test it until it works, then put it back in the main solution.
 
+## Related Walkthrough
+
+There's a 10-minute [video](player.html#code-leftshift.webm) of Prof Tychonievich using the "How to write binary" section above to create a program that computes `x <<= y`. We hope it will prove helpful.
 
 # Submit
 

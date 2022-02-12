@@ -77,7 +77,7 @@ h6 { font-size: 100%; }
 
 /* Table styles */
 thead > th { font-weight: bold; }
-tr.odd { background-color: rgba(0,0,0,0.04); }
+tr.odd { background-color: rgba(0,0,0,0.08); }
 table { border: 0.0625ex solid rgba(0,0,0,0.125); border-collapse: collapse; max-width: 100%; }
 td,th { padding: 0ex 1ex; }
 
