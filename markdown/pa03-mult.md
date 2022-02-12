@@ -86,7 +86,7 @@ You should ignore overflow, so since 0xC9 × 0x23 = 0x1B7B, the answer should be
 You may assume that neither multiplicand will be negative, but either or both may be zero.
 
 Thus, if `mult.binary` begins `__ 09 __ 0A` then when it is finished it should have `5A` in address 0xA0;
-if `mult.binary` begins `__ 49 __ 23` then when it is finished it should have `7B` in address 0xA0.
+if `mult.binary` begins `__ C9 __ 23` then when it is finished it should have `7B` in address 0xA0.
 We should be able to change the second and fourth bytes of your program to do other multiplications too.
 
 # Hints, tips, and suggestions
