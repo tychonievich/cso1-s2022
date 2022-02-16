@@ -53,7 +53,7 @@ lectures:
     - fetch-decode-execute
     - fetch-decode-execute
     - writing machine code
-    - conditional jump
+    - writing machine code
 
     - [addressing modes, endianness]
     - [adjacency, pointers, back doors]
