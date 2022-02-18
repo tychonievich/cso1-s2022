@@ -1,5 +1,5 @@
 ---
-title: "Instructor notes: Backdoors in ISAs"
+title: "Instructor notes: Back Doors in ISAs"
 ...
 
 
