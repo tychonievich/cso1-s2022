@@ -39,27 +39,35 @@ This should be placed around the time that students are engaged with learning co
     
     - We need mandatory power-user training, CS education, etc.
     
-        {.note ...}
+        <div class="note">
         In reply I mention the idea of learning curves: it takes time to learn, time not used for other things, so what are we sacrificing?
         
         I also sometimes discuss the lack of qualified teachers and thus the long-term character of such solutions.
-        {/}
+        </div>
     
     - We should not make power-user interfaces; make all programs simple.
 
-        {.note} In reply I ask how many people, given power, will willingly give it up to become equal with the unempowered.
+        <div class="note">
+        In reply I ask how many people, given power, will willingly give it up to become equal with the unempowered.
+        </div>
     
     - This isn't a problem; the casual user doesn't want that power and wouldn't know what to do with it if they had it.
         
-        {.note} I don't have a single standard reply, but often can do some kind of echo-and-confirm "just to be clear, you're saying that people who don't know how to do something must not want the power to do it---power they don't even know they don't have?"
+        <div class="note">
+        I don't have a single standard reply, but often can do some kind of echo-and-confirm "just to be clear, you're saying that people who don't know how to do something must not want the power to do it---power they don't even know they don't have?"
+        </div>
         
     - Once AI masters understanding what we want this problem will go away.
         
-        {.note} I usually reply with something like "AI is just another class of applications, which themselves have power-user and casual-user interfaces. I can't predict the future, but at least on their current trajectory they are making the separation of cans and cannots more, not less, extreme."
+        <div class="note">
+        I usually reply with something like "AI is just another class of applications, which themselves have power-user and casual-user interfaces. I can't predict the future, but at least on their current trajectory they are making the separation of cans and cannots more, not less, extreme."
+        </div>
         
     - Better help guides, UI design, etc, can make the separation go away.
         
-        {.note} In reply I often summarize "Good UI is intuitive, but intuition comes from subconscious learning by repeated exposure to a pattern. When we are offering more power than most users even realize can exist, there is no intuition to use, and hence no good UI---until people become accustomed to whatever UI we make and start to develop an "intuitive" expectation for that design." It's not a perfect response, but it does the job.
+        <div class="note">
+        In reply I often summarize "Good UI is intuitive, but intuition comes from subconscious learning by repeated exposure to a pattern. When we are offering more power than most users even realize can exist, there is no intuition to use, and hence no good UI---until people become accustomed to whatever UI we make and start to develop an "intuitive" expectation for that design." It's not a perfect response, but it does the job.
+        </div>
 
 # More context
 
