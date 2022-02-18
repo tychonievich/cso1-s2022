@@ -35,7 +35,7 @@ This lesson should follow a discussion of an instructor-created design that stud
             In USA, only bestowed if formally filed for and awarded,
             and only if the filer was the first to invent the process.
             
-            Your copyright is violated if I *use* your process without permission, whether I learned it from you or not.
+            Your patent is violated if I *use* your process without permission, whether I learned it from you or not.
             But it is much easier to defend in court if I did learn it from you.
             
             Last for long enough to get market advantage (10–20 years).
