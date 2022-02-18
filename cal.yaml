@@ -56,7 +56,7 @@ lectures:
     - writing machine code
 
     - [addressing modes, endianness]
-    - [adjacency, pointers, back doors]
+    - [adjacency and pointers, back doors]
     - review 
     
     - [assembly, x86-64]
@@ -243,6 +243,10 @@ reading:
         lnk: https://doc.rust-lang.org/1.8.0/book/references-and-borrowing.html
       - txt: lifetimes
         lnk: https://doc.rust-lang.org/1.8.0/book/lifetimes.html
+    
+    adjacency and pointers:
+        - txt: Data
+          lnk: structures.html
 
 assignments:
     ".groups":

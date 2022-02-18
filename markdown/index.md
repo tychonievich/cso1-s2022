@@ -69,6 +69,7 @@ The following are the main writeups created for this course:
 - [Bits and Beyond](bits.html) including number representations and a little information theory
 - [Components of digital computers](parts.html), including voltage, registers, and HDLs
 - [Designing a processor](isa.html), including von Neumann architecture, ISAs, condition codes, and RISC/CISC
+- [How to store data](structures.html), including enumeration, adjacency, and pointers
 - [x86-64 Summary](x86.html), including calling conventions
 - [C, a guide and reference](c.html), including the C preprocessor
 - [An overview of memory](memory.html), including garbage detection and common memory errors
