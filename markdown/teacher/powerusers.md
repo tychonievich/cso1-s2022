@@ -68,9 +68,7 @@ This should be placed around the time that students are engaged with learning co
         <div class="note">
         
         I usually reply with something like "AI is just another class of applications, which themselves have power-user and casual-user interfaces. I can't predict the future, but at least on their current trajectory they are making the separation of cans and cannots more, not less, extreme."
-        
-        Some student have strong views on AI, so I also tread this path with some caution.
-        
+
         </div>
         
     - Better help guides, UI design, etc, can make the separation go away.
