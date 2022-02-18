@@ -68,27 +68,16 @@ I recommend that article to any instructor presenting on this subject.
 
 
 [^webconsole]:
-    I like to show other power-user PL-CLI interfaces they won't expect, such as the web browser javascript console. For example, I have done enough web scraping in my day that I can go to <https://www.cs.virginia.edu> and type
+    I like to show other power-user PL-CLI interfaces they won't expect, such as the web browser javascript console. For example, I have done enough web scraping in my day that I can go to <https://engineering.virginia.edu/departments/computer-science/faculty> and type
     
     ```javascript
-    a = ''
-    document.querySelectorAll('div.image')
-        .forEach(x => a += x
-            .style
-            .backgroundImage
-            .replace('url(','<img src=')
-            .replace(')','/>')
-        )
-    document.head.innerHTML = ''; document.body.innerHTML = a;
-    ```
-    
-    to get a page of images about the latest news story or to the faculty pae and type
-    
-    ```javascript
-    a=''; 
-    document.querySelectorAll('figure img')
-        .forEach(x => a+='<img src="'+x.src+'"/>');
-    document.head.innerHTML = ''; document.body.innerHTML = a;
+    document.body.innerHTML =
+        Array.from(document.querySelectorAll('.image'))
+            .map(x=>
+                x.style.backgroundImage
+                .replace('url(','<img src=').replace(')','/>')
+            )
+            .join('\n')
     ```
     
     to get a page of faculty photos, so I sometimes will create something like this live for the students.
