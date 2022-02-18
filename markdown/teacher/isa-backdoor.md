@@ -25,12 +25,7 @@ This lesson should follow the students' first exploration of how instructions ca
 
     ````c
     R = (icode != READ_MEMORY) ? R :
-        (mem_out == 0x21) && (R == 0) ? 1 :
-        (mem_out == 0x30) && (R == 1) ? 2 :
-        (mem_out == 0xDE) && (R == 2) ? 3 :
-        (mem_out == 0xAD) && (R == 3) ? 4 :
-        // ...
-        (mem_out == 0x07) && (R == 14) ? 15 :
+        (mem_out == password[R]) ? R+1 :
         0;
     ````
     </div>
