@@ -66,14 +66,20 @@ This should be placed around the time that students are engaged with learning co
     - Once AI masters understanding what we want this problem will go away.
         
         <div class="note">
+        
         I usually reply with something like "AI is just another class of applications, which themselves have power-user and casual-user interfaces. I can't predict the future, but at least on their current trajectory they are making the separation of cans and cannots more, not less, extreme."
+        
+        Some student have strong views on AI, so I also tread this path with some caution.
+        
         </div>
         
     - Better help guides, UI design, etc, can make the separation go away.
         
         <div class="note">
         
-        In reply I often summarize "Good UI is intuitive, but intuition comes from subconscious learning by repeated exposure to a pattern. When we are offering more power than most users even realize can exist, there is no intuition to use, and hence no good UI---until people become accustomed to whatever UI we make and start to develop an "intuitive" expectation for that design." It's not a perfect response, but it does the job.
+        In reply I often summarize "Good UI is intuitive, but intuition comes from subconscious learning by repeated exposure to a pattern. When we are offering more power than most users even realize can exist, there is no intuition to use, and hence no good UI---until people become accustomed to whatever UI we make and start to develop an "intuitive" expectation for that design."
+        
+        It's not a perfect response, but it does the job.
         
         </div>
 
