@@ -90,7 +90,7 @@ I define a structure with the following parts:
 Suppose I also decide that points are each a list of two 16-bit integers
 and labels are each a list of eight 8-bit ASCII characters.
 
-Let's store `(0x123,0x345), (0x1, 0x2), "example\0"` at address 0x1234
+Let's store `(0x123, 0x345), (0x1, 0x2), "example\0"` at address 0x1234
 using a little-endian encoding
 
  address    value   meaning
