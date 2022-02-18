@@ -112,6 +112,8 @@ using a little-endian encoding
 0x1242      0x65    `e`, seventh character of label
 0x1243      0x00    `\0`, eighth character of label
 
+In a [hex editor](lab02-hex-editor.html), this would look like
+`23 01 45 03 01 00 02 00 65 78 61 6d 70 6c 65 00`
 The entire structure takes up 16 bytes.
 :::
 
