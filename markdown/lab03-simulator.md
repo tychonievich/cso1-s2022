@@ -262,8 +262,8 @@ icode = 5
 :   First load a value into R~1~ and then do something to it: 
     
     - flip all bits: `64 89` `54` (result: `76`)
-    - perform `!`: `64 89` `55` (result: `00`; try also `55` by itself to result in `01`)
-    - negate: `64 89` `56` (result: `77`)
+    - negate: `64 89` `55` (result: `77`)
+    - perform `!`: `64 89` `56` (result: `00`; try also `55` by itself to result in `01`)
     - replace with the PC: `64 89` `57`  (result: `02`)
 
 icode = 6
