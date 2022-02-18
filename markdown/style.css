@@ -203,5 +203,17 @@ img.face { height:14.2em; display:float; float:right; margin:1em; margin-right:0
     font-style: italic;
 }
 
+.note {
+    margin: 1em 0em 1em 0em;
+    background: rgba(0,0,0,0.0625);
+    border-left: rgba(0,0,0,0.1225) solid 0.5ex;
+    padding: 0.5em 1em;
+}
+
+/*.aside:not(.long):before, .aside.long > :first-child:before*/
+.note > :first-child:before {
+    content: "Note \2014  ";
+    font-style: italic;
+}
 
 .author + .author:before { content: " and " }
