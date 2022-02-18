@@ -26,7 +26,7 @@ The 8-bit value 0x54 could mean any of the following:
 :   capital letter T: `T`
 
 [Bitvector sets](bool.html#bit-sets-and-flags)
-:   The set ${2,3,5}$
+:   The set $\{2,3,5\}$
 
 [Our example ISA](pa03-mult.html#the-instructions)
 :   Flip the all bits of the value in r1
