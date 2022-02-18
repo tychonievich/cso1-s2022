@@ -18,22 +18,22 @@ This lesson should follow the students' first exploration of how instructions ca
 
 2. Add in a chain of logic that checks successive memory reads for some special sequence of bytes
 
-:::example
-One way to do this is to add a special hidden multi-bit register $R$.
-Use $R$ as the selection input to a mux with fixed constants as the value inputs, and use the output of that mux as the input to an equality comparison circuit.
-Set $R$'s new value to be 0 if the equality is false, or $R+1$ if it is true.
+    :::example
+    One way to do this is to add a special hidden multi-bit register $R$.
+    Use $R$ as the selection input to a mux with fixed constants as the value inputs, and use the output of that mux as the input to an equality comparison circuit.
+    Set $R$'s new value to be 0 if the equality is false, or $R+1$ if it is true.
 
-````c
-R = (icode != READ_MEMORY) ? R :
-    (mem_out == 0x21) && (R == 0) ? 1 :
-    (mem_out == 0x30) && (R == 1) ? 2 :
-    (mem_out == 0xDE) && (R == 2) ? 3 :
-    (mem_out == 0xAD) && (R == 3) ? 4 :
-    // ...
-    (mem_out == 0x07) && (R == 14) ? 15 :
-    0;
-````
-:::
+    ````c
+    R = (icode != READ_MEMORY) ? R :
+        (mem_out == 0x21) && (R == 0) ? 1 :
+        (mem_out == 0x30) && (R == 1) ? 2 :
+        (mem_out == 0xDE) && (R == 2) ? 3 :
+        (mem_out == 0xAD) && (R == 3) ? 4 :
+        // ...
+        (mem_out == 0x07) && (R == 14) ? 15 :
+        0;
+    ````
+    :::
 
 3. Add a mux with $R = 15$ (or however many bytes you used) as the selection and two inputs: "normal, documented behavior" and "special secret behavior"
 
