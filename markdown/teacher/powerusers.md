@@ -40,21 +40,27 @@ This should be placed around the time that students are engaged with learning co
     - We need mandatory power-user training, CS education, etc.
     
         <div class="note">
+        
         In reply I mention the idea of learning curves: it takes time to learn, time not used for other things, so what are we sacrificing?
         
         I also sometimes discuss the lack of qualified teachers and thus the long-term character of such solutions.
+        
         </div>
     
     - We should not make power-user interfaces; make all programs simple.
 
         <div class="note">
+        
         In reply I ask how many people, given power, will willingly give it up to become equal with the unempowered.
+        
         </div>
     
     - This isn't a problem; the casual user doesn't want that power and wouldn't know what to do with it if they had it.
         
         <div class="note">
+        
         I don't have a single standard reply, but often can do some kind of echo-and-confirm "just to be clear, you're saying that people who don't know how to do something must not want the power to do it---power they don't even know they don't have?"
+        
         </div>
         
     - Once AI masters understanding what we want this problem will go away.
@@ -66,7 +72,9 @@ This should be placed around the time that students are engaged with learning co
     - Better help guides, UI design, etc, can make the separation go away.
         
         <div class="note">
+        
         In reply I often summarize "Good UI is intuitive, but intuition comes from subconscious learning by repeated exposure to a pattern. When we are offering more power than most users even realize can exist, there is no intuition to use, and hence no good UI---until people become accustomed to whatever UI we make and start to develop an "intuitive" expectation for that design." It's not a perfect response, but it does the job.
+        
         </div>
 
 # More context
