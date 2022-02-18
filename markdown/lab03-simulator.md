@@ -4,7 +4,7 @@ title: Simulator
 
 # Introduction
 
-As discussed in class, register-transfer level design can be relatively simply described as
+As discussed in class, register-transfer level design can be described as
 
 1. clock signal has a rising edge
 2. register outputs change
