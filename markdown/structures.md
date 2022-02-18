@@ -179,7 +179,7 @@ Because of that, there are dialects of jargon usage and other computer scientist
 
 It is hard to overstate the following fact:
 
-<center style="font-size:150%">It's all just bytes.</center>
+<center style="font-size:150%"> <br/>It's all just bytes.<br/> </center>
 
 There is nothing that distinguishes a float, int, character, instruction, array, etc. They're just bytes. We only tell them apart by how we use them.
 
