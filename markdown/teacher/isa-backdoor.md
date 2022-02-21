@@ -31,6 +31,15 @@ This lesson should follow the students' first exploration of how instructions ca
     </div>
 
 3. Add a mux with $R = 15$ (or however many bytes you used) as the selection and two inputs: "normal, documented behavior" and "special secret behavior"
+    
+    <div class="example">
+    A simple but versatile "special secret behavior" is to treat what cam after the special byte sequence as if it were code.
+    
+    ````c
+    PC = R == 15 ? memory_address + 1 :
+         expected PC;
+    ````
+    </div>
 
 4. Lead a discussion. Example questions to seed discussion include
     
