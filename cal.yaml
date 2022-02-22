@@ -258,15 +258,18 @@ assignments:
             portion: 10
             drop: 1
             rubric: {"kind":"percentage"}
+            no-regrade: true
         Exam:
             portion: "40"
             rubric: {"kind":"percentage"}
+            no-regrade: true
         Quiz:
             portion: "10"
             drop: 1
             duration: -1
             rubric: {"kind":"percentage"}
             link: https://kytos.cs.virginia.edu/cso1/quizzes/
+            no-regrade: true
 
     HW01:
         title: bit fiddling
