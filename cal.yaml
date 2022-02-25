@@ -60,10 +60,10 @@ lectures:
     - review 
     
     - [assembly, x86-64]
-    - x86-64
+    - [x86-64, the stack]
 
-    - debugger demo
-    - [the stack, tracing variables]
+    - debugger demo (guest instructor)
+    - Class canceled
     - compilation
     - compile-time info
 
@@ -206,7 +206,7 @@ reading:
     x86-64: 
         txt: x86-64 summary
         lnk: x86.html
-    tracing variables: 
+    debugger demo: 
         txt: debugger example
         lnk: cmdadd.html
     
