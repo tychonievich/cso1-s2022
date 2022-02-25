@@ -15,22 +15,8 @@ Fall 2018     3     [pdf](files/f2018e3practice.pdf)    [pdf](files/f2018e3real.
 Fall 2019     1                                         [pdf](files/f2019e1.pdf)        [html](files/f2019e1key.html)       83.2%   86.8%   12.4%
 Fall 2019     2                                         [pdf](files/f2019e2.pdf)        [html](files/f2019e2key.html)       75.5%   78.7%   12.4%
 Fall 2019     3                                         [pdf](files/f2019e3.pdf)                                            76.7%   80.0%   14.9%
+Spring 2022   1                                         [pdf](files/s2022e1.pdf)        [pdf](files/s2022e1key.pdf)         89.9%   94.0%   13.6%
 
-<!--
-
-# TPEGS
-
-We use a system called TPEGS (the Tablet Paper Exam Grading System) to scan and grade your paper exams. For this to work, you need to fill in a bubble sheet on the first page of your exam. The bubble region looks like this:
-
-![Example TPEGS footer](files/tpegs.png)
-
-You fill in your computing ID, skipping rows if you have less than 6 characters in your id.
-The footers are read optically, so please fill in the bubbles darkly (either with ink or dark pencil).
-For example the following are correctly bubbled:
-
-![Example TPEGS footer bubbling](files/tpegs-examples.png)
-
--->
 <!--
 The final exam will be about half material from exams 1 and 2 and about half new material. The practice exam only contains examples of the new material.
 
