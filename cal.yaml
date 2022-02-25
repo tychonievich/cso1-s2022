@@ -62,7 +62,7 @@ lectures:
     - [assembly, x86-64]
     - [x86-64, the stack]
 
-    - debugger demo (guest instructor)
+    - [debugger demo, guest instructor]
     - Class canceled
     - compilation
     - compile-time info
