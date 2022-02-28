@@ -26,7 +26,7 @@ When using them on code you wrote, you want to compile with the `-g` flag to ena
 
 # How to Start Using `lldb`
 
-1. Log into a computer with clang and LLDB (e.g., your virtual machine, or `portal.cs.virginia.edu` after running `module load clang-llvm`)
+1. Log into a computer with clang and LLDB (e.g. by SSHing into `portal.cs.virginia.edu` and running `module load clang-llvm`)
 2. Invoke with `lldb program_to_debug`
 
 The following sections describe the important types of things you can do with `lldb`,
@@ -56,7 +56,7 @@ You might also want to use Ctrl+C to interrupt a program if it is running too lo
 
 ### Commands controlling break points
 
-A *break point* is a program location where the debugger pauses when running so you can see what's around it.
+A *breakpoint* is a program location where the debugger pauses when running so you can see what's around it.
 
 When `run`, the debugger pauses right *before* executing the code on which you place a breakpoint.
 
@@ -94,7 +94,7 @@ Command                     Meaning
 
 # Example: debugging `cmdadd`
 
-See the [cmdadd example](cmdadd.html) file for a detailed walkthrough.
+See the [cmdadd example](cmdadd.html) for a detailed walkthrough.
 
 # Task: debug `recfib`
 
@@ -111,15 +111,27 @@ The program [`recfib`](files/recfib) is supposed to print out the *n*th Fibonacc
 
 However, the program prints the wrong numbers.
 
-Your task: use `lldb` to find the bug, then use `ghex` (or another hex editor) to fix it.
+Your task: use `lldb` to find the bug, then use [a hex editor](lab03-simulator.html) to fix it.
 
 :::aside
 Hex editors
 
 We used an online hex-editor in [Lab 03](lab03-simulator.html), and that can be used again here.
-However, stand-alone hex editors like [GHex](https://wiki.gnome.org/Apps/Ghex) can be simpler in some cases.
+There are also various hex-editor applications,
+such as 
 
-If you are running a Linux environment without ghex, try `module load ghex` (on portal) or `sudo apt install ghex` (in your virtual machine) to get access to it.
+- xxd (installed by defualt on most linux systems)
+- hexedit
+- [hexyl](https://github.com/sharkdp/hexyl)
+- [ghex](https://wiki.gnome.org/Apps/Ghex)
+- [bless](https://github.com/bwrsandman/Bless)
+- [oketa](https://utils.kde.org/projects/okteta/)
+- [wxHexEditor](https://sourceforge.net/projects/wxhexeditor/)
+- [hexcurse](https://github.com/arm0th/hexcurse)
+- [dhex](https://sourceforge.net/projects/dhex/)
+- [hexer](https://github.com/PeterTh/hexer)
+
+If editing binaries becomes a common part of your workflow (it won't in this class, but might later in your careers) then picking a hex editor you like will be worth your while.
 :::
 
 Note: the simplest fix (though not the only one) includes changing the conditions of a jump. There are multiple encodings of jumps, but the most common is a two-byte encoding, where the second byte is a relative offset and the first byte indicates the condition of the jump:
