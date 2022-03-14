@@ -77,7 +77,7 @@ There are several ways we could make an AST, but one of them is
     - `int`
     - `printf`
     - arguments
-        1. 
+        1. declaration
             - type
                 - `const`
                 - `char`
