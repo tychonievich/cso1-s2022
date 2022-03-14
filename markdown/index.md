@@ -71,6 +71,8 @@ The following are the main writeups created for this course:
 - [Designing a processor](isa.html), including von Neumann architecture, ISAs, condition codes, and RISC/CISC
 - [How to store data](structures.html), including enumeration, adjacency, and pointers
 - [x86-64 Summary](x86.html), including calling conventions
+- [How to store data](structures.html), including enumeration, adjacency, and pointers
+- [Compilation example](compile-ex.html), outlining how a simple C program is compiled
 - [C, a guide and reference](c.html), including the C preprocessor
 - [An overview of memory](memory.html), including garbage detection and common memory errors
 - [C standard library manual pages](manpage.html), including a guide to using the `man` command
