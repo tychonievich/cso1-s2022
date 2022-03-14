@@ -113,7 +113,7 @@ There are several ways we could make an AST, but one of them is
             - `0`
 :::
 <style>
-.tree * {margin: 0; padding: 0;}
+.tree * {margin: 0; padding: 0; list-style: none; }
 .tree li {
   margin-left: 15px;
   position: relative;
