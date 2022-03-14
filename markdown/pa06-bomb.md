@@ -12,7 +12,7 @@ You may discuss *strategies* and *code patterns*, but not specifics.
 
 You'll use the same bomb you did for [the lab](lab06-bomb.html). If you worked with someone else in lab, you can download your own bomb using the same bomb download site.
 
-> Due to changes needed to fix several errors with the bomb server, bombs downloaded before Wednesday, 16 October 2019 at 6:00pm will not be graded. Please download a new bomb if yours is older than that.
+> Due to changes needed to fix several errors with the bomb server, bombs downloaded before Monday, 14 March 2022 at 3:21pm will not be graded. Please download a new bomb if yours is older than that.
 
 Credit will be awarded as follows:
 
