@@ -198,7 +198,7 @@ reading:
     the stack: 
         txt: ISA §3.4.2
         lnk: isa.html
-    compilation
+    compilation:
         txt: Compilation
         lnk: compile-ex.html
     
