@@ -73,45 +73,44 @@ A parser combines the tokens into a tree structure called an "abstract syntax tr
 There are several ways we could make an AST, but one of them is
 
 :::tree
-- file
-    - function declaration
-        - `int`
-        - `printf`
-        - arguments
-            1. 
-                - type
-                    - `const`
-                    - `char`
-                    - `*`
-                - name
-                    - `format`
-            1. `...`
-    - function definition
-        - `int`
-        - `main`
-        - arguments
-        - body
-            1. definition
-                - `double`
-                - `x`
-            1. initialization
-                - `int`
+- function declaration
+    - `int`
+    - `printf`
+    - arguments
+        1. 
+            - type
+                - `const`
+                - `char`
+                - `*`
+            - name
+                - `format`
+        1. `...`
+- function definition
+    - `int`
+    - `main`
+    - arguments
+    - body
+        1. definition
+            - `double`
+            - `x`
+        1. initialization
+            - `int`
+            - `y`
+            - `+`
+                - `1`
+                - `2`
+        1. assignment
+            - `x`
+            - `>>`
                 - `y`
-                - `+`
-                    - `1`
-                    - `2`
-            1. assignment
-                - `x`
-                - `>>`
-                    - `y`
-                    - `1`
-            1. invocation
-                - `printf`
-                - arguments
-                    1. `"%g\n"`
-                    2. `x`
-            1. return
-                - `0`
+                - `1`
+        1. invocation
+            - `printf`
+            - arguments
+                1. `"%g\n"`
+                2. `x`
+        1. return
+            - `0`
 :::
 <style>
 .tree * {margin: 0; padding: 0; list-style: none;}
