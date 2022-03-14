@@ -115,12 +115,12 @@ There are several ways we could make an AST, but one of them is
 :::
 <style>
 .tree * {margin: 0; padding: 0; list-style: none;}
-.tree ul li {
+.tree ul > li {
   margin-left: 15px;
   position: relative;
   padding-left: 5px;
 }
-.tree ul li::before {
+.tree ul > li::before {
   content: " ";
   position: absolute;
   width: 1px;
@@ -130,8 +130,8 @@ There are several ways we could make an AST, but one of them is
   left: -10px;
 }
 .tree > ul > li:first-child::before {top: 12px;}
-.tree ul li:not(:first-child):last-child::before {display: none;}
-.tree ul li:only-child::before {
+.tree ul > li:not(:first-child):last-child::before {display: none;}
+.tree ul > li:only-child::before {
   display: list-item;
   content: " ";
   position: absolute;
@@ -142,7 +142,7 @@ There are several ways we could make an AST, but one of them is
   height: 7px;
   left: -10px;
 }
-.tree ul li::after {
+.tree ul > li::after {
   content: " ";
   position: absolute;
   left: -10px;
