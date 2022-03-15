@@ -18,24 +18,24 @@ The integer data types are
 
 name            bits        representation              notes
 --------------- ----------- --------------------------  ------------------------------------
-`_Bool`         1 or more   undefined                   rarely used; for all types, `0` is false, anything else is true
+`_Bool`         1 or more   undefined                   rarely used; for all types, `0` is false, anything else is true
 `char`          8           signedness undefined        usually used for characters, sometimes for bytes
-`signed char`   8           2's complement
-`unsigned char` 8           unsigned integer
+`signed char`   8           2's complement
+`unsigned char` 8           unsigned integer
 `short`         16          2's complement
 `int`           32          2's complement
-`long`          32 or 64    2's complement              32 bits if compiled in 32-bit mode; for 64-bit, add the `-m64` flag when compiling
-`long long`     64          2's complement
+`long`          32 or 64    2's complement              32 bits if compiled in 32-bit mode; for 64-bit, add the `-m64` flag when compiling
+`long long`     64          2's complement
 
 Each has an `unsigned` version (e.g., `unsigned short`, etc). If `unsigned` is used as a type by itself, it means `unsigned int`.
 
 Integer literals will be implicitly cast to the correct type upon assignment;
 thus `char x = -3`{.c} will turn `-3` into an 8-bit value automatically,
-as `int x = 'x'`{.c} will turn `'x'` into a 32-bit value.
+and `int x = 'x'`{.c} will turn `'x'` into a 32-bit value.
 This only works up to int-sized literals.
 
 To force a literal to be long add a `l` or `L` to the end; to force it to be unsigned add a `u` or `U`.
-This is generally only needed for very large constants, like `unsigned long very_big = 9223372036854775808ul`{.c}.
+This is generally only needed for very large constants, like `unsigned long very_big = 9223372036854775808uL`{.c}.
 
 Character literals are integer literals written with a different syntax.
 There is no significant difference between `'0'` and `48` other than legibility.
@@ -46,19 +46,19 @@ The floating-point datatypes are
 
 name            exponent bits   fraction bits   total size              literal syntax
 --------------- --------------- --------------- ---------------------   ------------------------------------
-`float`         8               23              32 bits (4 bytes)       `3.1415f` -- `f` or `F` for `float`
-`double`        11              52              64 bits (8 bytes)       `3.1415`  -- no suffix
-`long double`   15              64              80 bits (10 bytes)      `3.1415l` -- `l` or `L` for `long`
+`float`         8               23              32 bits (4 bytes)       `3.1415f` (`f` or `F` for `float`)
+`double`        11              52              64 bits (8 bytes)       `3.1415`  (no suffix)
+`long double`   15              64              80 bits (10 bytes)      `3.1415L` (`l` or `L` for `long`)
 
 Note that `long double` has traditionally only differed from `double` on x86 architectures.
 
 ### Enumerations
 
 The `enum` keyword is a special way of defining named integer constants,
-typically in ascending order unless otherwise specified.
+in ascending order unless otherwise specified.
 
 ````c
-enum colors { a, b, c, d=100, e };
+enum { a, b, c, d=100, e };
 /* a is 0, b is 1, c is 2, d is 100, and e is 101 */
 
 int f = e; /* equivalent to f = 101 */
@@ -69,7 +69,7 @@ int f = e; /* equivalent to f = 101 */
 There is also a special `void` type that means either "a byte with no known meaning" (if used as part of a pointer type) or "nothing at all" (if used as a return type or parameter list).
 
 Casting between integer types truncates (if going smaller) or zero- or sign-extends (if going larger, depending on the signedness of the value) to fit the available space.
-Casting to or from floating-point types converts to a nearby^[Oddly, not always *the* nearest value; floating-point numbers use a "round to even" rule that sometimes rounds in a different direction than you expect in order to get the last bit of the fraction to be a `0`.] representable value (which may be infinity),
+Casting to or from floating-point types converts to a nearby representable value (which may be infinity),
 with the exception that casting from float to int truncates the reminder instead of rounding.
 
 ## Pointers
@@ -84,12 +84,12 @@ float **w;  /* points to a pointer that points to a float */
 float ***a; /* points to a pointer that points to a pointer that points to a float */
 ````
 
-A pointer to any value stored in memory can be taken by using the address-of operator `&`
+A pointer to any value stored in memory can be taken by using the address-of operator `&`.
 Thus `&x`{.c} is the address of the value stored in `x`,
 but `&3`{.c} is an error because 3 is a literal and does not have an address.
 You also can't take the address of the result of an expression: `&(x + y)` or `&&x` are both errors as well.
 
-You de-reference pointers with the same syntax used to create them: a `*` before the variable.
+You de-reference pointers with the same syntax used to declare them: a `*` before the variable.
 
 ````c
 int *x = &z;     /* x = pointer to z */
@@ -123,7 +123,7 @@ long w = ((long)z) - ((long)y); // w is 8, not 2.
 
 
 
-## Composite
+## Compompound Types
 
 There are two basic compound types in C: the `struct` and the array.
 
@@ -145,7 +145,7 @@ The `sizeof` an array is the total bytes used by all elements of the array:
 unsigned x = sizeof(array);  /* 4000: sizeof(int) * 1000    */
 ````
 
-The `&` an array is the `&` of its first element (i.e., `&array == &(array[0])`).
+The `&` of an array is the `&` of its first element (i.e., `&array == &(array[0])`).
 
 
 Parentheses are allowed when declaring types, although their meaning is counter-intuitive to many students:
@@ -161,7 +161,7 @@ char (*pc)[10];   /* a pointer to an array of 10 (char)s */
 ````
 
 The rule here is that we declare variables *exactly* as we would use them:
-a point to an array would first be dereferenced (`(*pc)`) and then indexed (`(*pc)[i]`) to get a `char`
+a pointer to an array would first be dereferenced (`(*pc)`) and then indexed (`(*pc)[i]`) to get a `char`
 so we declare it as `char (*pc)[10]`.
 
 Arrays literals use curly braces and commas.
@@ -178,7 +178,7 @@ Arrays cannot be resized after being created.
 
 
 A `struct` also stores values contiguously in memory,
-but the values may be of different types and are accessed by name, not index.
+but the values may have different types and are accessed by name, not index.
 
 ````c
 struct foo {
@@ -191,22 +191,22 @@ struct foo {
 
 The name of the resulting type includes the word `struct`
 
-````
+````c
 struct foo x;
-unsigned long a = sizeof(struct foo);
+unsigned long y = sizeof(struct foo);
 x.b = 1234;
 x.a = x.b - 5;
 ````
 
 Compilers are free to lay out the data elements of a structure with padding between elements if they wish;
-this is often done in practice to improve data alignment, so in the above example we expect `a` to have a value larger than the minimal 15 bytes needed to store those fields.
+this is often done in practice because memory tends to be faster when the address of a 4-byte value is a multiple of 4, so in the above example we expect `y` to have a value larger than the minimal 15 bytes needed to store the fields of `struct foo`.
 
 Structures are passed by value; that is, using them as arguments, return types, or with `=` means that all of their fields are copied.
 This is inefficient for all by the smallest `structs`, so often pointers to structures are passed, not the structures themselves.
 
 Because all pointers are the same size, you can have code use a pointer to a `struct`
 without knowing what is inside the `struct`;
-the only need to be known for `sizeof` and the `.` operator to work.
+the fields only need to be known for `sizeof` and the `.` operator to work, not for parameter passing.
 
 ````c
 struct baz;                  /* just says "a struct of this name exists"   */
@@ -355,7 +355,7 @@ is equivalent to the following:
 
 ````c
 {
-    e1
+    e1;
     while (e2) {
         s;
         e3;
@@ -379,7 +379,7 @@ In my experience, this is used for less than 1% of loops.
 #### label and goto
 
 Any line of code may be preceded by a label:
-an identifier followed by a colon.
+which is an identifier followed by a colon (e.g. `some_label:`).
 
 The `goto some_label;`{.c} statement unconditionally jumps to the code identified by that label.
 
@@ -439,11 +439,11 @@ Hence the following example, taken from [wikipedia](https://en.wikipedia.org/wik
 
 ````c
 switch (age) {
-  case 1:  printf("You're one.");              break;
-  case 2:  printf("You're two.");              break;
-  case 3:  printf("You're three.");
-  case 4:  printf("You're three or four.");    break;
-  default: printf("You're not 1, 2, 3 or 4!");
+  case 1:  printf("You're one.\n");              break;
+  case 2:  printf("You're two.\n");              break;
+  case 4:  printf("You're four.\n");
+  case 5:  printf("You're four or five.\n");    break;
+  default: printf("You're not 1, 2, 4 or 5!\n");
 }
 ````
 
@@ -456,6 +456,39 @@ or mostly C-compatible languages augmenting them with rules like
 
 Most compilers have several different implementations of `switch` they can pick between;
 they might use a jump table, a sequence of `if`/`else if`s, a binary search, etc.
+
+:::example
+We can change a switch into gotos as follows
+
+````c
+switch (age) {
+  case 1:  printf("You're one.\n");              break;
+  case 2:  printf("You're two.\n");              break;
+  case 4:  printf("You're four.\n");
+  case 5:  printf("You're four or five.\n");    break;
+  default: printf("You're not 1, 2, 4 or 5!\n");
+}
+````
+
+````c
+void *locations[] = {&&L1, &&L2, &&L6, &&L3, &&L4};
+if (age < 1 || age > 4) goto L5; 
+else goto *locations[age-1];
+if (0) {
+  L1: printf("You're one.\n");
+      goto L6;
+  L2: printf("You're two.\n");
+      goto L6;
+  L3: printf("You're four.\n");
+  L4: printf("You're four or five.\n");
+      goto L6;
+  L5: printf("You're not 1, 2, 4 or 5!\n");
+  L6: ;
+}
+````
+
+Note that the `&&label_name` syntax is a GCC and CLang extension and not part of the official C language. 
+:::
 
 # Functions
 
@@ -497,7 +530,7 @@ simplifying coding without increasing the size of the resulting `.c` file or the
 
 ## Syntax variations
 
-However, C allows several variations on this theme.
+C allows several variations to standard function syntax. Most of these are consider bad programming style.
 
 -   Function return types can be omitted, defaulting to `int`:
     
@@ -597,7 +630,7 @@ it cannot do anything other than assume all other files agrees with the one it i
     
 ## Variadic functions
 
-The number of arguments in a function is known as the functions **arity**.
+The number of arguments in a function is known as the function's **arity**.
 Many functions have fixed arity, requiring the same number of arguments each time they are invoked,
 but sometimes it is nice to have a function that has variable arity, or a **variadic** function.
 
@@ -660,9 +693,10 @@ int sign_swaps(int num0, ...) {
 
 If you want to write variadic functions, you should
 
-1. Read all of `man stdarg.h` twice
-2. Look up variadic security vulnerabilities like the [format string attack](https://en.wikipedia.org/wiki/Format_string_attack)
-3. Write good tests, including too-few- and too-many- and wrong-type-argument invocations.
+1. Read all of `man stdarg.h`
+1. Read all of `man stdarg.h` again, because you almost certainly missed something important
+1. Look up variadic security vulnerabilities like the [format string attack](https://en.wikipedia.org/wiki/Format_string_attack)
+1. Write good tests, including too-few- and too-many- and wrong-type-argument invocations.
 
 # Preprocessor
 
@@ -802,10 +836,10 @@ but also processes various *macros* and *directives*.
 `__FILE__` and `__LINE__`
 :   The preprocessor is guaranteed to define `__FILE__` as an object-like macro expanding to the name of the current file, in quotes,
     like `"my_file.c"`.
-    The preprocessor is also guaranteed to define `__LINE__` as an object-like macro expanding to the line number on which __LINE__ appears,
+    The preprocessor is also guaranteed to define `__LINE__` as an object-like macro expanding to the line number on which `__LINE__` appears,
     like `23`.
     
-    These are often used in debugging messages, as e.g. `printf("Error in %s on line %d\n", __FILE__, __LINE__);`.
+    These are often used in debugging messages, as e.g. `printf("Error in %s on line %d\n", __FILE__, __LINE__);`{.c}.
     
     Because the preprocessor redefines these on its own on each new line of code,
     they have a special `#line` directive to change them if you need to do that (not the usual `#define`).
