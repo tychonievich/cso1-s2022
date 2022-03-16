@@ -184,7 +184,7 @@ It may be helpful to use various utilities for examining the bomb program outsid
     :   calls the built-in output method `puts` with the given `char *` (as a memory address). See `man puts` for more.
 
     `(lldb) disas methodName`
-    :   gives you the to get the machine instruction translation of the method `methodName`. (If you see a `call` instruction in this output that does not indicate what function it refers to, if on the department machines, make sure you are using lldb version 8.1.)
+    :   gives you the to get the machine instruction translation of the method `methodName`.
 
     `(lldb) disas`
     :   gives you the to get the machine instruction translation of the currently executing method.
