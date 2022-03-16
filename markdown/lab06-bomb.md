@@ -127,7 +127,7 @@ It may be helpful to use various utilities for examining the bomb program outsid
     (lldb) fame variable
     ````
 
-    *Generally some parameters are local variables and some are stored in registers and others on the stack; if none are on the stack, `frame variables` prints nothing. Strings are stored as pointers so you'll need to e**x**amine what they point to. Try looking at several as if they are strings:*
+    *Generally some parameters are local variables and some are stored in registers and others on the stack; if none are on the stack, `frame variables` prints nothing. Strings are stored as pointers so you'll need to "e**x**amine" what they point to. Try looking at several as if they are strings:*
 
     ````
     (lldb) x/s anAddressDisplayedByRegisterReadOrFrameVariable
