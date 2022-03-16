@@ -9,6 +9,12 @@ If you type the correct string, then the phase is defused and the bomb proceeds 
 Otherwise, the bomb **explodes** by printing "BOOM!!!", **telling us it did so**,
 and then terminating.
 
+# Fix permissions
+
+Some student accounts were set up with the wrong file permissions.
+
+Please visit [the permission checker page](https://www.cs.virginia.edu/luther/permcheck/) and follow any instructions it gives you.
+
 # Work together
 
 In lab, we strongly encourage you to work with one another.
