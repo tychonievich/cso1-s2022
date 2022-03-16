@@ -64,7 +64,7 @@ Because you want to avoid explosions, you'll want to set a breakpoint *before* y
 
 You might find it useful to run, `objdump --syms bomb` to get a list of all symbols in the bomb file, including all function names, as a starting point on where you want your breakpoint.
 
-The best way is to use your favorite debugger to step through the disassembled binary. **Almost no students succeed without using a debugger like lldb or gdb.** On the department Unix machines, `lldb` is the debugger that is available. By default GDB verison 7.3 is available, and you can use GDB version 8 by running `module load lldb-8.1` then running `lldb`. You will need to run this `module load` command in each new terminal (the setting will not persist).
+The best way is to use your favorite debugger to step through the disassembled binary. **Almost no students succeed without using a debugger like lldb or gdb.** We recommend using `lldb`. On the department machines, you can enable `lldb` buy running  `module load clang-llvm`. You will need to run this `module load` command in each new terminal (the setting will not persist).
 
 To avoid accidentally detonating the bomb, you will need to learn how to single-step through the assembly code and how to set breakpoints. You will also need to learn how to inspect both the registers and the memory states.
 
