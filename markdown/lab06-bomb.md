@@ -184,10 +184,10 @@ It may be helpful to use various utilities for examining the bomb program outsid
     :   calls the built-in output method `puts` with the given `char *` (as a memory address). See `man puts` for more.
 
     `(lldb) disas methodName`
-    :   gives you the to get the machine instruction translation of the method `methodName`.
+    :   get the machine instruction translation of the method `methodName`.
 
     `(lldb) disas`
-    :   gives you the to get the machine instruction translation of the currently executing method.
+    :   get the machine instruction translation of the currently executing method.
 
     `(lldb) x/6i 0x...`
     :   try to disassemble 6 instructions in memory starting at the memory address 0x...
