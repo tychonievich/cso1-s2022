@@ -20,15 +20,15 @@ Please visit [the permission checker page](https://www.cs.virginia.edu/luther/pe
 In lab, we strongly encourage you to work with one another.
 Reading binary is much more fun and effective with someone else to talk to.
 
-You should *not* work together on phase 2, as that is a PA.
+You should *not* work together on phase 2, that is HW.
 
 # Grading
 
-You'll use the same bomb for this lab and for [the following PA](pa06-bomb.html).
+You'll use the same bomb for this lab and for [the following HW](pa06-bomb.html).
 
 For lab, you need to *either* (a) have a TA record that you were part of a team that defused phase 1 *or* (b) defuse phase 1 on your bomb.
 
-For the PA, you'll need to defuse additional phases on your own.
+For the HW, you'll need to defuse additional phases on your own.
 
 Each time your bomb explodes it notifies the bomblab server. If we're notified of your bomb exploding 20 times we’ll start removing points.
 
@@ -38,7 +38,7 @@ Each time your bomb explodes it notifies the bomblab server. If we're notified o
 1. On a Linux machine, download[^curl] a [binary bomb](http://kytos.cs.virginia.edu:15215/)
     - for credit, you must use your lower-case computing ID
 
-    > Due to changes needed to fix several errors with the bomb server, bombs downloaded before Wednesday, 16 October 2019 at 6:00pm will not be graded for the PA. Please download a new bomb if yours is older than that.
+    > Due to changes needed to fix several errors with the bomb server, bombs downloaded before Wednesday, 16 October 2019 at 6:00pm will not be graded. Please download a new bomb if yours is older than that.
 
 2. Extract the bomb using `tar -xvf bomb#.tar`{.bash} where `#` is your bomb number.
 3. `cd bomb#` (again, where `#` is your bomb number).
