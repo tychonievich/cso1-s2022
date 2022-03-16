@@ -176,6 +176,8 @@ It may be helpful to use various utilities for examining the bomb program outsid
 
     `(lldb) x/s $someRegister`
     :   examines the value at register someRegister. Displays the value as a string (assuming the register contains a pointer).
+    
+        Note it is `x/s $rdi` in lldb, not `%rdi` like it would be in assembly.
 
     `(lldb) print expr`
     :   evaluates and prints the value of the given expression
