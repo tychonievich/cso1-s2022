@@ -213,7 +213,7 @@ It may be helpful to use various utilities for examining the bomb program outsid
 
 ## On interpreting the disassembly
 
--   Reviewing the x86-64 calling convention (Figure 3.28 in the textbook or [this reference you may remember from 2150](https://aaronbloomfield.github.io/pdr/book/x86-64bit-ccc-chapter.pdf)) may be helpful.
+-   Reviewing [the x86-64 calling convention](x86.html#registers) may be helpful.
 
 -   The C standard library function `sscanf` is called `__isoc99_sscanf` in the executable. Try `man sscanf` for more information about this library function.
 
@@ -225,7 +225,7 @@ It may be helpful to use various utilities for examining the bomb program outsid
 
 -   Some of the things later phases might be using include:
 
-    -   calls to `scanf` (which is much like a backwards version of `printf`; try `man scanf` for more)
+    -   calls to `scanf` (which is a formatted read; try `man scanf` or [Wikipedia](https://en.wikipedia.org/wiki/Scanf_format_string) for more)
     -   linked data structure traversal
     -   recursion
     -   string literals
