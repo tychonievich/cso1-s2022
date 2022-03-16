@@ -123,16 +123,26 @@ It may be helpful to use various utilities for examining the bomb program outsid
     *input test passphrase here*
 
     ````
-    (lldb) stepi
     (lldb) register read
-    (lldb) frame variable
+    (lldb) fame variable
     ````
 
-    *Generally some parameters are local variables and some are stored in registers. You should see your test passphrase here. Note the hex value of your input*
+    *Generally some parameters are local variables and some are stored in registers and others on the stack; if none are on the stack, `frame variables` prints nothing. Strings are stored as pointers so you'll need to e**x**amine what they point to. Try looking at several as if they are strings:*
+
+    ````
+    (lldb) x/s an_address_displayed_by_register_read
+    ````
+    
+    *You can also look at the assembly directly*
 
     ````
     (lldb) disas
-    (lldb) nexti
+    ````
+    
+    *And walk through it instruction by instruction*
+
+    ````
+    (lldb) disas
     ````
 
     *keep `nexti`ing until you see `strings_not_equal` method (a suspicious name that might be checking your passphrase)*
@@ -147,7 +157,7 @@ It may be helpful to use various utilities for examining the bomb program outsid
 -   Some useful `lldb` commands:
 
     `(lldb) frame variable`
-    :   prints out the name and value of local variables in scope at your current place in the code.
+    :   prints out the name and value of local variables in scope at your current place in the code, if any.
 
     `(lldb) register read`
     :   prints the values of all registers except floating-point and vector registers
