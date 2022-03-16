@@ -142,7 +142,7 @@ It may be helpful to use various utilities for examining the bomb program outsid
     *And walk through it instruction by instruction*
 
     ````
-    (lldb) disas
+    (lldb) nexti
     ````
 
     *keep `nexti`ing until you see `strings_not_equal` method (a suspicious name that might be checking your passphrase)*
