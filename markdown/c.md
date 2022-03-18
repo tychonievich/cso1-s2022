@@ -210,7 +210,7 @@ the fields only need to be known for `sizeof` and the `.` operator to work, not 
 
 ````c
 struct baz;                  /* just says "a struct of this name exists"   */
-void swizzle(struct baz *);  /* just says "a function of this name exists" */
+void swizzle(struct baz *p); /* just says "a function of this name exists" */
 
 /* Swizzles an array of struct bazs                           *
  * This code does not need to understand what a struct baz is */
