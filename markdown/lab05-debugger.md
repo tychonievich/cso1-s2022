@@ -120,9 +120,8 @@ We used an online hex-editor in [Lab 03](lab03-simulator.html), and that can be 
 There are also various hex-editor applications,
 such as 
 
-- xxd (installed by defualt on most linux systems)
+- xxd (installed by default on some linux systems)
 - hexedit
-- [hexyl](https://github.com/sharkdp/hexyl)
 - [ghex](https://wiki.gnome.org/Apps/Ghex)
 - [bless](https://github.com/bwrsandman/Bless)
 - [oketa](https://utils.kde.org/projects/okteta/)
@@ -148,6 +147,12 @@ Instruction First byte of "short jump" operation
 If you need to fill extra bytes, you can always insert "nop" instructions: `0x90` swaps the contents of `%eax` and `%eax` (i.e., does nothing) and can fill space freely.
 
 We compiled `recfib` with the `-g` flag, so you'll see some source code as well as assembly.
+
+# Tips
+
+Linux has a notion of "file permissions" which we'll learn more about in CSO2. One of those permissions is "executable", meaning a file can be run as a program. Depending on how you download `recfib` and get it onto `portal`, it might or might not have that permission.
+
+If `lldb`'s `run` command gives an error message like `'A' packet has an error`, try exiting `lldb` and running `chmod +x recfib` to enable executable permissions on the `recfib` file.
 
 # Check-off
 
