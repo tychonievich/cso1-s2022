@@ -24,7 +24,7 @@ name            bits        representation              notes
 `unsigned char` 8           unsigned integer
 `short`         16          2's complement
 `int`           32          2's complement
-`long`          32 or 64    2's complement              32 bits if compiled in 32-bit mode; for 64-bit, add the `-m64` flag when compiling
+`long`          32 or 64    2's complement              32 bits if compiled with `-m32`, 64-bit if compiled with `-m64`, compiler's choice if neither
 `long long`     64          2's complement
 
 Each has an `unsigned` version (e.g., `unsigned short`, etc). If `unsigned` is used as a type by itself, it means `unsigned int`.
