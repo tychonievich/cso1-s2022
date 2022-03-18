@@ -225,7 +225,7 @@ Structure literals are written using curly braces and commas, optionally with `.
 struct a {
     int b;
     double c;
-}
+};
 
 /* Both of the following initialize b to 0 and c to 1.0 */
 struct a x = { 0, 1.0 };
