@@ -47,7 +47,7 @@ Write a function with the above signature
 that places the first `num` fibonacci numbers (modulo 256, since the array stores only bytes) into `dest`.
 
 :::aside
-You implemented something very like this in [PA04](pa04-fib.html). Unlike PA04, however, your code must work for any location and number of values requested.
+You implemented something very like this in [HW04](pa04-fib.html). Unlike HW04, however, your code must work for any location and number of values requested.
 :::
 
 :::example
@@ -81,7 +81,7 @@ that computes and returns `x`^`e`^.
 You **must** implement this recursively, not iteratively (do not use `for`, `while`, `do`, or `goto`).
 
 :::aside
-You implemented something very like this in [PA05](pa05-assembly.html). Unlike PA05, however, your code must work for any `x` (including negative and zero) and any `e` (including zero).
+You implemented something very like this in [HW05](pa05-assembly.html). Unlike HW05, however, your code must work for any `x` (including negative and zero) and any `e` (including zero).
 :::
 
 :::example

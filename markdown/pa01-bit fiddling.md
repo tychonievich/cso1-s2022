@@ -5,7 +5,7 @@ title: Bit fiddling
 
 # Overview
 
-This PA will give you a chance to practice using binary and bit-wise operators.
+This HW will give you a chance to practice using binary and bit-wise operators.
 You'll likely find [Booleans §4](bool.html) a useful reference.
 
 # Task

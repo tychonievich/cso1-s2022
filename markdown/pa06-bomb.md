@@ -1,5 +1,5 @@
 ---
-title: Bomb PA
+title: Bomb HW
 ...
 
 # Work alone
@@ -25,4 +25,4 @@ Grade       Criteria
 
 If you have more than 20 explosions, we will remove points.
 
-There is no submission needed besides running the bomb and typing the correct inputs, which will update [the scoreboard](http://kytos.cs.virginia.edu:15215/scoreboard) which will be used to populate the gradebook after the PA closes.
+There is no submission needed besides running the bomb and typing the correct inputs, which will update [the scoreboard](http://kytos.cs.virginia.edu:15215/scoreboard) which will be used to populate the gradebook after the HW closes.
