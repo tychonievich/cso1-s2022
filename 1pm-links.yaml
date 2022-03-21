@@ -154,3 +154,10 @@
     - lectures/2022-03-18-pointers.o
     - lectures/2022-03-18-swapper.c
     - lectures/2022-03-18-slides.pdf
+2022-03-21:
+  video:
+    - lectures/2022-03-21-recording-21.webm
+  audio:
+    - lectures/2022-03-21-audio-21.mp3
+  files:
+    - lectures/2022-03-21-slides.pdf
