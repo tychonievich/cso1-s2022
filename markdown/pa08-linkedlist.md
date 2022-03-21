@@ -2,9 +2,19 @@
 title: Linked List
 ...
 
-Write a C file named `linkedlist.c` that contains implementations of the following functions for manipulating a doubly-linked list.
+# Getting the starter code
 
-Your code should begin with `#include "linkedlist.h"`{.c}, where [linkedlist.h may be downloaded here](files/linkedlist.h).
+Download the starter code using git:
+
+```sh
+git clone https://github.com/CSO-Starter-Code/HW08-linkedlist.git
+cd HW08-linkedlist
+```
+
+
+Edit the C file named `linkedlist.c` that contains implementations of the following functions for manipulating a doubly-linked list.
+
+Your code should begin with `#include "linkedlist.h"`{.c}.
 We will assume you use this exact `linkedlist.h` in our testing: if you change it, we will not use those changes in our compilation and testing of your code.
 Comments in `linkedlist.h` also describe what each function is supposed to do.
 
