@@ -19,8 +19,8 @@ In this lab, and the subsequent programming assignment, you will expand on these
 Download the starter code using git:
 
 ```sh
-git clone https://github.com/CSO-Starter-Code/HW08-linkedlist.git
-cd HW08-linkedlist
+git clone https://github.com/CSO-Starter-Code/lab03-simulator.git
+cd lab03-simulator
 ```
 
 You should be able to run this entirely on your laptop, so no `portal` needed.
