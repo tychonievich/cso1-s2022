@@ -442,7 +442,7 @@ switch (age) {
   case 1:  printf("You're one.\n");              break;
   case 2:  printf("You're two.\n");              break;
   case 4:  printf("You're four.\n");
-  case 5:  printf("You're four or five.\n");    break;
+  case 5:  printf("You're four or five.\n");     break;
   default: printf("You're not 1, 2, 4 or 5!\n");
 }
 ````
@@ -465,7 +465,7 @@ switch (age) {
   case 1:  printf("You're one.\n");              break;
   case 2:  printf("You're two.\n");              break;
   case 4:  printf("You're four.\n");
-  case 5:  printf("You're four or five.\n");    break;
+  case 5:  printf("You're four or five.\n");     break;
   default: printf("You're not 1, 2, 4 or 5!\n");
 }
 ````
