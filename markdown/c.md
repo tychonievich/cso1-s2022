@@ -24,7 +24,7 @@ name            bits        representation              notes
 `unsigned char` 8           unsigned integer
 `short`         16          2's complement
 `int`           32          2's complement
-`long`          32 or 64    2's complement              32 bits if compiled in 32-bit mode; for 64-bit, add the `-m64` flag when compiling
+`long`          32 or 64    2's complement              32 bits if compiled with `-m32`, 64-bit if compiled with `-m64`, compiler's choice if neither
 `long long`     64          2's complement
 
 Each has an `unsigned` version (e.g., `unsigned short`, etc). If `unsigned` is used as a type by itself, it means `unsigned int`.
@@ -210,7 +210,7 @@ the fields only need to be known for `sizeof` and the `.` operator to work, not 
 
 ````c
 struct baz;                  /* just says "a struct of this name exists"   */
-void swizzle(struct baz *);  /* just says "a function of this name exists" */
+void swizzle(struct baz *p); /* just says "a function of this name exists" */
 
 /* Swizzles an array of struct bazs                           *
  * This code does not need to understand what a struct baz is */
@@ -225,7 +225,7 @@ Structure literals are written using curly braces and commas, optionally with `.
 struct a {
     int b;
     double c;
-}
+};
 
 /* Both of the following initialize b to 0 and c to 1.0 */
 struct a x = { 0, 1.0 };

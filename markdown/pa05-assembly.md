@@ -32,8 +32,8 @@ the better these experiences will be.
 
 We recommend using `git` to version and test your code.
 
-1. Use a git project for this PA and check it out on both your laptop and the server.
-    You can use the same project you made in [Lab 01](lab01-git-infotheory.html#creating-a-project) or a new one for just this PA
+1. Use a git project for this HW and check it out on both your laptop and the server.
+    You can use the same project you made in [Lab 01](lab01-git-infotheory.html#creating-a-project) or a new one for just this HW
 2. Download [the starter code](files/matlib.s) into that project directory on your laptop
     and `git add matlib.s` to tell `git` to track it
 3. Edit locally, and when you want to test it
