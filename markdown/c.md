@@ -374,10 +374,12 @@ The most important of these are:
     If you need a many functions to all access the same persistent state, use a non-`static` global declared as `extern` everywhere it is used except in one `.c` file.
     Non-`static` globals are associated with various bugs, so you should prefer a `static` global or `static` local instead where possible.
 
-`register` and `volatile`
+`register`, `volatile`, and `restrict`
 :   These are hints to the compiler. They have no direct impact on code operation, but can make some optimizations work better.
-    `register` suggests that this variable be stored in a register, not in memory, and is ignored by many compilers.
-    `volatile` tells the optimizer to assume the variable is being changed by something other than the code itself and blocks certain kinds of optimizations that might otherwise assume differently.
+    
+    - `register` suggests that this variable be stored in a register, not in memory, and is ignored by many compilers.
+    - `volatile` tells the optimizer to assume the variable is being changed by something other than the code itself and blocks certain kinds of optimizations that might otherwise assume differently.
+    - `restrict` can only be used with pointers, and tells the compiler it is safe to assume that no other pointer describes the same memory as this pointer, enabling certain optimizations that might otherwise not be permitted.
     
 
 # Control constructs
