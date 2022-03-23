@@ -25,12 +25,13 @@ below 0xFFFFFFFFFFFF    user stack (grows into smaller addresses)
 &nbsp;                  memory-mapped region (shared libraries)
 
 &nbsp;                  empty space for future heap growth
-                        read/write segments (`.data` for initialized globals,
-                        `.bss` for uninitialized globals)
 
 &nbsp;                  run-time heap (grows into larger addresses)
 
-above 0x400000          read-only code and data (`.init` gets tarted, `.text` is 
+&nbsp;                  read/write segments (`.data` for initialized globals,
+                        `.bss` for uninitialized globals)
+
+above 0x400000          read-only code and data (`.init` run by loader, `.text` is 
                         your code, `.rodata` is string constants and such)
 
 0x0--0x400000           unused segments, so that `*0` and the like crashes
