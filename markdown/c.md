@@ -376,7 +376,7 @@ The most important of these are:
 `register` and `volatile`
 :   These are hints to the compiler. They have no direct impact on code operation, but can make some optimizations work better.
     `register` suggests that this variable be stored in a register, not in memory, and is ignored by many compilers.
-    `volatile` suggests that the optimizer assume the variable is being changed by something other than the code itself and blocks certain kinds of optimizations that might otherwise assume differently.
+    `volatile` tells the optimizer to assume the variable is being changed by something other than the code itself and blocks certain kinds of optimizations that might otherwise assume differently.
     
 
 # Control constructs
