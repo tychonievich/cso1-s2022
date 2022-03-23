@@ -161,3 +161,14 @@
     - lectures/2022-03-21-audio-21.mp3
   files:
     - lectures/2022-03-21-slides.pdf
+2022-03-23:
+  video:
+    - lectures/2022-03-23-recording-21.webm
+  audio:
+    - lectures/2022-03-23-audio-21.mp3
+  files:
+    - lectures/2022-03-23-structasm.c
+    - lectures/2022-03-23-structasm-parallel.s
+    - lectures/2022-03-23-switch.c
+    - lectures/2022-03-23-switch.s
+    - lectures/2022-03-23-slides.pdf
