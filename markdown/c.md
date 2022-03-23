@@ -335,18 +335,18 @@ The most important of these are:
     
     :::example
     ````c
-    int previous(int y) {
-        static int memory = 0; // only initialized once
-        int ans = memory;
-        memory = y;
+    int prev(int y) {
+        static int q = 0; // only initialized once
+        int ans = q;
+        q = y;
         return ans;
     }
     int main() {
-        printf("%d\n", previous(3));
-        printf("%d\n", previous(1));
-        // memory = 5; // <- error, only previous can access memory
-        printf("%d\n", previous(4));
-        printf("%d\n", previous(1));
+        printf("%d\n", prev(3));
+        printf("%d\n", prev(1));
+        // q = 5; // <- error, only prev can access q
+        printf("%d\n", prev(4));
+        printf("%d\n", prev(1));
     }
     ````
     prints
