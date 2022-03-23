@@ -271,9 +271,18 @@ the compiler will treat both the original and new name as equivalent in all type
 Sometimes `typedef` is used with *anonymous* `struct`s:
 
 ````c
-struct { int x; double y; } foo;
+typedef struct { int x; double y; } foo;
 foo z;
+z.x = 3;
 ````
+
+Anonymous `struct`s can also be used directly as type names, though that's quite uncommon
+
+````c
+struct { int x; double y; } z;
+z.x = 3;
+````
+
 
 ## Union
 
