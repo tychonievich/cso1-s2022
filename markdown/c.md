@@ -322,6 +322,62 @@ t[0] = 'H';           /* we try to change that memory (the OS will crash our pro
 C's general attitude is "every rule has an exception" and "the programmer knows best".
 It might make you do some complicated casting to do things, but it won't stop you if you are determined.
 
+# Storage Classes
+
+Variable declarations can optionally have one or more **storage class**.
+The most important of these are:
+
+`const`
+:   Important enough to have it's own section: [Constant](#constant)
+
+`static` inside a function
+:   Declaring a local variable as `static` makes it a global variable that only that one function can see.
+    
+    :::example
+    ````c
+    int previous(int y) {
+        static int memory = 0;
+        int ans = memory;
+        memory = y;
+        return ans;
+    }
+    int main() {
+        printf("%d\n", previous(3));
+        printf("%d\n", previous(1));
+        printf("%d\n", previous(4));
+        printf("%d\n", previous(1));
+    }
+    ````
+    prints
+    ````
+    0
+    3
+    1
+    4
+    ````
+    :::
+    
+    If you need a function to have persistent state, a `static` local is the preferred way to do that.
+
+`static` for a global
+:   Declaring a global variable as `static` makes it visible only inside that `.c` file.
+
+    If you need a few related functions to share some persistent state, a `static` global is the preferred way to do that.
+    If just one function needs the state, use a `static` local instead.
+
+`extern` for a global
+:   Declaring a global variable as `extern` tells the compiler "assume it exists, don't create it. It will be supplied by a different `.c` file. Connect the two during linking."
+    
+    In general, globals are declared as `extern` in `.h` files and re-declared without `extern` in exactly one `.c` file.
+
+    If you need a many functions to all access the same persistent state, use a non-`static` global declared as `extern` everywhere it is used except in one `.c` file.
+    Non-`static` globals are associated with various bugs, so you should prefer a `static` global or `static` local instead where possible.
+
+`register` and `volatile`
+:   These are hints to the compiler. They have not direct impact on code operation, but can make some optimizations work better.
+    `register` suggests that this variable be stored in a register, not in memory, and is ignored by many compilers.
+    `volatile` suggests that the optimizer assume the variable is being changed by something other than the code itself and blocks certain kinds of optimizations that might otherwise assume differently.
+    
 
 # Control constructs
 
