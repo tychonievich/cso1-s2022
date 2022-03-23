@@ -336,7 +336,7 @@ The most important of these are:
     :::example
     ````c
     int previous(int y) {
-        static int memory = 0;
+        static int memory = 0; // only initialized once
         int ans = memory;
         memory = y;
         return ans;
