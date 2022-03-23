@@ -344,6 +344,7 @@ The most important of these are:
     int main() {
         printf("%d\n", previous(3));
         printf("%d\n", previous(1));
+        // memory = 5; // <- error, only previous can access memory
         printf("%d\n", previous(4));
         printf("%d\n", previous(1));
     }
