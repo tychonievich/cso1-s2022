@@ -520,7 +520,7 @@ it is common to see them banned by style,
 or augmented with a special style,
 or later languages to use a similar syntax in ways a jump table cannot handle,
 or mostly C-compatible languages augmenting them with rules like
-"each case bust either end with `break` or with an explicit `fallthrough`/`goto case`".
+"each case must either end with `break` or with an explicit `fallthrough`/`goto case`".
 
 Most compilers have several different implementations of `switch` they can pick between;
 they might use a jump table, a sequence of `if`/`else if`s, a binary search, etc.
