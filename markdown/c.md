@@ -322,7 +322,7 @@ t[0] = 'H';           /* we try to change that memory (the OS will crash our pro
 C's general attitude is "every rule has an exception" and "the programmer knows best".
 It might make you do some complicated casting to do things, but it won't stop you if you are determined.
 
-# Storage Classes
+## Storage Classes
 
 Variable declarations can optionally have one or more **storage class**.
 The most important of these are:
