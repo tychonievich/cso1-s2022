@@ -374,7 +374,7 @@ The most important of these are:
     Non-`static` globals are associated with various bugs, so you should prefer a `static` global or `static` local instead where possible.
 
 `register` and `volatile`
-:   These are hints to the compiler. They have not direct impact on code operation, but can make some optimizations work better.
+:   These are hints to the compiler. They have no direct impact on code operation, but can make some optimizations work better.
     `register` suggests that this variable be stored in a register, not in memory, and is ignored by many compilers.
     `volatile` suggests that the optimizer assume the variable is being changed by something other than the code itself and blocks certain kinds of optimizations that might otherwise assume differently.
     
