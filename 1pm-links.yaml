@@ -171,3 +171,13 @@
     - lectures/2022-03-23-structasm-parallel.s
     - lectures/2022-03-23-switch.c
     - lectures/2022-03-23-switch.s
+2022-03-25:
+  video:
+    - lectures/2022-03-25-recording-21.webm
+  audio:
+    - lectures/2022-03-25-audio-21.mp3
+  files:
+    - lectures/2022-03-25-calling.txt
+    - lectures/2022-03-25-include-me.h
+    - lectures/2022-03-25-use-include.c
+    - lectures/2022-03-25-slides.pdf
