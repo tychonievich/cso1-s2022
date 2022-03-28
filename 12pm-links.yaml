@@ -28,3 +28,10 @@
     - lectures/2022-03-25-include-me.h
     - lectures/2022-03-25-use-include.c
     - lectures/2022-03-25-slides.pdf
+2022-03-28:
+  video:
+    - lectures/2022-03-28-recording-11.webm
+  audio:
+    - lectures/2022-03-28-audio-11.mp3
+  files:
+    - lectures/2022-03-28-slides.pdf
