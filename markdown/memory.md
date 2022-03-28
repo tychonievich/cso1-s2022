@@ -16,7 +16,7 @@ Linux x86-64's loaders provide the following contents of memory, with large addr
 Address range           Use
 -------------------     ------------------------------------------------------------
 above 0xFFFFFFFFFFFF    kernel memory (OS runs here; if your code accesses these 
-                        segments as e.g. via `*-1`, you code crashes)
+                        segments as e.g. via `*(int *)-1`, your code crashes)
 
 below 0xFFFFFFFFFFFF    user stack (grows into smaller addresses)
 
@@ -34,7 +34,7 @@ below 0xFFFFFFFFFFFF    user stack (grows into smaller addresses)
 above 0x400000          read-only code and data (`.init` run by loader, `.text` is 
                         your code, `.rodata` is string constants and such)
 
-0x0--0x400000           unused segments, so that `*0` and the like crashes
+0x0--0x400000           unused segments, so that `*(int *)0` and the like crashes
 --------------------------------------------------------------------------------
 
 All of the user-access regions may be randomized (doing so is called ASLR: Address Space Layout Randomization)
@@ -54,7 +54,7 @@ We use it extensively in place of what Java or Python would do with a `.`.
 # Using the stack in C
 
 Although the compiler may optimize this by placing variables in registers,
-conceptually all local variables (including parameters and temporary values created as part of a computation)
+conceptually all local variables (including function parameters)
 are stored on the stack.
 Because you've already learned to write programs with local variables, you've also already learned to use stack memory.
 
@@ -153,7 +153,7 @@ they are common in C code.
 Because a global array typically needs associated global information like used size,
 that means other global variables are also common.
 
-A sizable (though not unanimous) majority of software engineering text I have consulted
+A sizable (though not unanimous) majority of software engineering texts I have consulted
 explicitly state that "global variables are **bad**."
 One of the more readable examples I've found is <http://wiki.c2.com/?GlobalVariablesAreBad>.
 However, even when well written these tend to refer to topics like "coupling" and "namespace polution"
@@ -200,7 +200,7 @@ The library function `void *malloc(size_t size);` returns a pointer to the first
 that is allocated on the heap and not used by any previous purpose.
 It does this by
 
-- Checking to see if it has enough space on partially-used heap page. If no, ask the OS to allocate new pages until it has enough unused heap space.
+- Checking to see if it has enough space on partially-used heap page. If not, ask the OS to allocate new pages until it has enough unused heap space.
 - Pick an address to return.
 - Add that address and its allocated size in a special bookkeeping data structure.
 - Return the address.
@@ -341,7 +341,7 @@ int bad(int a) {
 }
 ```
 
-The memory returned by `malloc` becomes garbage at the comment `// midpoint`{.c} because it is never used after that;
+The memory returned by the `calloc` call becomes garbage at the comment `// midpoint`{.c} because it is never used after that;
 it becomes unreachable after the function returns (and hence is a [memory leak](#memory-leak)).
 
 It's not related to memory, but what mathematical function does `bad(n)` compute?^[Answer: `floor(log2((n)*(n+1)/2))+1`{.c}]
@@ -350,18 +350,18 @@ It's not related to memory, but what mathematical function does `bad(n)` compute
 ### Garbage detection
 
 There are several well-known, well-studied, and carefully-implemented algorithms for performing garbage detection; almost all of these detect only unreachable garbage.
-A garbage **garbage collector** is a process that detects garbage and then frees it; the most common model (technically a "tracing garbage collector") works as follows:
+A **garbage collector** is a process that detects garbage and then frees it; the most common model (technically a "tracing garbage collector") works as follows:
 
 - inspect the entire contents of a program's memory
 - flag as garbage all unreachable memory on the heap
 - `free` that garbage
 
-Thee steps require significant bookkeeping data structures and processing power,
-and (b) periodically pausing the entire program to perform a garbage detection hunt^[There are garbage collectors that run *while* the rest of the program is modifying memory, but doing so has various challenges that make them more complicated and have various possible drawbacks. See <https://en.wikipedia.org/wiki/Tracing_garbage_collection#Stop-the-world_vs._incremental_vs._concurrent> for more.].
+These steps require significant bookkeeping data structures and processing power,
+and periodically pause the entire program to perform a garbage detection hunt^[There are garbage collectors that run *while* the rest of the program is modifying memory, but doing so has various challenges that make them more complicated and have various possible drawbacks. See <https://en.wikipedia.org/wiki/Tracing_garbage_collection#Stop-the-world_vs._incremental_vs._concurrent> for more.].
 In general, this can slow down a program, and increase the memory is uses,
 and cause it to pause at awkward times.
-As garbage collectors become more sophisticated and computer memory becomes cheaper,
-these concerns are decreasingly important;
+As garbage collectors become more sophisticated and computer memory becomes cheaper
+these concerns are decreasingly important,
 and the ability to write code that does not need to worry about `free`ing unused memory
 is a definite plus for software developers.
 However, because garbage collection always requires some space and time overhead,
