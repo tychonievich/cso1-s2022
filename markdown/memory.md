@@ -623,7 +623,7 @@ int f() {
 ### Use after return
 
 If you return the address of a local variable, and then later use that pointer,
-you have a use-after-free bug.
+you have a use-after-return bug.
 
 The [address sanitizer](#using-the-address-sanitizer) is usually able to detect this bug.
 
