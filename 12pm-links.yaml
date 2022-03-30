@@ -35,3 +35,11 @@
     - lectures/2022-03-28-audio-11.mp3
   files:
     - lectures/2022-03-28-slides2.pdf
+2022-03-30:
+  video:
+    - lectures/2022-03-30-recording-11.webm
+  audio:
+    - lectures/2022-03-30-audio-11.mp3
+  files:
+    - lectures/2022-03-30-badstack.c
+    - lectures/2022-03-30-slides1.pdf
