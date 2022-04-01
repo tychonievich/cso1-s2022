@@ -73,7 +73,7 @@ lectures:
     - C introduction
     - global, stack, heap
     - malloc and free
-    - malloc examples
+    - [memory errors, malloc examples]
 
     - review
     
@@ -224,6 +224,9 @@ reading:
     "malloc and free": 
         txt: memory writeup
         lnk: memory.html
+    "memory errors": 
+        txt: memory writeup §6
+        lnk: memory.html#detecting-and-avoiding-bugs
     C std library conventions: 
         txt: writeup
         lnk: manpage.html
