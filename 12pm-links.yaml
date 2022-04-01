@@ -43,3 +43,17 @@
   files:
     - lectures/2022-03-30-badstack.c
     - lectures/2022-03-30-slides1.pdf
+2022-04-01:
+  video:
+    - lectures/2022-04-01-recording-11.webm
+  audio:
+    - lectures/2022-04-01-audio-11.mp3
+  files:
+    - lectures/2022-04-01:
+    - lectures/a.out
+    - lectures/list.c
+    - lectures/list.h
+    - lectures/list.o
+    - lectures/use_list.c
+    - lectures/use_list.o
+    - lectures/2022-04-01-slides1.pdf
