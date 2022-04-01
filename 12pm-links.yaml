@@ -49,11 +49,7 @@
   audio:
     - lectures/2022-04-01-audio-11.mp3
   files:
-    - lectures/2022-04-01:
-    - lectures/a.out
-    - lectures/list.c
-    - lectures/list.h
-    - lectures/list.o
-    - lectures/use_list.c
-    - lectures/use_list.o
+    - lectures/2022-04-01-12pm-list.c
+    - lectures/2022-04-01-12pm-list.h
+    - lectures/2022-04-01-12pm-use_list.c
     - lectures/2022-04-01-slides1.pdf

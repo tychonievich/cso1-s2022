@@ -202,9 +202,7 @@
   audio:
     - lectures/2022-04-01-audio-21.mp3
   files:
-    - lectures/2022-04-01:
-    - lectures/a.out
-    - lectures/list.c
-    - lectures/list.h
-    - lectures/useList.c
+    - lectures/2022-04-01-1pm-list.c
+    - lectures/2022-04-01-1pm-list.h
+    - lectures/2022-04-01-1pm-useList.c
     - lectures/2022-04-01-slides2.pdf
