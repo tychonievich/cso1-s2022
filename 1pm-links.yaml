@@ -196,3 +196,15 @@
   files:
     - lectures/2022-03-30-badstack2.c
     - lectures/2022-03-30-slides2.pdf
+2022-04-01:
+  video:
+    - lectures/2022-04-01-recording-21.webm
+  audio:
+    - lectures/2022-04-01-audio-21.mp3
+  files:
+    - lectures/2022-04-01:
+    - lectures/a.out
+    - lectures/list.c
+    - lectures/list.h
+    - lectures/useList.c
+    - lectures/2022-04-01-slides2.pdf
