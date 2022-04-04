@@ -59,6 +59,4 @@
   audio:
     - lectures/2022-04-04-audio-11.mp3
   files:
-    - lectures/2022-04-04:
-    - lectures/textcat.c
     - lectures/2022-04-04-slides1.pdf

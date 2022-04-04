@@ -208,10 +208,9 @@
     - lectures/2022-04-01-slides2.pdf
 2022-04-04:
   video:
-    - lectures/2022-04-04-recording-21.webm
+    - lectures/2022-04-04-recording-22.webm
   audio:
-    - lectures/2022-04-04-audio-21.mp3
+    - lectures/2022-04-04-audio-22.mp3
   files:
-    - lectures/2022-04-04:
-    - lectures/textcat.c
+    - lectures/2022-04-04-1pm-textcat.c
     - lectures/2022-04-04-slides2.pdf
