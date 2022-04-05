@@ -169,7 +169,7 @@ if (error != 0) {
     puts("There was some kind of conversion error");
     if (error == EINVAL)
         printf("...because \"%s\" is not a valid integer\n", argv[1]);
-    else if (error == ERNAGE)
+    else if (error == ERANGE)
         printf("...because \"%s\" is too big to represent\n", argv[1]);
     else
         printf("...because of an unexpected error " 

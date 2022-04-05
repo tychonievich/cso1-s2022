@@ -75,9 +75,9 @@ lectures:
     - malloc and free
     - [memory errors, malloc examples]
 
+    - [malloc examples, C std library conventions]
     - review
     
-    - C std library conventions
     - string.h
     - stdio.h and varargs
     - stdio.h and varargs
