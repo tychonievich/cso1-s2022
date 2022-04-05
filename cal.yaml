@@ -244,7 +244,7 @@ reading:
       - txt: rust-lang
         lnk: https://www.rust-lang.org/
       - txt: ownership
-        lnk: https://doc.rust-lang.org/1.59.0/book/ch04-01-what-isownership.html
+        lnk: https://doc.rust-lang.org/1.59.0/book/ch04-01-what-is-ownership.html
       - txt: borrowing
         lnk: https://doc.rust-lang.org/1.59.0/book/ch04-02-references-and-borrowing.html
       - txt: lifetimes
