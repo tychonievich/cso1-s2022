@@ -60,3 +60,10 @@
     - lectures/2022-04-04-audio-11.mp3
   files:
     - lectures/2022-04-04-slides1.pdf
+2022-04-06:
+  video:
+    - lectures/2022-04-06-recording-11.webm
+  audio:
+    - lectures/2022-04-06-audio-11.mp3
+  files:
+    - lectures/2022-04-06-slides1.pdf
