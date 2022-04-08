@@ -14,15 +14,15 @@ A few useful commands to remember:
 --------------------------------------------------------------------------------
 Command                         Why to use it
 ------------------------------- ------------------------------------------------
-`man 3 functionname`            Section 3 has library functions; adding `3` can
+`man 3 functionname`            Section 3 has library functions; adding `3` can
                                 help if the same name is also a command-line
                                 tool
 
-`man -f functionname`           This **f**inds pages that discuss `functionname`
+`man -f functionname`           This **f**inds pages that discuss `functionname`
                                 displaying the page name, section, and a short
                                 synopsis of each.
 
-`man -k some_text`              This treats `some_text` as a regular expression
+`man -k some_text`              This treats `some_text` as a regular expression
                                 and searches for it within man pages,
                                 displaying the page name, section, and a short
                                 synopsis of each.
