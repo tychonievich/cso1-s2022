@@ -123,8 +123,8 @@ Some will mix and match, both returning and using a pointer parameter to provide
 :::example
 Consider the function `char *strsep(char **stringp, const char *delim)`{.c}.
 It returns a `char *`, which is a single token of a string after it is split on `delim`.
-But the input string, instead of being a normal `char *` is a `char **`.
-this is because it modifies the argument to point to the string following the split.
+But the input string, instead of being a normal `char *` is a `char **`
+so that the function can modify the argument to point to the string following the split.
 
 Inside this function, there is something like the following:
 

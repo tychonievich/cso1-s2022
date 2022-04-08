@@ -79,11 +79,10 @@ lectures:
     - review
     
     - [string.h, C std library conventions]
+    - string.h
     - stdio.h and varargs
     - stdio.h and varargs
     - unistd.h and so on
-
-    - flex day
 
     - buffer overrun; reporting exploits
     - function pointers
