@@ -67,8 +67,8 @@ and `strcat`, the string concatenation library function from `string.h`.
 #include <string.h>
 
 int main(){
-    char string1[50];
-    char string2[50];
+    char string1[10];
+    char string2[10];
     printf("Enter First String: ");
     scanf("%s", string1);
     printf("Enter Second String: ");
@@ -102,7 +102,43 @@ scanf("%10s", string1); // reads at most 10 characters
 
 Note you need padding for the null byte: `scanf("%10s", string1)` can put 11 bytes into `string1`.
 
-`strcat` also has a stack buffer overflow error, as it modified the buffer associated with first parameter.  Try entering 2 strings that are 50 charaters each. 
+`strcat` also has a stack buffer overflow error, as it modified the buffer associated with first parameter.  Try entering 2 strings that are 10 charaters each. 
+
+## Task 1.
+Modify the program so that only reads the 10 chars for the strings. 
+Modify the string1 array (buffer) so that has enough space to hold the concantinated result. 
+
+### Check in with your TA
+Demo an example to your TA showing a program that reads two 10 char words (examples 0123456789) and prints the concantinated result. 
+
+
+
+# Task 2
+Let’s extend the program so that it reads also reads integers and floats. We begin by adding a prompt that asks the user to the type of values they want to enter.  Users should enter “I” for integers, “F” for floats and “S” for Strings. Note your program shouold be case sentive.   
+
+
+<pre> 
+    What types of values do you want to add: <ins>F</ins>
+    Enter your first value: <ins>0.2</ins>
+    Enter your second value: <ins>0.5</ins> 
+</pre> 
+
+Once you’ve entered your values, The program should print
+
+<pre> 
+    The results is : 0.7 
+</pre> 
+
+
+
+### Check in with your TA
+Demo the following to your TA 
+
+1. Adding two integers. 
+2. Adding two floats
+3. Concating two strings. 
+
+# Task 3 
 
 
 
