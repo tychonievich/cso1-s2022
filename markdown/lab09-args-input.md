@@ -180,13 +180,13 @@ a.out -i
 ``
 Since we know from the command line argument that we enter integers, your program should skip the step of prompting the user for the type. If another type of flag is supplied your program should print `` invalid flag supplied.``
 
-##Check in with TA 
+## Check in with TA 
 
 Demo your program to the TA with the following test cases: 
 
-    1. No flag supplied. 
-    2. -i flag supplied. 
-    3.  -h flag supplied (This is the valid flag option. 
+   1. No flag supplied. 
+   2. -i flag supplied. 
+   3.  -h flag supplied (This is the valid flag option. 
 
 
 
