@@ -6,6 +6,7 @@ The goal of this lab is to give some practice working with the string.h stdio.h 
 
 # Outline
 You will write a program that will do the following: 
+
 1. Read 2 string from standard-in and concatenate them and print the result to the console. 
 2. Read 2 intergers from standard-in add them and print the result to the console. 
 3. Read 2 floats from standard-in add them and print the result to the console.  
@@ -104,7 +105,7 @@ Note you need padding for the null byte: `scanf("%10s", string1)` can put 11 byt
 
 `strcat` also has a stack buffer overflow error, as it modified the buffer associated with first parameter.  Try entering 2 strings that are 10 charaters each. 
 
-## Task 1.
+# Task 1.
 Modify the program so that only reads the 10 chars for the strings. 
 Modify the string1 array (buffer) so that has enough space to hold the concantinated result. 
 
@@ -139,6 +140,59 @@ Demo the following to your TA
 3. Concating two strings. 
 
 # Task 3 
+
+Command line arguments are values passed in after the executiable. Consider the following example
+```
+./a.out a b c 
+```
+Here `a`, `b` and `c` are all command line arguments. So you might be wonderign how you would write a program that reads 
+
+
+```
+#include <stdio.h>
+
+int main(int argc, char** argv)
+{
+ for(int i = 0; i < argc; i++){
+   printf("Argument [%d] : %s \n", i, argv[i]); 
+ }
+ return 0;
+}
+
+```
+Notice that we you run the program, with the command line parameters you get the following output.
+
+```
+$ ./a.out a b c
+Argument [0] : ./a.out 
+Argument [1] : a 
+Argument [2] : b 
+Argument [3] : c
+``` 
+**Notice the first Argument (Argument [0]) is the name of the program itself. *** 
+
+Now let's extend your your program so that you can pass in command-line arguments that spefic the type values that you want to enter. 
+
+
+So if user want to enter intergers the run the program like this: 
+``
+a.out -I 
+``
+
+If they want to enter floats they run the program like this: 
+
+```
+a.out -F
+```
+and if they want to enter strings they run the program like this: 
+
+```
+a.out -S
+```
+
+In this case `-i` is a command line argument.  We want want to com
+
+It will not ask the user to enter the type instead it will simply start by asking them to enter two integers. If another type of flag is supplied your programshould print out invalid flag supplied. 
 
 
 
