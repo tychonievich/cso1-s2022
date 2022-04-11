@@ -4,7 +4,7 @@ title: Input and Arguments
 
 The goal of this lab is to give some practice working with the string.h stdio.h and varargs.
 
-#Outline
+# Outline
 You will write a program that will do the following: 
 1. Read 2 string from standard-in and concatenate them and print the result to the console. 
 2. Read 2 intergers from standard-in add them and print the result to the console. 
@@ -12,29 +12,29 @@ You will write a program that will do the following:
 4. Read command line argument that is supplied when you run your program. 
 
 
-#Helpful functions. 
+# Helpful functions. 
 Let's begin by looking at some function that you'll find helpful in this lab. 
 
-##printf
+## printf
 The `printf` functiona allows you to print to the console. Below is the function prototype for `printf`.  
 ```
 int printf(const char *format, ...) 
 ```
 The first parameter is a pointer to string.  This parameter provides a template of the values that follow and expects some key values.  
 
-
+<div style="columns: 3">
 | specifier |  Representation         | 
 --------------------------------------
 | c         |   Character             |
 | d or i    |  Signed decimal integer |
 | e or E    | Scientific notation     |
 | f         | Decimal floating point  |
-
+</div> 
+ 
 The second parameter `...` represents a variable number of parameters.  This means that we can one or more parameters in it's spot.  For example, the following code snippet prints out the value 3. 
 
 ```
  printf("%d", 3); 
- 
 ```
 
 We could also print multiple values by adding more parameters and updating the first parameter that represents the format string. Look at the next example> 
@@ -45,7 +45,7 @@ print(" Number 1 %d , and the other number %d", 3, 7)
 
 Notice that the string act as template. Printf will search for the specifier and remplace them, with values for parameters that follow.
 
-##scanf 
+## scanf 
 The `scanf` method allows you to read user input from the console. And has a simpilar prototype to `printf`. 
 
 ```
