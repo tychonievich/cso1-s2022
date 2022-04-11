@@ -175,10 +175,12 @@ Now let's extend your your program so that you can pass in command-line argument
 
 
 So if user want to enter intergers the run the program like this: 
+
 ``
 a.out -i 
 ``
-Since we know from the command line argument that we enter integers, your program should skip the step of prompting the user for the type. If another type of flag is supplied your program should print `` invalid flag supplied.``
+
+Since we know from the command line argument that we want to enter integers, your program should skip the step of prompting the user for the type. If another type of flag is supplied your program should print `` invalid flag supplied.``
 
 ## Check in with TA 
 
