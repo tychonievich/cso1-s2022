@@ -229,3 +229,14 @@
   files:
     - lectures/2022-04-08-slides2.pdf
     - lectures/2022-04-08-1pm-usestrsep.c
+2022-04-11:
+  video:
+    - lectures/2022-04-11-recording-21.webm
+  audio:
+    - lectures/2022-04-11-audio-21.mp3
+  files:
+    - lectures/2022-04-11-1pm-mcp-big.c
+    - lectures/2022-04-11-1pm-mcp.c
+    - lectures/2022-04-11-1pm-mcp.s
+    - lectures/2022-04-11-1pm-problem.c
+    - lectures/2022-04-11-slides2.pdf
