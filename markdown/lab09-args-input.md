@@ -22,14 +22,13 @@ int printf(const char *format, ...)
 ```
 The first parameter is a pointer to string.  This parameter provides a template of the values that follow and expects some key values.  
 
-<div style="columns: 3">
-| specifier |  Representation         | 
---------------------------------------
-| c         |   Character             |
-| d or i    |  Signed decimal integer |
-| e or E    | Scientific notation     |
-| f         | Decimal floating point  |
-</div> 
+
+1.  c         **Character            **
+2.  d or i    **Signed decimal integer **
+3.  e or E    **Scientific notation     **
+4.  f         **Decimal floating point  **
+
+So if wanted to print a char we would pass `"%c"` as the first parameter. 
  
 The second parameter `...` represents a variable number of parameters.  This means that we can one or more parameters in it's spot.  For example, the following code snippet prints out the value 3. 
 
@@ -103,5 +102,8 @@ scanf("%10s", string1); // reads at most 10 characters
 
 Note you need padding for the null byte: `scanf("%10s", string1)` can put 11 bytes into `string1`.
 
-`strcat` also has a stack buffer overflow error,
-as it 
+`strcat` also has a stack buffer overflow error, as it modified the buffer associated with first parameter.  Try entering 2 strings that are 50 charaters each. 
+
+
+
+
