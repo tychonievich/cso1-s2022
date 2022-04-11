@@ -24,7 +24,7 @@ The first parameter is a pointer to string.  This parameter provides a template 
 
 
 | specifier |  Representation         | 
---------------------------------------|
+--------------------------------------
 | c         |   Character             |
 | d or i    |  Signed decimal integer |
 | e or E    | Scientific notation     |
