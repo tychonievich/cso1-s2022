@@ -169,31 +169,24 @@ Argument [1] : a
 Argument [2] : b 
 Argument [3] : c
 ``` 
-**Notice the first Argument (Argument [0]) is the name of the program itself. *** 
+***Notice the first Argument (Argument [0]) is the name of the program itself. *** 
 
-Now let's extend your your program so that you can pass in command-line arguments that spefic the type values that you want to enter. 
+Now let's extend your your program so that you can pass in command-line arguments that spefic the type values that you want to enter. For simplisity will only support one type integers. 
 
 
 So if user want to enter intergers the run the program like this: 
 ``
-a.out -I 
+a.out -i 
 ``
+Since we know from the command line argument that we enter integers, your program should skip the step of prompting the user for the type. If another type of flag is supplied your program should print `` invalid flag supplied.``
 
-If they want to enter floats they run the program like this: 
+##Check in with TA 
 
-```
-a.out -F
-```
-and if they want to enter strings they run the program like this: 
+Demo your program to the TA with the following test cases: 
 
-```
-a.out -S
-```
-
-In this case `-i` is a command line argument.  We want want to com
-
-It will not ask the user to enter the type instead it will simply start by asking them to enter two integers. If another type of flag is supplied your programshould print out invalid flag supplied. 
-
+    1. No flag supplied. 
+    2. -i flag supplied. 
+    3.  -h flag supplied (This is the valid flag option. 
 
 
 
