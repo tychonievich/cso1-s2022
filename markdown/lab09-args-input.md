@@ -27,9 +27,9 @@ The first parameter is a pointer to a string.  This parameter provides a templat
 
 
 1.  c         **Character**
-2.  d or i    **Signed decimal integer**
-3.  e or E    **Scientific notation**
-4.  f         **Decimal floating point**
+2.  d or i    **base-10 `int`**
+3.  e or E    **Scientific notation `float`**
+4.  f         **#.######-notation `float`**
 
 If you wanted to print a char we would pass `"%c"` as the first parameter.  You can ream more about the `printf` by searching the man page by running 
 
@@ -137,10 +137,16 @@ Enter your second value: <ins>0.5</ins>
 Once you’ve entered your values, add the numbers of concatenate the strings and print the result:
 
 <pre>
-The results is : 0.7 
+The results is : 0.700000
 </pre> 
 
+:::aside
+Try printing the sum of two very small numbers, like `0.0000000001` or `1e-8`.
+Notice the error in the answer? That's an error in formatting, not arithmetic.
+You could fix it with `%e` instead of `%f` in your `printf`, but then 1+2 would be displayed as `3.000000e+00`, which is rather ugly.
 
+For extra kudos, look through the manual page for `printf` to find a formatting flag you can use that will show 1+2 without an `e` but also show numbers close to 0 with an `e`.
+:::
 
 ## Check in with your TA
 Demo the following to your TA 
@@ -203,8 +209,8 @@ man strcmp
 Demo your program to the TA with the following test cases: 
 
 1. No flag supplied. Should ask for a type first, then two numbers or strings depending on the type given. 
-2. -i flag supplied. Should ask for two integers.
-3. -h flag supplied. Should say "invalid flag supplied" and return without doing anything else.
+2. `-i` flag supplied. Should ask for two integers.
+3. `-h` flag supplied. Should say "invalid flag supplied" and return without doing anything else.
 
 
 
