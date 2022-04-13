@@ -18,34 +18,36 @@ Let's begin by looking at some function that you'll find helpful in this lab.
 
 ## printf
 The `printf` function allows you to print to the console. Below is the function prototype for `printf`.  
-```
+
+```c
 int printf(const char *format, ...) 
 ```
+
 The first parameter is a pointer to a string.  This parameter provides a template of the values that follow. `printf` expects that this string to include some key specifies. Here as some example specifiers.   
 
 
-1.  c         **Character            **
-2.  d or i    **Signed decimal integer **
-3.  e or E    **Scientific notation     **
-4.  f         **Decimal floating point  **
+1.  c         **Character**
+2.  d or i    **Signed decimal integer**
+3.  e or E    **Scientific notation**
+4.  f         **Decimal floating point**
 
 If you wanted to print a char we would pass `"%c"` as the first parameter.  You can ream more about the `printf` by searching the man page by running 
 
 ```
 man 3 printf
 ```
-We include the value 3 because there are several `printf` functions and this is the one we are interested in.  
+We include the value 3 because there are several `printf`s and we are interested in the one in section 3 (the "Library calls" section).  
 
  
-The second `printf` parameter `...` represents a variable number of parameters.  This means that we can place one or more parameters in it's spot.  For example, the following code snippet prints out the value 3. Here we only placing on parameter. 
+The second `printf` parameter `...` represents a variable number of parameters.  This means that we can place one or more parameters in it's spot.  For example, the following code snippet prints out the value 3. Here we only placing one parameter in the `...`'s position. 
 
-```
- printf("%d", 3); 
+```c
+printf("%d", 3); 
 ```
 
 We could also print multiple values by adding more parameters. Look at the next example. Notice that we also updated the first parameter to include additional format specifiers. 
 
-``` 
+```c
 print(" Number 1 %d , and the other number %d", 3, 7) 
 ```
 
@@ -54,7 +56,7 @@ This string acts as template. The `printf` method will search for the specifiers
 ## scanf 
 The `scanf` method allows you to read user input from the console, and has a simpilar prototype to `printf`. 
 
-```
+```c
 int scanf(const char *format, ...)
 ```
 
@@ -73,7 +75,7 @@ and `strcat`, the string concatenation library function from `string.h`.
 #include <stdio.h>
 #include <string.h>
 
-int main(){
+int main() {
     char string1[10];
     char string2[10];
     printf("Enter First String: ");
@@ -97,7 +99,7 @@ scanf("%s", string1);
 means "read input, discarding whitespace, until you find a word and store the word as a null-terminated string starting at the address `string1`, overwriting whatever was already there."
 
 The above code has a stack buffer overflow vulnerability.
-To see this, try typing a twelve-character word when prompted.
+To see this, try typing a very long word when prompted.
 What happens?
 
 `scanf` and `printf` both allow some additional information between the `%` and the `s` (or other letter that specifies a type).
@@ -115,35 +117,37 @@ Note you need padding for the null byte: `scanf("%10s", string1)` can put 11 byt
 Modify the program so that it only reads the 10 chars for the strings. 
 Modify the string1 array (buffer) so that has enough space to hold the concantinated result. 
 
-### Check in with your TA
-Demo an example to your TA showing a program that reads two 10 char words (example 0123456789) and prints the concantinated result. 
+## Check in with your TA
+Demo an example to your TA showing a program that reads two 10 char words (example 0123456789) and prints the concatenated result. Your code should concatenate the strings with `strcat`, not simply print them next to one another.
 
 
 
 # Task 2
-Let’s extend the program so that it also reads integers and floats. We begin by adding a prompt that ask the user to enter the value's type.  Users should enter “I” for integers, “F” for floats and “S” for Strings. Note your program shouold be case sentive.   
+Extend the program so that it also reads integers and floats. We begin by adding a prompt that ask the user to enter the value's type.  Users should enter “I” for integers, “F” for floats and “S” for Strings. Note your program should be case sensitive.
+
+You'll likely need to check `man 3 scanf` to learn how to read the different datatypes in.
 
 
-<pre> 
-    What types of values do you want to add: <ins>F</ins>
-    Enter your first value: <ins>0.2</ins>
-    Enter your second value: <ins>0.5</ins> 
+<pre>
+What types of values do you want to add: <ins>F</ins>
+Enter your first value: <ins>0.2</ins>
+Enter your second value: <ins>0.5</ins> 
 </pre> 
 
-Once you’ve entered your values, The program should print
+Once you’ve entered your values, add the numbers of concatenate the strings and print the result:
 
-<pre> 
-    The results is : 0.7 
+<pre>
+The results is : 0.7 
 </pre> 
 
 
 
-### Check in with your TA
+## Check in with your TA
 Demo the following to your TA 
 
 1. Adding two integers. 
 2. Adding two floats
-3. Concating two strings. 
+3. Concatenating two strings. 
 
 # Task 3 
 
@@ -155,41 +159,41 @@ Command line arguments are values passed in after the executiable. Consider the 
 Here `a`, `b` and `c` are all command line arguments. Let's write a program that reads these values: 
 
 
-```
+```c
 #include <stdio.h>
 
-int main(int argc, char** argv)
-{
- for(int i = 0; i < argc; i++){
-   printf("Argument [%d] : %s \n", i, argv[i]); 
- }
- return 0;
+int main(int argc, const char* argv[]) {
+    for(int i = 0; i < argc; i++){
+        printf("Argument [%d]: %s\n", i, argv[i]); 
+    }
+    return 0;
 }
-
 ```
+
 When you run the program with the command line parameters above you should get the following output.
 
 ```
 $ ./a.out a b c
-Argument [0] : ./a.out 
-Argument [1] : a 
-Argument [2] : b 
-Argument [3] : c
+Argument [0]: ./a.out 
+Argument [1]: a 
+Argument [2]: b 
+Argument [3]: c
 ``` 
-***Notice the first Argument (Argument [0]) is the name of the program itself. *** 
 
-Let's extend your program so you can pass in a command-line argument that spefics the type values that you want to enter. For simplisity will only support one type, integers. 
+__Notice the first Argument (Argument `0`) is the name of the program itself.__
+
+Let's extend your program so you can pass in a command-line argument that specifics the type values that you want to enter. For simplicity will only support one type, integers. 
 
 
-So if a user wants to enter intergers they'll run the program like this: 
+So if a user wants to enter integers they'll run the program like this: 
 
-``
+```
 a.out -i 
-``
+```
 
-If a users start the program like this, your program should skip the step of prompting the user for the type. If another type of flag is supplied your program should print `` invalid flag supplied.`` If no flag is supplied your program should prompt the user to enter the type. 
+If a users start the program like this, your program should skip the step of prompting the user for the type. If another type of flag is supplied your program should print `invalid flag supplied.` If no flag is supplied your program should prompt the user to enter the type. 
 
-You might may find the `strcmp` function useful. Read the man page for strcmp by running the following command. 
+You might may find the `strcmp` function useful. Read the manual page for `strcmp` by running the following command. 
 ```
 man strcmp
 ```
@@ -198,9 +202,9 @@ man strcmp
 
 Demo your program to the TA with the following test cases: 
 
-   1. No flag supplied. 
-   2. -i flag supplied. 
-   3.  -h flag supplied (This is the valid flag option. 
+1. No flag supplied. Should ask for a type first, then two numbers or strings depending on the type given. 
+2. -i flag supplied. Should ask for two integers.
+3. -h flag supplied. Should say "invalid flag supplied" and return without doing anything else.
 
 
 
