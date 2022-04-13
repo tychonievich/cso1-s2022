@@ -186,7 +186,9 @@ Argument [2]: b
 Argument [3]: c
 ``` 
 
-__Notice the first Argument (Argument `0`) is the name of the program itself.__
+:::aside
+Notice the first argument (argument `0`) is the name of the program itself.
+:::
 
 Let's extend your program so you can pass in a command-line argument that specifics the type values that you want to enter. For simplicity will only support one type, integers. 
 
