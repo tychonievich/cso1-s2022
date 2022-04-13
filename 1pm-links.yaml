@@ -240,3 +240,10 @@
     - lectures/2022-04-11-1pm-mcp.s
     - lectures/2022-04-11-1pm-problem.c
     - lectures/2022-04-11-slides2.pdf
+2022-04-13:
+  video:
+    - lectures/2022-04-13-recording-21.webm
+  audio:
+    - lectures/2022-04-13-audio-21.mp3
+  files:
+    - lectures/2022-04-13-1pm-strcmp-overflow.c
