@@ -32,13 +32,16 @@ Code            Meaning
 `%e` or `%E`    scientific notation `float` -- use `%le` for a `double`
 `%f`            #.######-notation `float` -- use `%lf` for a `double`
 
-If you wanted to print a char we would pass `"%c"` as the first parameter.  You can ream more about the `printf` by searching the man page by running 
+If you wanted to print a char we would pass `"%c"` as the first parameter.  You can read more about the `printf` from its manual page by running 
 
 ```
 man 3 printf
 ```
-We include the value 3 because there are several `printf`s and we are interested in the one in section 3 (the "Library calls" section).  
 
+:::aside
+We need to include the section number (`3`) of the library calls section of the manual
+because there is also a command-line tool named `printf` in section 1 of the manual.
+:::
  
 The second `printf` parameter `...` represents a variable number of parameters.  This means that we can place one or more parameters in it's spot.  For example, the following code snippet prints out the value 3. Here we only placing one parameter in the `...`'s position. 
 
