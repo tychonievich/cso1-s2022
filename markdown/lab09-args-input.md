@@ -10,7 +10,7 @@ You will write a program that will do the following:
 1. Read 2 string from standard-in, concatenate them and print the result to the console. 
 2. Read 2 intergers from standard-in, add them and print the result to the console. 
 3. Read 2 floats from standard-in, add them and print the result to the console.  
-4. Read a command line argument that is supplied when you run your program. 
+4. Use a command line argument that is supplied when you run your program. 
 
 
 # Helpful functions. 
@@ -25,11 +25,12 @@ int printf(const char *format, ...)
 
 The first parameter is a pointer to a string.  This parameter provides a template of the values that follow. `printf` expects that this string to include some key specifies. Here as some example specifiers.   
 
-
-1.  c         **Character**
-2.  d or i    **base-10 `int`**
-3.  e or E    **Scientific notation `float`**
-4.  f         **#.######-notation `float`**
+Code            Meaning
+--------        ----------------------------------
+`%c`            character
+`%d` or `%i`    base-10 `int` -- use `%ld` for a `long`
+`%e` or `%E`    scientific notation `float` -- use `%le` for a `double`
+`%f`            #.######-notation `float` -- use `%lf` for a `double`
 
 If you wanted to print a char we would pass `"%c"` as the first parameter.  You can ream more about the `printf` by searching the man page by running 
 
