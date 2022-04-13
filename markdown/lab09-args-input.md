@@ -14,7 +14,7 @@ You will write a program that will do the following:
 
 
 # Helpful functions. 
-Let's begin by looking at some function that you'll find helpful in this lab. 
+Let's begin by looking at some functions that you'll find helpful in this lab. 
 
 ## printf
 The `printf` function allows you to print to the console. Below is the function prototype for `printf`.  
