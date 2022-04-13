@@ -106,7 +106,7 @@ labs:
     - 'char*'
     - fchat
     - Exam 2
-    - TBA
+    - args and inputs
     - sockets
     - [cpp, stl]
 
@@ -141,6 +141,9 @@ reading:
     'fchat':
         txt: in-lab description
         lnk: lab08-fchat.html
+    'args and inputs':
+        txt: in-lab description
+        lnk: lab09-args-inputs.html
     'sockets':
         txt: in-lab description
         lnk: lab09-sockets.html
