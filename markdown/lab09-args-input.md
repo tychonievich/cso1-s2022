@@ -121,8 +121,8 @@ Note you need padding for the null byte: `scanf("%10s", string1)` can put 11 byt
 Modify the program so that it only reads the 10 chars for the strings. 
 Modify the string1 array (buffer) so that has enough space to hold the concantinated result. 
 
-## Check in with your TA
-Demo an example to your TA showing a program that reads two 10 char words (example 0123456789) and prints the concatenated result. Your code should concatenate the strings with `strcat`, not simply print them next to one another.
+## Test your progress. 
+Try an example that reads two 10 char words (example 0123456789) and prints the concatenated result. Your code should concatenate the strings with `strcat`, not simply print them next to one another.
 
 
 
@@ -152,8 +152,8 @@ You could fix it with `%e` instead of `%f` in your `printf`, but then 1+2 would 
 For extra kudos, look through the manual page for `printf` to find a formatting flag you can use that will show 1+2 without an `e` but also show numbers close to 0 with an `e`.
 :::
 
-## Check in with your TA
-Demo the following to your TA 
+## Test your progress
+Try 
 
 1. Adding two integers. 
 2. Adding two floats
@@ -214,8 +214,8 @@ man strcmp
 
 Demo your program to the TA with the following test cases: 
 
-1. No flag supplied. Should ask for a type first, then two numbers or strings depending on the type given. 
-2. `-i` flag supplied. Should ask for two integers.
+1. No flag supplied. Should ask for a type first, then two numbers or strings depending on the type given.  Show an example contactination two strings.
+2. `-i` flag supplied. Should ask for two integers. Show an example adding two integers. 
 3. `-h` flag supplied. Should say "invalid flag supplied" and return without doing anything else.
 
 
