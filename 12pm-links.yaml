@@ -96,3 +96,12 @@
     - lectures/2022-04-13-12pm-useprintf.c
     - lectures/2022-04-13-slides1.pdf
     - lectures/2022-04-13-slides1.pdf
+2022-04-15:
+  video:
+    - lectures/2022-04-15-recording-11.webm
+  audio:
+    - lectures/2022-04-15-audio-11.mp3
+  files:
+    - lectures/2022-04-15-12pm-badwrite.c
+    - lectures/2022-04-15-12pm-mycat.c
+    - lectures/2022-04-15-slides1.pdf
