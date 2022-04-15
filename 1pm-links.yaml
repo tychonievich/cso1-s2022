@@ -247,3 +247,11 @@
     - lectures/2022-04-13-audio-21.mp3
   files:
     - lectures/2022-04-13-1pm-strcmp-overflow.c
+2022-04-15:
+  video:
+    - lectures/2022-04-15-recording-21.webm
+  audio:
+    - lectures/2022-04-15-audio-21.mp3
+  files:
+    - lectures/2022-04-15-1pm-mywrite.c
+    - lectures/2022-04-15-slides2.pdf
