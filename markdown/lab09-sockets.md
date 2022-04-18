@@ -196,7 +196,8 @@ Great you server is now waiting for the client that you'll write to connect to i
 
 and then to write a client program that
 
-2. Accepts an IP address and a port number from the command line.
+2. Accepts an IP address and a port number from the command line. (Hint: the `atoi()` function in the  `<stdlib.h>` converts string to integers. ) 
+
 3. Connects to that server.
 4. `read`s a message from the server and displays it on the command line.
 
