@@ -280,11 +280,6 @@ not any of their advanced features.
 
 
 
-
----
-title: The C++ STL
-...
-
 The goal of this lab is to provide enough exposure to C++ that you understand how to explore more on your own.
 It assumes you learned all of the topics in [last week's lab](lab10-cpp.html).
 
