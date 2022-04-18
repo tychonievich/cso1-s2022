@@ -180,8 +180,8 @@ Compile and run your `server.c` file. You should see the following output.
 
 ```
 
-[id@portal04 ~]$ clang server.c
-[id@portal04 ~]$ ./a.out 
+[id@portal04 ~]$ clang server.c -o server
+[id@portal04 ~]$ ./server 
 portal04.cs.Virginia.EDU has address 128.143.69.114
 The server is now listening on port 5048
 Waiting for a connection
@@ -190,7 +190,7 @@ Waiting for a connection
 Great you server is now waiting for the client that you'll write to connect to it. ***Don't close this terminal, we want to keep server running.  Open a new terminal and user this new terminal to develop your client.c program***
 
 
-Your job is 
+# Your job is 
 
 1. Read enough `man`-pages that you understand what every line of the above code does.
 
@@ -200,6 +200,8 @@ and then to write a client program that
 3. Connects to that server.
 4. `read`s a message from the server and displays it on the command line.
 
+**Hint: Read the table above. It list server of the function that you need when developing your client*** 
+
 Ideally your program should
 
 - Verify that the connection worked, giving a reasonable error message if the IP and port combination failed to connect.
@@ -207,7 +209,7 @@ Ideally your program should
 - Also check the return values of every other function that returns error status (see the **return value** section in each function's manual page).
 - `close` everything it `open`s and `free` everything it `malloc`s
 
-# Testing your code
+## Testing your code
 
 You'll need a server running at some known IP address and port.
 You'll also need to run your client.
