@@ -471,4 +471,3 @@ If you have time, implement your own `ostream & operator<<(ostream & o, stack<do
 which repeatedly displays (with `<<`) the `top()` and then `pop()`s until the stack is `.empty()`.
 Note that we pass in the ouput stream by reference (with `&`), but pass the stack by value.
 Passing by value means passing a copy, so `pop`ing `s` does not `pop` the stack that was passed in, only the local copy of it that the `operator<<` function contains.
-
