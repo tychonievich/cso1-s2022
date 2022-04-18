@@ -16,12 +16,20 @@ For the TCP/IP sockets this lab will use, we'll need several other steps to do t
 In the end, we'll have two programs running at once, possibly on different computers, each with a socket
 connected by a virtual two-way communication channel.
 
-Each connected socket has exactly two ends: the local end you use in your code, and the remote end somewhere else.
+Each connected socket has exactly two ends: the local end (client) you use in your code, and the remote end (server) somewhere else.
+
+```
+|--------|           |--------|    
+| Client | --------->| Server |
+|--------|           |--------|
+```
 
 A basic TCP/IP socket application uses three socket pairs:
 
 - A server listening socket that connects a computer to the Internet and waits around for other computers to contact it
     - The remote end of this socket is held by the OS, which sends "I got a new connection attempt" messages to your code through it
+    - ***You're server must be running before your client can connect to it***
+ 
 - A client socket that contacts the server listening socket
     - The remote end of this socket is the server communication socket
 - A server communication socket that the OS creates and sends through the server listening socket to your code
@@ -46,7 +54,7 @@ int port = 0xc000 | (random()&0x3fff); // random element of 49152–65535
 ````
 
 The *client* will need to know the port that the server it wants to contact is listening on,
-so we'll have the port be a command-line parameter in the client.
+so we'll have the port be a command-line parameter in the client. ***The Server program we provide prints both the IP and Port, we it runs you'll want to write these down.***
 
 ## Address
 
@@ -125,7 +133,7 @@ int main() {
     // start by getting a random port from the ephemeral port range
     srandom(getpid()); // random seed based on this process's OS-assigned ID
     int port = 0xc000 | (random()&0x3fff); // random element of 49152–65535
-
+    
     // create an address structure: IPv4 protocol, anny IP address, on given port
     // note: htonl and htons are endian converters, essential for Internet communication
     struct sockaddr_in ipOfServer;
@@ -148,6 +156,8 @@ int main() {
     printf("The server is now listening on port %d\n", port); // and listening port
 
     for(;;) {
+        printf("
+        \n");
         // get a connection socket (this call will wait for one to connect)
         int connection = accept(listener, (struct sockaddr*)NULL, NULL);
         if (random()%2) { // half the time
@@ -165,6 +175,20 @@ int main() {
     return 0;
 }
 ```
+
+Compile and run your `server.c` file. You should see the following output. 
+
+```
+
+[id@portal04 ~]$ clang server.c
+[id@portal04 ~]$ ./a.out 
+portal04.cs.Virginia.EDU has address 128.143.69.114
+The server is now listening on port 5048
+Waiting for a connection
+
+```
+Great you server is now waiting for the client that you'll write to connect to it. ***Don't close this terminal, we want to keep server running.  Open a new terminal and user this new terminal to develop your client.c program***
+
 
 Your job is 
 
