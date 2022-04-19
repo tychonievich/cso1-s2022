@@ -176,12 +176,6 @@ Most casual C++ programmers I know only use the basic type-generic aspect of tem
 not any of their advanced features.
 
 
-
-The goal of this lab is to provide enough exposure to C++ that you understand how to explore more on your own.
-It assumes you learned all of the topics in [last week's lab](lab10-cpp.html).
-
-# Three Language Features
-
 ## Reference arguments
 
 In C, if you have an argument of type `int *`{.c} you don't know if it is an array or just a value you are supposed to set.
@@ -209,9 +203,6 @@ Both pieces of code turn into equivalent *assembly*, but the C++ version uses *t
 :::
 
 ## Templates
-
-As discussed last week, C++ allows function names to be overloaded using name mangling.
-It also allows more complicated overloads.
 
 A **template** in C++ is an outline of how to create code if it is needed.
 Templates uses angle-brackets, like generics in Java.
