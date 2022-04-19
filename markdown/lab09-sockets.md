@@ -210,6 +210,44 @@ Ideally your program should
 - Also check the return values of every other function that returns error status (see the **return value** section in each function's manual page).
 - `close` everything it `open`s and `free` everything it `malloc`s
 
+Here is skeleton code for for your `client.c` file. 
+
+```c
+#include <stdio.h>	
+#include <sys/socket.h> 
+#include <arpa/inet.h>  
+#include <unistd.h>
+#include <stdlib.h> //atoi 
+
+
+int main(int argc , char *argv[]){
+
+    /*
+        Initalize struct sockaddr_in to contain IP address and port number of server. 
+        Remember to read the port number for argv. (You also need to convert it from 
+        a string to an int, the atoi function is very helpful)
+        
+     */
+
+
+    //Create Socket  (Remember to check the return value to see if an error occured) 
+    
+    
+    //Connect to Remote server 
+    
+    
+    //Read message from server. (Note: The server sends multiple messages, so you might need a loop)
+    
+    
+    //Close socket and free anything you malloced. 
+
+
+}
+
+
+```
+
+
 ## Testing your code
 
 You'll need a server running at some known IP address and port.
