@@ -7,13 +7,7 @@ The subsequent lab will have you use these features to work with some basic C++ 
 
 # How this lab works
 
-## Passing off
-
-Each subsequent section of this lab writeup describes a C++ feature and ends with a set of questions about that feature.
-You'll pass off the lab by sharing your answers to a TA-selected subset of these questions with a TA.
-The TA may also ask a variation on one or more question to ensure understanding of the underlying concepts.
-
-We recommend you write down your answers as you determine them.
+This lab introduces key features `C++`, and describes how it deffers from `C`. Once you've completed the reading, we ask you implement a postfix calculator using `C++`. If you prefer to start coding skip to end of lab and start coding.    
 
 ## Compiling
 
@@ -48,33 +42,6 @@ to be compiled; the compiler picks which version of `abs_val` to invoked in each
 
 This renaming of functions to arrive at labels is called **name mangling**.
 
-:::exercise
-Experiment with the compiler until you are ready to answer the following questions
-
-1. What is the label used by `void f()`{.cpp}?
-
-1. If you use the label name you found in the previous question as a C++ function name, what label is that given?
-
-1. What are the labels given to the following?
-    
-    C++ function header                         Label
-    ------------------------------------------  ----------------------------
-    `void f()`{.cpp}
-    `void fame()`{.cpp}
-    `int f()`{.cpp}
-    `float f()`{.cpp}
-    `double f()`{.cpp}
-    `void f(int a)`{.cpp}
-    `void f(int b)`{.cpp}
-    `void f(float a)`{.cpp}
-    `void f(double a)`{.cpp}
-    `void f(int a, int b)`{.cpp}
-    `void f(int a, float b)`{.cpp}
-    `void f(float a, int b)`{.cpp}
-    `void f(float a, int b, double c)`{.cpp}
-
-1. If the TA writes an arbitrary signature using `int`, `float`, and `double` in arguments and return types, could you write its label?
-::: 
 
 # Namespaces
 
@@ -89,35 +56,6 @@ These are included in the name mangling to further decrease the chance of name c
 
 Name mangling for namespaces uses a length-before-name technique, so that namespace `welcome` would become `7welcome` in the mangled name. This is important to be able to have numbers in the namespace hierarchy: `7welcome2it` represents the two nested namespaces `welcome::it` while `10welcome2it` is the single namespace `welcome2it`
 
-:::exercise
-Experiment with the compiler until you are ready to answer the following questions
-
-1. What are the mangled names of both `baz`s and `xyxxy` in the following code?
-    
-    ````cpp
-    namespace bar {
-        int baz(int x) { return x + 2; }
-        namespace flub {
-            int baz(int x) { return x - 2; }
-        }
-        int xyxxy(int, int);
-    }
-    int bar::xyxxy(int a, int b) { return bar::baz(a) * bar::flub::baz(b); }
-    ````
-
-1. Compile and inspect the assembly created by the following. What does the `using namespace` keyword appear to do?
-
-    ````cpp
-    namespace a { 
-        int b(int c) { return -c * (c-2); }
-    }
-    int d(int e) { return e+e*e; }
-
-    using namespace a;
-
-    int f(int g) { return d(b(g)); }
-    ````
-:::
 
 # Operator overloading
 
@@ -125,30 +63,6 @@ C++ allows you to redefine what almost every operator does.
 You can define functions whose name is `operator+`, `operator<<=`, etc,
 and they will be used in place of built-in behavior for `+`, `<<=`, etc, when those operators are applied to the appropriate types.
 
-:::exercise
-Consider the following code:
-
-```cpp
-#include <stdio.h>
-
-typedef struct nonint { int x; } nonint;
-
-nonint operator+ (nonint a, nonint b) {
-    nonint ans = { a.x - b.x };
-    return ans;
-}
-
-int main() {
-    nonint a = { 3 };
-    nonint b = { 5 };
-    nonint c = a + b;
-    printf("%d + %d = %d\n", a.x, b.x, c.x);
-}
-```
-
-1. What does it print when run?
-1. What assembly instruction does the `a + b` compile to?
-:::
 
 # Other odds and ends
 
@@ -189,11 +103,6 @@ These two compile to virtually the assembly except that the compiler takes care 
 Recent versions of C++ have added many other similar tricks for efficient coding with more compile-time checking,
 such as more careful casts, self-deallocating pointers, etc.
 
-:::exercise
-Write a pass-by-reference wrapper around `realloc` named `realloc2`
-such that you can replace `x = realloc(x, 20)` with just `realloc2(x, 20)` without errors.
-You'll show the TA your source code.
-:::
 
 # Classes
 
@@ -221,16 +130,6 @@ C++ also extends `struct` and `class` to allow them to declare member functions 
 |````                   |                               |
 +-----------------------+-------------------------------+
 
-:::exercise
-Compile the above code and inspect the resulting assembly to answer the following:
-
-1. How many arguments does `inOrder` use?
-    Recall the arguments are passed (in order) in `%rdi`, `%rsi`, `%rdx`, `%rcx`, `%r8`, %`r9`, and the stack.
-    You can determine how many are used by checking how many of these the code for `inOrder`
-    accesses before they are set inside that code.
-
-1. From the code that uses each argument, what is the type of each (address, int, etc)?
-:::
 
 
 
@@ -263,9 +162,7 @@ public:
 };
 ```
 
-:::exercise
-Given the above code, what assembly operation(s) is/are invoked if we invoke `gleam2 *bazzle = new gleam2(1, 2)`{.cpp}?
-:::
+
 
 ## Inheritance and overloading
 
