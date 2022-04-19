@@ -150,10 +150,6 @@ reading:
     cpp:
         txt: in-lab description
         lnk: lab10-cpp.html
-    stl:
-        txt: in-lab description
-        lnk: lab11-stl.html
-        
     
     Review:
         txt: topics list
