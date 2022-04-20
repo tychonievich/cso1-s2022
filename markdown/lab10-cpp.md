@@ -7,7 +7,7 @@ The subsequent lab will have you use these features to work with some basic C++ 
 
 # How this lab works
 
-This lab introduces key features `C++`, and describes how it deffers from `C`. Once you've completed the reading, we ask you implement a postfix calculator using `C++`. If you prefer to start coding skip to end of lab and start coding.    
+This lab introduces key features `C++`, and describes how it deffers from `C`. Once you've completed the reading, we ask you implement a postfix calculator using `C++`. If you already know C++, skip to end of lab and start coding.    
 
 ## Compiling
 
