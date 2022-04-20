@@ -156,8 +156,7 @@ int main() {
     printf("The server is now listening on port %d\n", port); // and listening port
 
     for(;;) {
-        printf("
-        \n");
+        printf("Waiting for a connection\n");
         // get a connection socket (this call will wait for one to connect)
         int connection = accept(listener, (struct sockaddr*)NULL, NULL);
         if (random()%2) { // half the time
