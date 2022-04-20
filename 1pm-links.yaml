@@ -263,3 +263,10 @@
   files:
     - lectures/2022-04-18-1pm-pig.c
     - lectures/2022-04-18-slides2.pdf
+2022-04-20:
+  video:
+    - lectures/2022-04-20-recording-21.webm
+  audio:
+    - lectures/2022-04-20-audio-21.mp3
+  files:
+    - lectures/2022-04-20-slides2.pdf
