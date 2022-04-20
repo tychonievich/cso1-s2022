@@ -84,7 +84,7 @@ lectures:
     - stdio.h and varargs
     - unistd.h and so on
 
-    - buffer overrun; reporting exploits
+    - [buffer overrun, reporting exploits, memory errors]
     - function pointers
     - defensive programming
 
