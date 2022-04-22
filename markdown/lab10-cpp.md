@@ -324,7 +324,7 @@ Implement a postfix calculator, like you did in [PA09](pa09-postfix.html) but th
 
     - If you have time, implement `ostream & operator<<(ostream & o, stack<double> s)`{.cpp} to display a stack, and end your program with `cout << my_stack;`{.cpp} instead.
     
-We strongly recommend, but do not requite, using a two-step read: read a word from `cin` into a `string`,
+We strongly recommend, but do not require, using a two-step read: read a word from `cin` into a `string`,
 then feed the `string` into a `stringstream` and use the stringstream to parse a number. However, there are other solutions and you do not have to do this if you do not want to.
 
 We strongly recommend, but do not require, adding `using namespace std;` after your `#include`s so that you can refer to included types by name without prefixing `std::` before each.
