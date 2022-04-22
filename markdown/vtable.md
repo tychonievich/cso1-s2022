@@ -90,7 +90,7 @@ Because `length` is at the same offset for both `base` and `derived`, this works
 # Virtual functions
 
 Non-virtual functions are stored in the global address space, and thus cannot be overridden in subclasses.
-C++ allows overloading by using *virtual* functions.
+C++ allows overriding by using *virtual* functions.
 
 Conceptually, in C++ every class's first member is a pointer to a `struct` called a **vtable** with only function-pointer attributes.
 There's just one copy of each such `struct` in memory, stored in the read-only globals.
