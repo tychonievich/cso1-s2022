@@ -120,3 +120,14 @@
     - lectures/2022-04-20-audio-11.mp3
   files:
     - lectures/2022-04-20-slides1.pdf
+2022-04-22:
+  video:
+    - lectures/2022-04-22-recording-11.webm
+  audio:
+    - lectures/2022-04-22-audio-11.mp3
+  files:
+    - lectures/2022-04-22-12pm-datapoly1.c
+    - lectures/2022-04-22-12pm-datapoly2.c
+    - lectures/2022-04-22-12pm-funcpoly1.c
+    - lectures/2022-04-22-12pm-objpoly1.c
+    - lectures/2022-04-22-slides1.pdf
