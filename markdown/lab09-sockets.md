@@ -200,7 +200,7 @@ and then to write a client program that
 3. Connects to that server.
 4. `read`s a message from the server and displays it on the command line.
 
-**Hint: Read the table above. It list server of the function that you need when developing your client*** 
+**Hint: Read the table above. It lists server of the function that you need when developing your client*** 
 
 Ideally your program should
 
