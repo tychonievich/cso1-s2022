@@ -281,3 +281,11 @@
     - lectures/2022-04-22-1pm-funcpoly1.c
     - lectures/2022-04-22-1pm-objpoly1.c
     - lectures/2022-04-22-slides2.pdf
+2022-04-25:
+  video:
+    - lectures/2022-04-25-recording-21.webm
+  audio:
+    - lectures/2022-04-25-audio-21.mp3
+  files:
+    - lectures/2022-04-25-1pm-bad.c
+    - lectures/2022-04-25-1pm-better.c
