@@ -140,3 +140,10 @@
     - lectures/2022-04-25-12pm-bad.c
     - lectures/2022-04-25-12pm-better.c
     - lectures/2022-04-25-slides1.pdf
+2022-04-27:
+  video:
+    - lectures/2022-04-27-recording-11.webm
+  audio:
+    - lectures/2022-04-27-audio-11.mp3
+  files:
+    - lectures/2022-04-27-slides1.pdf
