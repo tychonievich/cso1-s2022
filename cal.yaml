@@ -252,6 +252,13 @@ reading:
         - txt: Data
           lnk: structures.html
 
+    ask me anything:
+      - txt: 12pm questions
+        lnk: https://kytos.cs.virginia.edu/cso1/q12pm/
+      - txt: 1pm questions
+        lnk: https://kytos.cs.virginia.edu/cso1/q1pm/
+
+
 assignments:
     ".groups":
         HW:

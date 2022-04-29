@@ -331,7 +331,7 @@ We strongly recommend, but do not require, adding `using namespace std;` after y
 :::
 
 
-The input processing cal look like a loop which, as long as `cin` is `.good()` (i.e., not closed and with no read errors)
+The input processing can look like a loop which, as long as `cin` is `.good()` (i.e., not closed and with no read errors)
 
 1. `>>` a `string` from `cin`
 1. make a `stringstream` and `<<` a `string` into it
