@@ -18,7 +18,6 @@ Fall 2019     3                                         [pdf](files/f2019e3.pdf)
 Spring 2022   1                                         [pdf](files/s2022e1.pdf)        [pdf](files/s2022e1key.pdf)         89.9%   94.0%   13.6%
 Spring 2022   2                                         [pdf](files/s2022e2.pdf)        [pdf](files/s2022e2key.pdf)         80.8%   84.0%   14.0%
 
-<!--
 The final exam will be about half material from exams 1 and 2 and about half new material. The practice exam only contains examples of the new material.
 
 The final will include printed-out excerpts from manual pages.
@@ -37,7 +36,7 @@ Assembly
 
     1. The calling convention use of `%rax`, `%rdi`, and `%rsi` -- if others are needed, they will be provided on the exam
 
-    1. The 2-, 4-, and 8-byte versions of each instruction (e.g., `movw`, `movl`, and `movq`) and the first eight registers (e.g., `%ax`, `%eax`, `%rax`)
+    1. The 4-, and 8-byte versions of each instruction (e.g., `movl`, and `movq`) and the first eight registers (e.g., `%eax` = `%rax`)
 
     1. x86-64 assembly instructions `mov`, `add`, `xor`, `call`, `ret`, `lea`, `cmp`, `jmp`, and the signed conditional jumps (`jle` and so on)
 
@@ -57,4 +56,3 @@ C
     1. The library functions `puts`, `printf`, `fopen`, `fclose`, and at least one reads-from-`FILE *` function
 
 You are of course also expected to recall all the syntax and semantics details needed to read and write code in both AT&T x86-64 and C.
--->
