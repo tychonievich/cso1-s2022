@@ -296,3 +296,10 @@
     - lectures/2022-04-27-audio-21.mp3
   files:
     - lectures/2022-04-27-slides2.pdf
+2022-05-02:
+  video:
+    - lectures/2022-05-02-recording-21.webm
+  audio:
+    - lectures/2022-05-02-audio-21.mp3
+  files:
+    - lectures/2022-05-02-slides2.pdf
