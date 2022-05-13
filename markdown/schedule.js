@@ -15,7 +15,8 @@ document.querySelectorAll('.week').forEach(function(x){
     else
         x.classList.add('past');
 });
-document.querySelector('.day:not(.past) div').parentElement.classList.add('today');
+let tmp = document.querySelector('.day:not(.past) div');
+if (tmp) tmp.parentElement.classList.add('today');
 
 function saveCookie(key, value) {
     var d = new Date();
@@ -30,7 +31,6 @@ function viewmode(me) {
     document.getElementById('schedule').classList.add(me);
     saveCookie('viewmode', me);
     if (!document.getElementById('viewmode='+me).checked) {
-        document.getElementById('viewmode='+me).checked = true;
     }
 }
 function show(me,val) {
