@@ -7,6 +7,8 @@ title: Review
 
 The following are the practice and real exams prepared for last year. While we have explained a few ideas slightly differently than this semester, these should be considered good baselines for what to expect in exams this year.
 
+Sometimes exams contained typos, resulting in more lenient grading that the key would indicate. In some, but not all, cases those typos were corrected before being posted here.
+
 Semester     Exam    Practice                            Actual                          Key                                Mean    Median  Deviation
 ----------- ------- ----------------------------------  -----------------------------   --------------------------------    -----   ------- ---------
 Fall 2018     1     [pdf](files/f2018e1practice.pdf)    [pdf](files/f2018e1real.pdf)    [html](files/f2018e1key.html)       89.9%   93.8%   10.3%
