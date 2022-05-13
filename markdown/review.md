@@ -17,8 +17,9 @@ Fall 2019     2                                         [pdf](files/f2019e2.pdf)
 Fall 2019     3                                         [pdf](files/f2019e3.pdf)                                            76.7%   80.0%   14.9%
 Spring 2022   1                                         [pdf](files/s2022e1.pdf)        [pdf](files/s2022e1key.pdf)         89.9%   94.0%   13.6%
 Spring 2022   2                                         [pdf](files/s2022e2.pdf)        [pdf](files/s2022e2key.pdf)         80.8%   84.0%   14.0%
+Spring 2022   3                                         [pdf](files/s2022e3.pdf)        [pdf](files/s2022e3key.pdf)         74.8%   78.1%   15.2%
 
-The final exam will be about half material from exams 1 and 2 and about half new material. The practice exam only contains examples of the new material.
+The final exam will be about half material from exams 1 and 2 and about half new material.
 
 The final will include printed-out excerpts from manual pages.
 These might include pages for functions you have not previously used.
